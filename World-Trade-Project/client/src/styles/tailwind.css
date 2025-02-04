@@ -1,0 +1,102 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #1a202c; /* Dark background */
+  color: white; /* Text color */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Styles pour la page "Work in Progress" */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: inherit; /* Utilisez inherit pour hériter de la couleur de fond globale */
+  color: white;
+  text-align: center;
+}
+
+.header {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.link {
+  color: #ffd700;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+h1 {
+  font-size: 3rem; /* Augmentez la taille de la police pour "Work in Progress" */
+  margin: 0;
+}
+
+.progress-container {
+  width: 80%;
+  max-width: 500px;
+  height: 20px;
+  background-color: #333;
+}
+
+.progress-bar {
+  width: 0%;
+  height: 100%;
+  background-color: #ffd700;
+  transition: width 0.5s ease-in-out;
+}
+
+.percentage {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}

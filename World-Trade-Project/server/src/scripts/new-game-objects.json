@@ -1,0 +1,1338 @@
+[
+  {
+    "name": "Absolute Armor",
+    "rarity": "Transcendent",
+    "purchasePrice": 0,
+    "supply": 200,
+    "type": "Armor",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Armor_r9.png"
+  },
+  {
+    "name": "Absolute Armors Artifact",
+    "rarity": "Transcendent",
+    "purchasePrice": 0,
+    "supply": 150,
+    "type": "Artifact",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/WS_artifact_armor_r9.png"
+  },
+  {
+    "name": "Absolute Axe",
+    "rarity": "Transcendent",
+    "purchasePrice": 0,
+    "supply": 200,
+    "type": "Tool",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Tool_axe_r9.png"
+  },
+  {
+    "name": "Absolute Claws",
+    "rarity": "Transcendent",
+    "purchasePrice": 0,
+    "supply": 33,
+    "type": "Weapon",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Weapon_claws_r9.png"
+  },
+  {
+    "name": "Absolute Club",
+    "rarity": "Transcendent",
+    "purchasePrice": 0,
+    "supply": 33,
+    "type": "Weapon",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Weapon_club_r9.png"
+  },
+  {
+    "name": "Absolute Dual Axes",
+    "rarity": "Transcendent",
+    "purchasePrice": 0,
+    "supply": 33,
+    "type": "Weapon",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Weapon_dualaxes_r9.png"
+  },
+  {
+    "name": "Absolute Greathammer",
+    "rarity": "Transcendent",
+    "purchasePrice": 0,
+    "supply": 33,
+    "type": "Weapon",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Weapon_greathammer_r9.png"
+  },
+  {
+    "name": "Absolute Greatsword",
+    "rarity": "Transcendent",
+    "purchasePrice": 0,
+    "supply": 33,
+    "type": "Weapon",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Weapon_greatsword_r9.png"
+  },
+  {
+    "name": "Absolute Pickaxe",
+    "rarity": "Transcendent",
+    "purchasePrice": 0,
+    "supply": 200,
+    "type": "Tool",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Tool_pickaxe_r9.png"
+  },
+  {
+    "name": "Absolute Sword & Shield",
+    "rarity": "Transcendent",
+    "purchasePrice": 0,
+    "supply": 33,
+    "type": "Weapon",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Weapon_sword_shield_r9.png"
+  },
+  {
+    "name": "Absolute Tools Artifact",
+    "rarity": "Transcendent",
+    "purchasePrice": 0,
+    "supply": 150,
+    "type": "Artifact",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/WS_artifact_tools_r9.png"
+  },
+  {
+    "name": "Absolute Weapons Artifact",
+    "rarity": "Transcendent",
+    "purchasePrice": 0,
+    "supply": 150,
+    "type": "Artifact",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/WS_artifact_weapons_r9.png"
+  },
+  {
+    "name": "Arcane Armor",
+    "rarity": "Exalted",
+    "purchasePrice": 0,
+    "supply": 2500,
+    "type": "Armor",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Armor_r7.png"
+  },
+  {
+    "name": "Arcane Armors Artifact",
+    "rarity": "Exalted",
+    "purchasePrice": 0,
+    "supply": 2500,
+    "type": "Artifact",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/WS_artifact_armor_r7.png"
+  },
+  {
+    "name": "Arcane Axe",
+    "rarity": "Exalted",
+    "purchasePrice": 0,
+    "supply": 2500,
+    "type": "Tool",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Tool_axe_r7.png"
+  },
+  {
+    "name": "Arcane Claws",
+    "rarity": "Exalted",
+    "purchasePrice": 0,
+    "supply": 417,
+    "type": "Weapon",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Weapon_claws_r7.png"
+  },
+  {
+    "name": "Arcane Club",
+    "rarity": "Exalted",
+    "purchasePrice": 0,
+    "supply": 417,
+    "type": "Weapon",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Weapon_club_r7.png"
+  },
+  {
+    "name": "Arcane Dual Axes",
+    "rarity": "Exalted",
+    "purchasePrice": 0,
+    "supply": 417,
+    "type": "Weapon",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Weapon_dualaxes_r7.png"
+  },
+  {
+    "name": "Arcane Greathammer",
+    "rarity": "Exalted",
+    "purchasePrice": 0,
+    "supply": 417,
+    "type": "Weapon",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Weapon_greathammer_r7.png"
+  },
+  {
+    "name": "Arcane Greatsword",
+    "rarity": "Exalted",
+    "purchasePrice": 0,
+    "supply": 417,
+    "type": "Weapon",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Weapon_greatsword_r7.png"
+  },
+  {
+    "name": "Arcane Pickaxe",
+    "rarity": "Exalted",
+    "purchasePrice": 0,
+    "supply": 2500,
+    "type": "Tool",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Tool_pickaxe_r7.png"
+  },
+  {
+    "name": "Arcane Sword & Shield",
+    "rarity": "Exalted",
+    "purchasePrice": 0,
+    "supply": 417,
+    "type": "Weapon",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Weapon_sword_shield_r7.png"
+  },
+  {
+    "name": "Arcane Tools Artifact",
+    "rarity": "Exalted",
+    "purchasePrice": 0,
+    "supply": 2500,
+    "type": "Artifact",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/WS_artifact_tools_r7.png"
+  },
+  {
+    "name": "Arcane Weapons Artifact",
+    "rarity": "Exalted",
+    "purchasePrice": 0,
+    "supply": 2500,
+    "type": "Artifact",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/WS_artifact_weapons_r7.png"
+  },
+  {
+    "name": "Assassin Blades",
+    "rarity": "Legendary",
+    "purchasePrice": 2350,
+    "supply": 50,
+    "type": "Weapon",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/WS_weapon_claws_assassin_r5.png"
+  },
+  {
+    "name": "Assassin Blades",
+    "rarity": "Epic",
+    "purchasePrice": 590,
+    "supply": 100,
+    "type": "Weapon",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/WS_weapon_claws_assassin_r4.png"
+  },
+  {
+    "name": "Assassin Blades",
+    "rarity": "Rare",
+    "purchasePrice": 179,
+    "supply": 200,
+    "type": "Weapon",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/WS_weapon_claws_assassin_r3.png"
+  },
+  {
+    "name": "Celestial Armor",
+    "rarity": "Exotic",
+    "purchasePrice": 0,
+    "supply": 1000,
+    "type": "Armor",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Armor_r8.png"
+  },
+  {
+    "name": "Celestial Armors Artifact",
+    "rarity": "Exotic",
+    "purchasePrice": 0,
+    "supply": 750,
+    "type": "Artifact",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/WS_artifact_armor_r8.png"
+  },
+  {
+    "name": "Celestial Axe",
+    "rarity": "Exotic",
+    "purchasePrice": 0,
+    "supply": 1000,
+    "type": "Tool",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Tool_axe_r8.png"
+  },
+  {
+    "name": "Celestial Claws",
+    "rarity": "Exotic",
+    "purchasePrice": 0,
+    "supply": 167,
+    "type": "Weapon",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Weapon_claws_r8.png"
+  },
+  {
+    "name": "Celestial Club",
+    "rarity": "Exotic",
+    "purchasePrice": 0,
+    "supply": 167,
+    "type": "Weapon",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Weapon_club_r8.png"
+  },
+  {
+    "name": "Celestial Dual Axes",
+    "rarity": "Exotic",
+    "purchasePrice": 0,
+    "supply": 167,
+    "type": "Weapon",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Weapon_dualaxes_r8.png"
+  },
+  {
+    "name": "Celestial Greathammer",
+    "rarity": "Exotic",
+    "purchasePrice": 0,
+    "supply": 167,
+    "type": "Weapon",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Weapon_greathammer_r8.png"
+  },
+  {
+    "name": "Celestial Greatsword",
+    "rarity": "Exotic",
+    "purchasePrice": 0,
+    "supply": 167,
+    "type": "Weapon",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Weapon_greatsword_r8.png"
+  },
+  {
+    "name": "Celestial Pickaxe",
+    "rarity": "Exotic",
+    "purchasePrice": 0,
+    "supply": 1000,
+    "type": "Tool",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Tool_pickaxe_r8.png"
+  },
+  {
+    "name": "Celestial Sword & Shield",
+    "rarity": "Exotic",
+    "purchasePrice": 0,
+    "supply": 167,
+    "type": "Weapon",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Weapon_sword_shield_r8.png"
+  },
+  {
+    "name": "Celestial Tools Artifact",
+    "rarity": "Exotic",
+    "purchasePrice": 0,
+    "supply": 750,
+    "type": "Artifact",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/WS_artifact_tools_r8.png"
+  },
+  {
+    "name": "Celestial Weapons Artifact",
+    "rarity": "Exotic",
+    "purchasePrice": 0,
+    "supply": 750,
+    "type": "Artifact",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/WS_artifact_weapons_r8.png"
+  },
+  {
+    "name": "Champion Greathammer",
+    "rarity": "Epic",
+    "purchasePrice": 399,
+    "supply": 100,
+    "type": "Weapon",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/WS_weapon_greathammer_champion_r4.png"
+  },
+  {
+    "name": "Champion Greathammer",
+    "rarity": "Rare",
+    "purchasePrice": 79.69,
+    "supply": 200,
+    "type": "Weapon",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/WS_weapon_greathammer_champion_r3.png"
+  },
+  {
+    "name": "Champion Greathammer",
+    "rarity": "Legendary",
+    "purchasePrice": 2999,
+    "supply": 50,
+    "type": "Weapon",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/WS_weapon_greathammer_champion_r5.png"
+  },
+  {
+    "name": "Defender Sword & Shield",
+    "rarity": "Legendary",
+    "purchasePrice": 1600,
+    "supply": 50,
+    "type": "Weapon",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/WS_weapon_sword_shield_defender_r5.png"
+  },
+  {
+    "name": "Defender Sword & Shield",
+    "rarity": "Rare",
+    "purchasePrice": 114.99,
+    "supply": 200,
+    "type": "Weapon",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/WS_weapon_sword_shield_defender_r3.png"
+  },
+  {
+    "name": "Defender Sword & Shield",
+    "rarity": "Epic",
+    "purchasePrice": 518,
+    "supply": 100,
+    "type": "Weapon",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/WS_weapon_sword_shield_defender_r4.png"
+  },
+  {
+    "name": "Enchanted Armor",
+    "rarity": "Epic",
+    "purchasePrice": 359.88,
+    "supply": 16000,
+    "type": "Armor",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Armor_r4.png"
+  },
+  {
+    "name": "Enchanted Armors Artifact",
+    "rarity": "Epic",
+    "purchasePrice": 388.99,
+    "supply": 16000,
+    "type": "Artifact",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Artifact_Armor_r4.png"
+  },
+  {
+    "name": "Enchanted Axe",
+    "rarity": "Epic",
+    "purchasePrice": 184.98,
+    "supply": 16000,
+    "type": "Tool",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Tool_axe_r4.png"
+  },
+  {
+    "name": "Enchanted Claws",
+    "rarity": "Epic",
+    "purchasePrice": 463,
+    "supply": 2667,
+    "type": "Weapon",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Weapon_claws_r4.png"
+  },
+  {
+    "name": "Enchanted Club",
+    "rarity": "Epic",
+    "purchasePrice": 354.5,
+    "supply": 2667,
+    "type": "Weapon",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Weapon_club_r4.png"
+  },
+  {
+    "name": "Enchanted Dual Axes",
+    "rarity": "Epic",
+    "purchasePrice": 399,
+    "supply": 2667,
+    "type": "Weapon",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Weapon_dualaxes_r4.png"
+  },
+  {
+    "name": "Enchanted Greathammer",
+    "rarity": "Epic",
+    "purchasePrice": 395,
+    "supply": 2667,
+    "type": "Weapon",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Weapon_greathammer_r4.png"
+  },
+  {
+    "name": "Enchanted Greatsword",
+    "rarity": "Epic",
+    "purchasePrice": 415,
+    "supply": 2667,
+    "type": "Weapon",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Weapon_greatsword_r4.png"
+  },
+  {
+    "name": "Enchanted Pickaxe",
+    "rarity": "Epic",
+    "purchasePrice": 184.97,
+    "supply": 16000,
+    "type": "Tool",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Tool_pickaxe_r4.png"
+  },
+  {
+    "name": "Enchanted Sword & Shield",
+    "rarity": "Epic",
+    "purchasePrice": 409.5,
+    "supply": 2667,
+    "type": "Weapon",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Weapon_sword_shield_r4.png"
+  },
+  {
+    "name": "Enchanted Tools Artifact",
+    "rarity": "Epic",
+    "purchasePrice": 378,
+    "supply": 16000,
+    "type": "Artifact",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Artifact_Tools_r4.png"
+  },
+  {
+    "name": "Enchanted Weapons Artifact",
+    "rarity": "Epic",
+    "purchasePrice": 389,
+    "supply": 16000,
+    "type": "Artifact",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Artifact_Weapons_r4.png"
+  },
+  {
+    "name": "Gemstone Pickaxe",
+    "rarity": "Legendary",
+    "purchasePrice": 1449.99,
+    "supply": 300,
+    "type": "Tool",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/WS_tool_Pickaxe_gemstone_r5.png"
+  },
+  {
+    "name": "Gemstone Pickaxe",
+    "rarity": "Rare",
+    "purchasePrice": 89,
+    "supply": 1200,
+    "type": "Tool",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/WS_tool_Pickaxe_gemstone_r3.png"
+  },
+  {
+    "name": "Gemstone Pickaxe",
+    "rarity": "Epic",
+    "purchasePrice": 298,
+    "supply": 600,
+    "type": "Tool",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/WS_tool_Pickaxe_gemstone_r4.png"
+  },
+  {
+    "name": "Island of Prosperity",
+    "rarity": "Rare",
+    "purchasePrice": 100,
+    "supply": 5000,
+    "type": "Island",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Founder_Island_w_access_06.png"
+  },
+  {
+    "name": "Island of Joy",
+    "rarity": "Epic",
+    "purchasePrice": 240,
+    "supply": 4000,
+    "type": "Island",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Founder_Island_w_access_07.png"
+  },
+  {
+    "name": "Island of Happiness",
+    "rarity": "Legendary",
+    "purchasePrice": 530,
+    "supply": 3000,
+    "type": "Island",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Founder_Island_w_access_08.png"
+  },
+  {
+    "name": "Island of Merriment",
+    "rarity": "Exalted",
+    "purchasePrice": 1988,
+    "supply": 1000,
+    "type": "Island",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Founder_Island_w_access_09.png"
+  },
+  {
+    "name": "Large Island of Bliss",
+    "rarity": "Legendary",
+    "purchasePrice": 900,
+    "supply": 10000,
+    "type": "Island",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/WS_add_island_large_03_r5.png"
+  },
+  {
+    "name": "Large Island of Euphoria",
+    "rarity": "Exalted",
+    "purchasePrice": 2480,
+    "supply": 3500,
+    "type": "Island",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/WS_add_island_large_05_r7.png"
+  },
+  {
+    "name": "Large Island of Harmony",
+    "rarity": "Epic",
+    "purchasePrice": 700,
+    "supply": 15000,
+    "type": "Island",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/WS_add_island_large_02_r4.png"
+  },
+  {
+    "name": "Large Island of Serenity",
+    "rarity": "Rare",
+    "purchasePrice": 550,
+    "supply": 25000,
+    "type": "Island",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/WS_add_island_large_01_r3.png"
+  },
+  {
+    "name": "Large Island of Tranquility",
+    "rarity": "Mythic",
+    "purchasePrice": 1800,
+    "supply": 5000,
+    "type": "Island",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/WS_add_island_large_04_r6.png"
+  },
+  {
+    "name": "Magical Armor",
+    "rarity": "Legendary",
+    "purchasePrice": 1690,
+    "supply": 10000,
+    "type": "Armor",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Armor_r5.png"
+  },
+  {
+    "name": "Magical Armors Artifact",
+    "rarity": "Legendary",
+    "purchasePrice": 950,
+    "supply": 10000,
+    "type": "Artifact",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Artifact_Armor_r5.png"
+  },
+  {
+    "name": "Magical Axe",
+    "rarity": "Legendary",
+    "purchasePrice": 1027.5,
+    "supply": 10000,
+    "type": "Tool",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Tool_axe_r5.png"
+  },
+  {
+    "name": "Magical Claws",
+    "rarity": "Legendary",
+    "purchasePrice": 3555,
+    "supply": 1667,
+    "type": "Weapon",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Weapon_claws_r5.png"
+  },
+  {
+    "name": "Magical Club",
+    "rarity": "Legendary",
+    "purchasePrice": 1199,
+    "supply": 1667,
+    "type": "Weapon",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Weapon_club_r5.png"
+  },
+  {
+    "name": "Magical Dual Axes",
+    "rarity": "Legendary",
+    "purchasePrice": 0,
+    "supply": 1667,
+    "type": "Weapon",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Weapon_dualaxes_r5.png"
+  },
+  {
+    "name": "Magical Greathammer",
+    "rarity": "Legendary",
+    "purchasePrice": 0,
+    "supply": 1667,
+    "type": "Weapon",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Weapon_greathammer_r5.png"
+  },
+  {
+    "name": "Magical Greatsword",
+    "rarity": "Legendary",
+    "purchasePrice": 2499.99,
+    "supply": 1667,
+    "type": "Weapon",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Weapon_greatsword_r5.png"
+  },
+  {
+    "name": "Magical Pickaxe",
+    "rarity": "Legendary",
+    "purchasePrice": 968,
+    "supply": 10000,
+    "type": "Tool",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Tool_pickaxe_r5.png"
+  },
+  {
+    "name": "Magical Sword & Shield",
+    "rarity": "Legendary",
+    "purchasePrice": 2500,
+    "supply": 1667,
+    "type": "Weapon",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Weapon_sword_shield_r5.png"
+  },
+  {
+    "name": "Magical Tools Artifact",
+    "rarity": "Legendary",
+    "purchasePrice": 939.89,
+    "supply": 10000,
+    "type": "Artifact",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Artifact_Tools_r5.png"
+  },
+  {
+    "name": "Magical Weapons Artifact",
+    "rarity": "Legendary",
+    "purchasePrice": 928,
+    "supply": 10000,
+    "type": "Artifact",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Artifact_Weapons_r5.png"
+  },
+  {
+    "name": "Medium Island of Bliss",
+    "rarity": "Legendary",
+    "purchasePrice": 428,
+    "supply": 20000,
+    "type": "Island",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/WS_add_island_medium_03_r5.png"
+  },
+  {
+    "name": "Medium Island of Euphoria",
+    "rarity": "Exalted",
+    "purchasePrice": 999,
+    "supply": 7000,
+    "type": "Island",
+    "img": " https://openloot-metadata.bigtime.gg/WS0/WS_add_island_medium_05_r7.png"
+  },
+  {
+    "name": "Medium Island of Harmony",
+    "rarity": "Epic",
+    "purchasePrice": 280,
+    "supply": 30000,
+    "type": "Island",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/WS_add_island_medium_02_r4.png"
+  },
+  {
+    "name": "Medium Island of Serenity",
+    "rarity": "Rare",
+    "purchasePrice": 265,
+    "supply": 50000,
+    "type": "Island",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/WS_add_island_medium_01_r3.png"
+  },
+  {
+    "name": "Medium Island of Tranquility",
+    "rarity": "Mythic",
+    "purchasePrice": 687,
+    "supply": 10000,
+    "type": "Island",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/WS_add_island_medium_04_r6.png"
+  },
+  {
+    "name": "Phantom Armor",
+    "rarity": "Legendary",
+    "purchasePrice": 1474,
+    "supply": 300,
+    "type": "Armor",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/WS_armor_phantom_r5.png"
+  },
+  {
+    "name": "Phantom Armor",
+    "rarity": "Epic",
+    "purchasePrice": 466,
+    "supply": 600,
+    "type": "Armor",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/WS_armor_phantom_r4.png"
+  },
+  {
+    "name": "Phantom Armor",
+    "rarity": "Rare",
+    "purchasePrice": 117,
+    "supply": 1200,
+    "type": "Armor",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/WS_armor_phantom_r3.png"
+  },
+  {
+    "name": "Primordial Armor",
+    "rarity": "Unique",
+    "purchasePrice": 0,
+    "supply": 10,
+    "type": "Armor",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Armor_r10.png"
+  },
+  {
+    "name": "Primordial Armors Artifact",
+    "rarity": "Unique",
+    "purchasePrice": 0,
+    "supply": 5,
+    "type": "Artifact",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/WS_artifact_armor_r10.png"
+  },
+  {
+    "name": "Primordial Axe",
+    "rarity": "Unique",
+    "purchasePrice": 0,
+    "supply": 10,
+    "type": "Tool",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Tool_axe_r10.png"
+  },
+  {
+    "name": "Primordial Claws",
+    "rarity": "Unique",
+    "purchasePrice": 0,
+    "supply": 2,
+    "type": "Weapon",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Weapon_claws_r10.png"
+  },
+  {
+    "name": "Primordial Club",
+    "rarity": "Unique",
+    "purchasePrice": 0,
+    "supply": 2,
+    "type": "Weapon",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Weapon_club_r10.png"
+  },
+  {
+    "name": "Primordial Dual Axes",
+    "rarity": "Unique",
+    "purchasePrice": 0,
+    "supply": 2,
+    "type": "Weapon",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Weapon_dualaxes_r10.png"
+  },
+  {
+    "name": "Primordial Greathammer",
+    "rarity": "Unique",
+    "purchasePrice": 0,
+    "supply": 2,
+    "type": "Weapon",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Weapon_greathammer_r10.png"
+  },
+  {
+    "name": "Primordial Greatsword",
+    "rarity": "Unique",
+    "purchasePrice": 0,
+    "supply": 2,
+    "type": "Weapon",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Weapon_greatsword_r10.png"
+  },
+  {
+    "name": "Primordial Pickaxe",
+    "rarity": "Unique",
+    "purchasePrice": 0,
+    "supply": 10,
+    "type": "Tool",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Tool_pickaxe_r10.png"
+  },
+  {
+    "name": "Primordial Sword & Shield",
+    "rarity": "Unique",
+    "purchasePrice": 0,
+    "supply": 2,
+    "type": "Weapon",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Weapon_sword_shield_r10.png"
+  },
+  {
+    "name": "Primordial Tools Artifact",
+    "rarity": "Unique",
+    "purchasePrice": 0,
+    "supply": 5,
+    "type": "Artifact",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/WS_artifact_tools_r10.png"
+  },
+  {
+    "name": "Primordial Weapons Artifact",
+    "rarity": "Unique",
+    "purchasePrice": 0,
+    "supply": 5,
+    "type": "Artifact",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/WS_artifact_weapons_r10.png"
+  },
+  {
+    "name": "Radiant Armor",
+    "rarity": "Mythic",
+    "purchasePrice": 0,
+    "supply": 5000,
+    "type": "Armor",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Armor_r6.png"
+  },
+  {
+    "name": "Radiant Armors Artifact",
+    "rarity": "Mythic",
+    "purchasePrice": 4994,
+    "supply": 5000,
+    "type": "Artifact",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/WS_artifact_armor_r6.png"
+  },
+  {
+    "name": "Radiant Axe",
+    "rarity": "Mythic",
+    "purchasePrice": 0,
+    "supply": 5000,
+    "type": "Tool",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Tool_axe_r6.png"
+  },
+  {
+    "name": "Radiant Claws",
+    "rarity": "Mythic",
+    "purchasePrice": 0,
+    "supply": 833,
+    "type": "Weapon",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Weapon_claws_r6.png"
+  },
+  {
+    "name": "Radiant Club",
+    "rarity": "Mythic",
+    "purchasePrice": 0,
+    "supply": 833,
+    "type": "Weapon",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Weapon_club_r6.png"
+  },
+  {
+    "name": "Radiant Dual Axes",
+    "rarity": "Mythic",
+    "purchasePrice": 0,
+    "supply": 833,
+    "type": "Weapon",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Weapon_dualaxes_r6.png"
+  },
+  {
+    "name": "Radiant Greathammer",
+    "rarity": "Mythic",
+    "purchasePrice": 0,
+    "supply": 833,
+    "type": "Weapon",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Weapon_greathammer_r6.png"
+  },
+  {
+    "name": "Radiant Greatsword",
+    "rarity": "Mythic",
+    "purchasePrice": 0,
+    "supply": 833,
+    "type": "Weapon",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Weapon_greatsword_r6.png"
+  },
+  {
+    "name": "Radiant Pickaxe",
+    "rarity": "Mythic",
+    "purchasePrice": 0,
+    "supply": 5000,
+    "type": "Tool",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Tool_pickaxe_r6.png"
+  },
+  {
+    "name": "Radiant Sword & Shield",
+    "rarity": "Mythic",
+    "purchasePrice": 0,
+    "supply": 833,
+    "type": "Weapon",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Weapon_sword_shield_r6.png"
+  },
+  {
+    "name": "Radiant Tools Artifact",
+    "rarity": "Mythic",
+    "purchasePrice": 4500,
+    "supply": 5000,
+    "type": "Artifact",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/WS_artifact_tools_r6.png"
+  },
+  {
+    "name": "Radiant Weapons Artifact",
+    "rarity": "Mythic",
+    "purchasePrice": 2750,
+    "supply": 5000,
+    "type": "Artifact",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/WS_artifact_weapons_r6.png"
+  },
+  {
+    "name": "Refined Armor",
+    "rarity": "Uncommon",
+    "purchasePrice": 13.8,
+    "supply": 40000,
+    "type": "Armor",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Armor_r2.png"
+  },
+  {
+    "name": "Refined Armors Artifact",
+    "rarity": "Uncommon",
+    "purchasePrice": 60,
+    "supply": 40000,
+    "type": "Artifact",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Artifact_Armor_r2.png"
+  },
+  {
+    "name": "Refined Axe",
+    "rarity": "Uncommon",
+    "purchasePrice": 8.3,
+    "supply": 40000,
+    "type": "Tool",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Tool_axe_r2.png"
+  },
+  {
+    "name": "Refined Claws",
+    "rarity": "Uncommon",
+    "purchasePrice": 19.09,
+    "supply": 6667,
+    "type": "Weapon",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Weapon_claws_r2.png"
+  },
+  {
+    "name": "Refined Club",
+    "rarity": "Uncommon",
+    "purchasePrice": 9.45,
+    "supply": 6667,
+    "type": "Weapon",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Weapon_club_r2.png"
+  },
+  {
+    "name": "Refined Dual Axes",
+    "rarity": "Uncommon",
+    "purchasePrice": 12.8,
+    "supply": 6667,
+    "type": "Weapon",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Weapon_dualaxes_r2.png"
+  },
+  {
+    "name": "Refined Greathammer",
+    "rarity": "Uncommon",
+    "purchasePrice": 14.9,
+    "supply": 6667,
+    "type": "Weapon",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Weapon_greathammer_r2.png"
+  },
+  {
+    "name": "Refined Greatsword",
+    "rarity": "Uncommon",
+    "purchasePrice": 12.95,
+    "supply": 6667,
+    "type": "Weapon",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Weapon_greatsword_r2.png"
+  },
+  {
+    "name": "Refined Pickaxe",
+    "rarity": "Uncommon",
+    "purchasePrice": 8.17,
+    "supply": 40000,
+    "type": "Tool",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Tool_pickaxe_r2.png"
+  },
+  {
+    "name": "Refined Sword & Shield",
+    "rarity": "Uncommon",
+    "purchasePrice": 17.78,
+    "supply": 6667,
+    "type": "Weapon",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Weapon_sword_shield_r2.png"
+  },
+  {
+    "name": "Refined Tools Artifact",
+    "rarity": "Uncommon",
+    "purchasePrice": 53,
+    "supply": 40000,
+    "type": "Artifact",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Artifact_Tools_r2.png"
+  },
+  {
+    "name": "Refined Weapons Artifact",
+    "rarity": "Uncommon",
+    "purchasePrice": 69,
+    "supply": 40000,
+    "type": "Artifact",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Artifact_Weapons_r2.png"
+  },
+  {
+    "name": "Robust Armor",
+    "rarity": "Common",
+    "purchasePrice": 1.69,
+    "supply": 100000,
+    "type": "Armor",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Armor_r1.png"
+  },
+  {
+    "name": "Robust Armors Artifact",
+    "rarity": "Common",
+    "purchasePrice": 18.5,
+    "supply": 100000,
+    "type": "Artifact",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Artifact_Armor_r1.png"
+  },
+  {
+    "name": "Robust Axe",
+    "rarity": "Common",
+    "purchasePrice": 1,
+    "supply": 100000,
+    "type": "Tool",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Tool_axe_r1.png"
+  },
+  {
+    "name": "Robust Claws",
+    "rarity": "Common",
+    "purchasePrice": 3.3,
+    "supply": 16667,
+    "type": "Weapon",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Weapon_claws_r1.png"
+  },
+  {
+    "name": "Robust Club",
+    "rarity": "Common",
+    "purchasePrice": 1,
+    "supply": 16667,
+    "type": "Weapon",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Weapon_club_r1.png"
+  },
+  {
+    "name": "Robust Dual Axes",
+    "rarity": "Common",
+    "purchasePrice": 1.3,
+    "supply": 16667,
+    "type": "Weapon",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Weapon_dualaxes_r1.png"
+  },
+  {
+    "name": "Robust Greathammer",
+    "rarity": "Common",
+    "purchasePrice": 1.3,
+    "supply": 16667,
+    "type": "Weapon",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Weapon_greathammer_r1.png"
+  },
+  {
+    "name": "Robust Greatsword",
+    "rarity": "Common",
+    "purchasePrice": 1.39,
+    "supply": 16667,
+    "type": "Weapon",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Weapon_greatsword_r1.png"
+  },
+  {
+    "name": "Robust Pickaxe",
+    "rarity": "Common",
+    "purchasePrice": 1,
+    "supply": 100000,
+    "type": "Tool",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Tool_pickaxe_r1.png"
+  },
+  {
+    "name": "Robust Sword & Shield",
+    "rarity": "Common",
+    "purchasePrice": 1.59,
+    "supply": 16667,
+    "type": "Weapon",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Weapon_sword_shield_r1.png"
+  },
+  {
+    "name": "Robust Tools Artifact",
+    "rarity": "Common",
+    "purchasePrice": 15,
+    "supply": 100000,
+    "type": "Artifact",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Artifact_Tools_r1.png"
+  },
+  {
+    "name": "Robust Weapons Artifact",
+    "rarity": "Common",
+    "purchasePrice": 29.6,
+    "supply": 100000,
+    "type": "Artifact",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Artifact_Weapons_r1.png"
+  },
+  {
+    "name": "Runic Axe",
+    "rarity": "Legendary",
+    "purchasePrice": 779.9,
+    "supply": 300,
+    "type": "Tool",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/WS_tool_Axe_runic_r5.png"
+  },
+  {
+    "name": "Runic Axe",
+    "rarity": "Epic",
+    "purchasePrice": 215,
+    "supply": 600,
+    "type": "Tool",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/WS_tool_Axe_runic_r4.png"
+  },
+  {
+    "name": "Runic Axe",
+    "rarity": "Rare",
+    "purchasePrice": 60,
+    "supply": 1200,
+    "type": "Tool",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/WS_tool_Axe_runic_r3.png"
+  },
+  {
+    "name": "Small Island of Bliss",
+    "rarity": "Legendary",
+    "purchasePrice": 260,
+    "supply": 33000,
+    "type": "Island",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/WS_add_island_small_03_r5.png"
+  },
+  {
+    "name": "Small Island of Euphoria",
+    "rarity": "Exalted",
+    "purchasePrice": 698,
+    "supply": 12000,
+    "type": "Island",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/WS_add_island_small_05_r7.png"
+  },
+  {
+    "name": "Small Island of Harmony",
+    "rarity": "Epic",
+    "purchasePrice": 199,
+    "supply": 53000,
+    "type": "Island",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/WS_add_island_small_02_r4.png"
+  },
+  {
+    "name": "Small Island of Serenity",
+    "rarity": "Rare",
+    "purchasePrice": 150,
+    "supply": 100000,
+    "type": "Island",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/WS_add_island_small_01_r3.png"
+  },
+  {
+    "name": "Small Island of Tranquility",
+    "rarity": "Mythic",
+    "purchasePrice": 315,
+    "supply": 17000,
+    "type": "Island",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/WS_add_island_small_04_r6.png"
+  },
+  {
+    "name": "Spiked Club",
+    "rarity": "Legendary",
+    "purchasePrice": 1600,
+    "supply": 50,
+    "type": "Weapon",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/WS_weapon_club_spiked_r5.png"
+  },
+  {
+    "name": "Spiked Club",
+    "rarity": "Rare",
+    "purchasePrice": 60,
+    "supply": 200,
+    "type": "Weapon",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/WS_weapon_club_spiked_r3.png"
+  },
+  {
+    "name": "Spiked Club",
+    "rarity": "Epic",
+    "purchasePrice": 400,
+    "supply": 100,
+    "type": "Weapon",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/WS_weapon_club_spiked_r4.png"
+  },
+  {
+    "name": "Storm Katana",
+    "rarity": "Legendary",
+    "purchasePrice": 4000,
+    "supply": 50,
+    "type": "Weapon",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/WS_weapon_greatsword_storm_r5.png"
+  },
+  {
+    "name": "Storm Katana",
+    "rarity": "Epic",
+    "purchasePrice": 488,
+    "supply": 100,
+    "type": "Weapon",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/WS_weapon_greatsword_storm_r4.png"
+  },
+  {
+    "name": "Storm Katana",
+    "rarity": "Rare",
+    "purchasePrice": 119.99,
+    "supply": 200,
+    "type": "Weapon",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/WS_weapon_greatsword_storm_r3.png"
+  },
+  {
+    "name": "Tuned Armor",
+    "rarity": "Rare",
+    "purchasePrice": 67.9,
+    "supply": 30000,
+    "type": "Armor",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Armor_r3.png"
+  },
+  {
+    "name": "Tuned Armors Artifact",
+    "rarity": "Rare",
+    "purchasePrice": 168,
+    "supply": 30000,
+    "type": "Artifact",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Artifact_Armor_r3.png"
+  },
+  {
+    "name": "Tuned Axe",
+    "rarity": "Rare",
+    "purchasePrice": 37.85,
+    "supply": 30000,
+    "type": "Tool",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Tool_axe_r3.png"
+  },
+  {
+    "name": "Tuned Claws",
+    "rarity": "Rare",
+    "purchasePrice": 91.49,
+    "supply": 5000,
+    "type": "Weapon",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Weapon_claws_r3.png"
+  },
+  {
+    "name": "Tuned Club",
+    "rarity": "Rare",
+    "purchasePrice": 59.98,
+    "supply": 5000,
+    "type": "Weapon",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Weapon_club_r3.png"
+  },
+  {
+    "name": "Tuned Dual Axes",
+    "rarity": "Rare",
+    "purchasePrice": 67.99,
+    "supply": 5000,
+    "type": "Weapon",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Weapon_dualaxes_r3.png"
+  },
+  {
+    "name": "Tuned Greathammer",
+    "rarity": "Rare",
+    "purchasePrice": 78.34,
+    "supply": 5000,
+    "type": "Weapon",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Weapon_greathammer_r3.png"
+  },
+  {
+    "name": "Tuned Greatsword",
+    "rarity": "Rare",
+    "purchasePrice": 75.48,
+    "supply": 5000,
+    "type": "Weapon",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Weapon_greatsword_r3.png"
+  },
+  {
+    "name": "Tuned Pickaxe",
+    "rarity": "Rare",
+    "purchasePrice": 39,
+    "supply": 30000,
+    "type": "Tool",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Tool_pickaxe_r3.png"
+  },
+  {
+    "name": "Tuned Sword & Shield",
+    "rarity": "Rare",
+    "purchasePrice": 90,
+    "supply": 5000,
+    "type": "Weapon",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Weapon_sword_shield_r3.png"
+  },
+  {
+    "name": "Tuned Tools Artifact",
+    "rarity": "Rare",
+    "purchasePrice": 162.9,
+    "supply": 30000,
+    "type": "Artifact",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Artifact_Tools_r3.png"
+  },
+  {
+    "name": "Tuned Weapons Artifact",
+    "rarity": "Rare",
+    "purchasePrice": 174,
+    "supply": 30000,
+    "type": "Artifact",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Artifact_Weapons_r3.png"
+  },
+  {
+    "name": "Valor Dual Axes",
+    "rarity": "Epic",
+    "purchasePrice": 448,
+    "supply": 100,
+    "type": "Weapon",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/WS_weapon_dualaxes_valor_r4.png"
+  },
+  {
+    "name": "Island of Delight",
+    "rarity": "Legendary",
+    "purchasePrice": 898,
+    "supply": 2000,
+    "type": "Island",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/Founder_Island_w_access_9.png"
+  },
+  {
+    "name": "Valor Dual Axes",
+    "rarity": "Legendary",
+    "purchasePrice": 1500,
+    "supply": 50,
+    "type": "Weapon",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/WS_weapon_dualaxes_valor_r5.png"
+  },
+  {
+    "name": "Valor Dual Axes",
+    "rarity": "Rare",
+    "purchasePrice": 80,
+    "supply": 200,
+    "type": "Weapon",
+    "img": "https://openloot-metadata.bigtime.gg/WS0/WS_weapon_dualaxes_valor_r3.png"
+  }
+]

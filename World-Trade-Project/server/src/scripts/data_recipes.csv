@@ -1,0 +1,50 @@
+Name,,Type,Rarity,Time (h),Action,Ressource 1,,QTT 1,Ressource 2 ,,QTT 2,Ressource 3 ,,QTT 3,,Ressource 4,QTT 4,,Ressource 5,QTT 5,Prix craft,Profit,Profit /h
+Robust Armor,,Armor Craftable,Common,48,Craft,Gems,,86,-,,,-,,,,-,,,-,,"$0,00","$2,15","$0,04"
+Enchanted Armor,,Armor Craftable,Epic,120,Merge,$SHARDS,,,Polished Jaderift,,,Tuned Armor,,3,,-,,,-,,"$263,70","$116,30","$0,97"
+Tuned Armor,,Armor Craftable,Rare,96,Merge,$SHARDS,,242,Refined Jaderift,,78,Refined Armor,,3,,-,,,-,,"$88,63","-$0,73","-$0,01"
+Refind Armor,,Armor Craftable,Uncommon,72,Merge,$SHARDS,,80,Refined Jaderift,,39,Robust Armor,,3,,-,,,-,,"$17,41","$2,09","$0,03"
+Refind Jaderift,,Premium Currency,-,7,,$SHARDS,,30,Jaderift,,75,-,,,,-,,,-,,"$3,20","-$3,11900","-$0,44557"
+Refind Tiderift,,Premium Currency,-,7,,$SHARDS,,30,Tiderift,,75,-,,,,-,,,-,,"$3,00","-$2,92520","-$0,41789"
+Refind Solrift,,Premium Currency,-,7,,$SHARDS,,30,Solrift,,75,-,,,,-,,,-,,"$3,00","-$2,94000","-$0,42000"
+Polished Jaderift,,Premium Currency,-,24,,$SHARDS,,90,Refined Jaderift,,75,-,,,,-,,,-,,"$14,70","-$14,70000",
+Polished Solrift,,Premium Currency,-,24,,$SHARDS,,90,Refined Solrift,,75,-,,,,-,,,-,,"$13,50","-$13,01900",
+Polished Tiderift,,Premium Currency,-,24,,$SHARDS,,90,Refined Tiderift,,75,-,,,,-,,,-,,"$14,61","-$14,13440",
+Jaderift,,Premium Currency,-,,,-,,,-,,,-,,,,-,,,-,,"$0,00","$0,00260",
+Tiderift,,Premium Currency,-,,,-,,,-,,,-,,,,-,,,-,,"$0,00","$0,00000",
+Solrift,,Premium Currency,-,,,-,,,-,,,-,,,,-,,,-,,"$0,00","$0,00000",
+Perfected Jaderift,,Premium Currency,-,,,-,,,Polished Jaderift,,,-,,,,-,,,-,,"$0,00","$0,00000",
+Perfected Tiderift,,Premium Currency,-,,,-,,,Polished Tiderift,,,-,,,,-,,,-,,"$0,00","$0,00000",
+Perfected Solrift,,Premium Currency,-,,,-,,,Polished Solrift,,,-,,,,-,,,-,,"$0,00","$0,00000",
+Gems,,Premium Currency,-,,,-,,,-,,,-,,,,-,,,-,,"$0,00","$0,00000",
+Robust Pickaxe,,Tool Craftable,Common,24,Craft,Gems,,43,-,,,-,,,,-,,,-,,"$0,00","$1,15","$0,05"
+Robust Axe,,Tool Craftable,Common,24,Craft,Gems,,43,-,,,-,,,,-,,,-,,"$0,00","$1,15","$0,05"
+Enchanted Axe,,Tool Craftable,Epic,60,Merge,$SHARDS,,402,Polished Solrift,,17,Tuned Axe,,3,,-,,,-,,"$198,38","$16,52","$0,28"
+Enchanted Pickaxe,,Tool Craftable,Epic,60,Merge,$SHARDS,,402,Polished Solrift,,17,Tuned Pickaxe,,3,,-,,,-,,"$222,38","$27,62","$0,46"
+Tuned Pickaxe,,Tool Craftable,Rare,48,Merge,$SHARDS,,121,Refined Solrift,,48,Refined Pickaxe,,3,,-,,,-,,"$49,33","$8,67","$0,18"
+Tuned Axe,,Tool Craftable,Rare,48,Merge,$SHARDS,,121,Refined Solrift,,48,Refined Axe,,3,,-,,,-,,"$49,39","$0,61","$0,01"
+Refind Axe,,Tool Craftable,Uncommon,36,Merge,$SHARDS,,49,Refined Solrift,,24,Robust Axe,,3,,-,,,-,,"$9,79","$1,68","$0,05"
+Refind Pickaxe,,Tool Craftable,Uncommon,36,Merge,$SHARDS,,49,Refined Solrift,,24,Robust Pickaxe,,3,,-,,,-,,"$9,79","$1,66","$0,05"
+Robust Claws,,Weapon Craftable,Common,48,Craft,Gems,,86,-,,,-,,,,-,,,-,,"$0,00","$3,49","$0,07"
+Robust Sword & Shield,,Weapon Craftable,Common,48,Craft,Gems,,86,-,,,-,,,,-,,,-,,"$0,00","$2,15","$0,04"
+Robust Greathammer,,Weapon Craftable,Common,48,Craft,Gems,,86,-,,,-,,,,-,,,-,,"$0,00","$1,70","$0,04"
+Robust Greatsword,,Weapon Craftable,Common,48,Craft,Gems,,86,-,,,-,,,,-,,,-,,"$0,00","$1,91","$0,04"
+Robust Dual Axes,,Weapon Craftable,Common,48,Craft,Gems,,86,-,,,-,,,,-,,,-,,"$0,00","$1,00","$0,02"
+Robust Club,,Weapon Craftable,Common,48,Craft,Gems,,86,-,,,-,,,,-,,,-,,"$0,00","$1,00","$0,02"
+Enchanted Claws,,Weapon Craftable,Epic,120,Merge,$SHARDS,,,Polished Tiderift,,,Tuned Claws,,3,,-,,,-,,"$339,00","$219,00","$1,83"
+Enchanted Club,,Weapon Craftable,Epic,120,Merge,$SHARDS,,,Polished Tiderift,,,Tuned Club,,3,,-,,,-,,"$181,50","$178,50","$1,49"
+Enchanted Sword & Shield,,Weapon Craftable,Epic,120,Merge,$SHARDS,,,Polished Tiderift,,,Tuned Sword & Shield,,3,,-,,,-,,"$285,00","$105,00","$0,88"
+Enchanted Greatsword,,Weapon Craftable,Epic,120,Merge,$SHARDS,,,Polished Tiderift,,,Tuned Greatsword,,3,,-,,,-,,"$282,00","$133,00","$1,11"
+Enchanted Dual Axes,,Weapon Craftable,Epic,120,Merge,$SHARDS,,,Polished Tiderift,,,Tuned Club,,3,,-,,,-,,"$181,50","$198,50","$1,65"
+Enchanted Greathammer,,Weapon Craftable,Epic,120,Merge,$SHARDS,,,Polished Tiderift,,,Tuned Greathammer,,3,,-,,,-,,"$251,97","$116,03","$0,97"
+Tuned Claws,,Weapon Craftable,Rare,96,Merge,$SHARDS,,242,Refined Tiderift,,78,Refined Claws,,3,,-,,,-,,"$104,70","$8,30","$0,09"
+Tuned Dual Axes,,Weapon Craftable,Rare,96,Merge,$SHARDS,,242,Refined Tiderift,,78,Refined Dual Axes,,3,,-,,,-,,"$60,03","$8,97","$0,09"
+Tuned Club,,Weapon Craftable,Rare,96,Merge,$SHARDS,,242,Refined Tiderift,,78,Refined Club,,3,,-,,,-,,"$66,03","-$5,53","-$0,06"
+Tuned Greathammer,,Weapon Craftable,Rare,96,Merge,$SHARDS,,242,Refined Tiderift,,78,Refined Greathammer,,3,,-,,,-,,"$76,53","$7,46","$0,08"
+Tuned Greatsword,,Weapon Craftable,Rare,96,Merge,$SHARDS,,242,Refined Tiderift,,78,Refined Greatsword,,3,,-,,,-,,"$88,53","$5,47","$0,06"
+Tuned Sword & Shield,,Weapon Craftable,Rare,96,Merge,$SHARDS,,242,Refined Tiderift,,78,Refined Sword & Shield,,3,,-,,,-,,"$79,53","$15,47","$0,16"
+Refined Sword & Shield,,Weapon Craftable,Uncommon,72,Merge,$SHARDS,,80,Refined Tiderift,,39,Robust Sword & Shield,,3,,-,,,-,,"$17,37","-$0,87","-$0,01"
+Refined Greatsword,,Weapon Craftable,Uncommon,72,Merge,$SHARDS,,80,Refined Tiderift,,39,Robust Greatsword,,3,,-,,,-,,"$16,65","$2,85","$0,04"
+Refined Dual Axes,,Weapon Craftable,Uncommon,72,Merge,$SHARDS,,80,Refined Tiderift,,39,Robust Club,,3,,-,,,-,,"$13,92","-$3,92","-$0,05"
+Refined Greathammer,,Weapon Craftable,Uncommon,72,Merge,$SHARDS,,80,Refined Tiderift,,39,Robust Greathammer,,3,,-,,,-,,"$16,02","-$0,52","-$0,01"
+Refined Claws,,Weapon Craftable,Uncommon,72,Merge,$SHARDS,,80,Refined Tiderift,,39,Robust Claws,,3,,-,,,-,,"$21,39","$3,50","$0,05"
+Refined Club,,Weapon Craftable,Uncommon,72,Merge,$SHARDS,,80,Refined Tiderift,,39,Robust Club,,3,,-,,,-,,"$13,92","-$1,92","-$0,03"

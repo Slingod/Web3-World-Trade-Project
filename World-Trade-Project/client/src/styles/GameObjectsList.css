@@ -1,0 +1,100 @@
+.game-objects-list {
+  padding: 20px;
+}
+
+.game-objects-list h1 {
+  color: #ffffff; 
+}
+
+.game-objects-list form {
+  margin-bottom: 20px;
+}
+
+.game-objects-list input {
+  margin-right: 10px;
+  padding: 5px;
+  color: #384e32;
+}
+
+.game-objects-list button {
+  padding: 5px 10px;
+  color: #ffffff; 
+  background-color: #8d8d8db6; 
+  border: none;
+  border-radius: 4px;
+}
+
+.game-objects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.game-object-card {
+  background-color: #2d2d2d;
+  color: #ffffff; 
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border: 2px solid transparent; /* Default border */
+  width: 200px;
+}
+
+.game-object-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+.game-object-name {
+  font-size: 1.1em; /* Adjust the size as needed */
+  font-weight: bold;
+  color: #fdfdfd; 
+}
+
+.game-object-card p {
+  color: #ffffff; /* Type , Rarity , Price */
+}
+
+/* Rarity classes */
+.rarity-common {
+  border-color: #a4b0be;
+}
+
+.rarity-uncommon {
+  border-color: #1cbf6a;
+}
+
+.rarity-rare {
+  border-color: #159cfd;
+}
+
+.rarity-epic {
+  border-color: #a369ff;
+}
+
+.rarity-legendary {
+  border-color: #e67e22;
+}
+
+.rarity-mythic {
+  border-color: #ffd32a;
+}
+
+.rarity-exalted {
+  border-color: #ef5777;
+}
+
+.rarity-exotic {
+  border-color: #be2edd;
+}
+
+.rarity-transcendent {
+  border-color: #ff3838;
+}
+
+.rarity-unique {
+  border-color: #f368e0;
+}
