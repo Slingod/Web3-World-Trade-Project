@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import '../styles/tailwind.css'; // Chemin corrigé pour importer les styles globaux
+import ShiftingCountdown from "../components/ShiftingCountdown"; // Import the ShiftingCountdown component
 
 const Home = () => {
   useEffect(() => {
@@ -23,10 +23,15 @@ const Home = () => {
     <div className="home-container">
       <h1 className="main-title">World Trade Project</h1>
       <h2>Work in Progress</h2>
+
+      {/* Add coldown */}
+      <ShiftingCountdown />
+
       <div className="progress-container">
         <div className="progress-bar" id="progressBar"></div>
       </div>
       <div className="percentage">0%</div>
+      
       <div className="center-link">
         <a href="/current-version" className="link">Current Version</a>
       </div>
