@@ -1,3 +1,56 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* 🌞 Day Mod (par défaut) */
+:root {
+    --bg-color: white;       /* Fond global */
+    --text-color: black;      /* Texte global */
+    --card-bg: #f8f9fa;      /* Fond des cartes */
+    --card-text: black;       /* Texte des cartes */
+  }
+  
+  /* 🌙 Dark Mod */
+.dark {
+    --bg-color: #1a202c;      /* Fond global (foncé) */
+    --text-color: white;      /* Texte global */
+    --card-bg: #1a202c;       /* Fond des cartes */
+    --card-text: white;       /* Texte des cartes */
+  }  
+  
+  /* 🔘 Button Toggle */
+  .theme-toggle {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.473);
+    padding: 5px;
+    border-radius: 20px;
+    position: relative;
+  }
+  
+  .toggle-btn {
+    background: transparent;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  /* 🌗 Animation Day/Night */
+  .toggle-slider {
+    position: absolute;
+    top: 3px;
+    width: 50%;
+    height: 24px;
+    border-radius: 12px;
+    background: #ffcc0000;
+    transition: transform 0.3s;
+  }
+  
+  .right {
+    transform: translateX(100%);
+  }
+  
+  .left {
+    transform: translateX(0);
+  }
+  

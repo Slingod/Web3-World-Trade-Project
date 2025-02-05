@@ -1,58 +1,100 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { motion } from "framer-motion";
+import { FiMoon, FiSun } from "react-icons/fi";
 
-// Create an axios instance to make requests to the backend
+// Création d'une instance Axios
 const axiosInstance = axios.create({
   headers: {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
   }
 });
 
+// 🔘 Composant Toggle Jour/Nuit
+const ThemeToggle = ({ theme, setTheme }) => {
+  return (
+    <div className="theme-toggle">
+      <button
+        className={`toggle-btn ${theme === "light" ? "active" : ""}`}
+        onClick={() => setTheme("light")}
+      >
+        <FiSun />
+      </button>
+      <button
+        className={`toggle-btn ${theme === "dark" ? "active" : ""}`}
+        onClick={() => setTheme("dark")}
+      >
+        <FiMoon />
+      </button>
+      <motion.div
+        layout
+        transition={{ type: "spring", damping: 15, stiffness: 250 }}
+        className={`toggle-slider ${theme === "dark" ? "right" : "left"}`}
+      />
+    </div>
+  );
+};
+
 const GameObjectsList = () => {
   const [gameObjects, setGameObjects] = useState([]);
-  const [visibleObjects, setVisibleObjects] = useState(20); // nomber of objects to show
+  const [visibleObjects, setVisibleObjects] = useState(20);
 
+  // 🔄 Fetch des objets de l'API au chargement
   useEffect(() => {
     const fetchGameObjects = async () => {
       try {
         const response = await axiosInstance.get('http://localhost:5000/api/gameObjects');
-        console.log('Number of game objects fetched:', response.data.length); // verify the number of game objects fetched
+        console.log('Nombre d\'objets récupérés :', response.data.length);
         setGameObjects(response.data);
       } catch (error) {
-        console.error('Error fetching game objects:', error);
+        console.error('Erreur lors du fetch des objets :', error);
       }
     };
 
     fetchGameObjects();
   }, []);
 
-  // define the colors for the rarity borders
+  // 🎨 Définition des couleurs des bordures selon la rareté
   const rarityBorders = {
-    'Common': '##a4b0be;',       // Gray
-    'Uncommon': '#1cbf6a',      // Green
-    'Rare': '#159cfd',          // Blue
-    'Epic': '#a369ff',          // Purple
-    'Legendary': '#e67e22',     // Orange
-    'Mythic': '#ffd32a',        // Yellow
-    'Exalted': '#ef5777',       // Pink ~ Red
-    'Exotic': '#be2edd',        // Indigo
-    'Transcendent': '#ff3838',  // Red
-    'Unique': '#f368e0'         // Pink
+    'Common': '#a4b0be',       
+    'Uncommon': '#1cbf6a',    
+    'Rare': '#159cfd',        
+    'Epic': '#a369ff',        
+    'Legendary': '#e67e22',   
+    'Mythic': '#ffd32a',      
+    'Exalted': '#ef5777',     
+    'Exotic': '#be2edd',      
+    'Transcendent': '#ff3838',
+    'Unique': '#f368e0'       
   };
 
+  // 🔽 Bouton "Show More"
   const handleShowMore = () => {
-    setVisibleObjects(prevVisibleObjects => prevVisibleObjects + 20); // Add 20 more objects
+    setVisibleObjects(prevVisibleObjects => prevVisibleObjects + 20);
   };
+
+  // 🌙☀️ Gestion du mode Jour/Nuit (APPLIQUÉ À TOUTE LA PAGE)
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
+
+  useEffect(() => {
+    document.body.className = theme; // ✅ Switch color from <body> 
+    localStorage.setItem("theme", theme); // ✅ Save on localStorage
+  }, [theme]);
 
   return (
-    <div style={styles.container}>
-      <h1 style={styles.title}>Game Objects</h1>
+    <div>
+      {/* 🔘 Bouton Day/Night on Top Left */}
+      <div style={styles.themeToggleContainer}>
+        <ThemeToggle theme={theme} setTheme={setTheme} />
+      </div>
+
+      <h1 style={styles.title}>167 Items</h1>
       
       <div style={styles.grid}>
         {gameObjects.slice(0, visibleObjects).map((gameObject) => (
           <div key={gameObject.id} style={{
             ...styles.card,
-            border: `3px solid ${rarityBorders[gameObject.rarity] || '#FFFFFF'}` // Border color based on rarity
+            border: `3px solid ${rarityBorders[gameObject.rarity] || '#FFFFFF'}` 
           }}>
             {gameObject.img && (
               gameObject.img.endsWith('.webm') ? (
@@ -70,7 +112,7 @@ const GameObjectsList = () => {
         ))}
       </div>
 
-      {/* Bouton Show More on center */}
+      {/* 📌 Bouton "Show More" */}
       {visibleObjects < gameObjects.length && (
         <div style={styles.showMoreContainer}>
           <button onClick={handleShowMore} style={styles.showMoreButton}>
@@ -82,14 +124,12 @@ const GameObjectsList = () => {
   );
 };
 
-// Styles in line
+// 🎨 Styles Online
 const styles = {
-  container: {
-    textAlign: 'center',
-    padding: '20px',
-    backgroundColor: '#2c2f33', // Dark background
-    color: '#ffffff',
-    borderRadius: '10px',
+  themeToggleContainer: {
+    position: "absolute",
+    top: "10px",
+    right: "20px",
   },
   title: {
     fontSize: '24px',
@@ -101,8 +141,11 @@ const styles = {
     gap: '20px',
     justifyContent: 'center',
   },
+
+  // 🎨 Card Styles (Objects)
   card: {
-    backgroundColor: '#23272a',
+    backgroundColor: 'var(--card-bg)',
+    color: 'var(--card-text)',
     padding: '15px',
     borderRadius: '8px',
     textAlign: 'center',
@@ -124,13 +167,15 @@ const styles = {
     justifyContent: 'center',
     marginTop: '20px',
   },
+
+  // 🎨 Show More Button Styles
   showMoreButton: {
-    backgroundColor: '#ffcc00',
+    backgroundColor: '#FFFFFF',
     border: 'none',
     padding: '10px 20px',
     fontSize: '16px',
     fontWeight: 'bold',
-    color: 'black',
+    color: '#1a202c',
     cursor: 'pointer',
     borderRadius: '5px',
     transition: 'background 0.3s ease',

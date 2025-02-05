@@ -1,3 +1,4 @@
+/* Home page */
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -60,7 +61,7 @@ code {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-color: inherit; /* Utilisez inherit pour hériter de la couleur de fond globale */
+  background-color: inherit; /* Home Background */
   color: white;
   text-align: center;
 }
@@ -78,7 +79,7 @@ code {
 }
 
 h1 {
-  font-size: 3rem; /* Augmentez la taille de la police pour "Work in Progress" */
+  font-size: 3rem; /* Title size "Work in Progress" */
   margin: 0;
 }
 

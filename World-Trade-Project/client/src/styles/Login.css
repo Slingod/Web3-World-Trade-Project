@@ -9,7 +9,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  background-color: #2d2d2d;
+  background-color: #535151e5;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -31,7 +31,7 @@
 .login-field input {
   padding: 5px;
   font-size: 1rem;
-  border: 1px solid #ffffff;
+  border: 1px solid #e5e7eb;
   border-radius: 4px;
   color: #384e32;
 }
@@ -40,7 +40,7 @@
   padding: 10px 20px;
   font-size: 1rem;
   color: white;
-  background-color: #8d8d8db6;
+  background-color: #e5e7eb;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -49,11 +49,30 @@
 .login-button:hover {
   background-color: #0b5f51fd;
 }
-
-.value-display {
-  padding: 8px;
-  background-color: #f0f0f0;
-  border: 1px solid #ccc;
+/* ✅ Button Style "Encrypt Login" */
+.encrypt-login-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-family: monospace;
+  color: white;
+  background-color: #8d8d8db6; /* Background Login Button */
+  border: none;
   border-radius: 4px;
-  color: rgb(88, 13, 13); /* Mettre le texte en noir */
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* ✅ Effet de survol */
+.encrypt-login-button:hover {
+  background-color: #f368e0; /* Vert foncé */
+  color: #f7f7f7; /* Indigo */
+}
+
+/* ✅ Icône du cadenas */
+.encrypt-login-button svg {
+  font-size: 1.2rem;
 }

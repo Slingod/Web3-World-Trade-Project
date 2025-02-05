@@ -1,0 +1,44 @@
+/* ✅ Style spécifique au bouton "Encrypt" pour éviter le conflit avec Login.css */
+.encrypt-button {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #888;
+    background-color: #444;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-family: monospace;
+    text-transform: uppercase;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: color 0.3s ease, background 0.3s ease;
+  }
+  
+  /* ✅ Effet au survol */
+  .encrypt-button:hover {
+    color: white; 
+  }
+  
+  /* ✅ Contenu du bouton */
+  .encrypt-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    z-index: 10;
+  }
+  
+  /* ✅ Effet d'animation */
+  .encrypt-effect {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    scale: 1.2;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0) 40%, rgb(255, 255, 255) 50%, rgba(255, 255, 255, 0) 60%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .encrypt-button:hover .encrypt-effect {
+    opacity: 1;
+  }  

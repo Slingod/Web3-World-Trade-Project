@@ -21,10 +21,10 @@ export const Sidebar = () => {
       layout
       style={{
         width: open ? "225px" : "60px",
-        backgroundColor: "#23272a",
-        color: "#ffffff",
+        backgroundColor: "#1a202c",
+        color: "#1a202c",
         height: "100vh", //  Max height
-        borderRight: "2px solid #ffffff22",
+        borderRight: "2px #1a202c",
         padding: "10px",
         display: "flex",
         flexDirection: "column",
@@ -34,10 +34,10 @@ export const Sidebar = () => {
       <TitleSection open={open} />
 
       <div style={{ width: "100%" }}>
-        <Option Icon={FiHome} title="Dashboard" selected={selected} setSelected={setSelected} open={open} />
-        <Option Icon={FiDollarSign} title="Sales" selected={selected} setSelected={setSelected} open={open} notifs={3} />
-        <Option Icon={FiMonitor} title="View Site" selected={selected} setSelected={setSelected} open={open} />
-        <Option Icon={FiShoppingCart} title="Products" selected={selected} setSelected={setSelected} open={open} />
+        <Option Icon={FiHome} title="Home" selected={selected} setSelected={setSelected} open={open} />
+        <Option Icon={FiDollarSign} title="Sales" selected={selected} setSelected={setSelected} open={open} />
+        <Option Icon={FiMonitor} title="Games" selected={selected} setSelected={setSelected} open={open} />
+        <Option Icon={FiShoppingCart} title="Market" selected={selected} setSelected={setSelected} open={open} />
         <Option Icon={FiTag} title="Tags" selected={selected} setSelected={setSelected} open={open} />
         <Option Icon={FiBarChart} title="Analytics" selected={selected} setSelected={setSelected} open={open} />
         <Option Icon={FiUsers} title="Members" selected={selected} setSelected={setSelected} open={open} />
@@ -59,9 +59,9 @@ const Option = ({ Icon, title, selected, setSelected, open, notifs }) => {
         width: "100%",
         height: "40px",
         padding: "10px",
-        backgroundColor: selected === title ? "#7289da" : "transparent",
-        borderRadius: "5px",
-        color: selected === title ? "white" : "#b9bbbe",
+        backgroundColor: selected === title ? "#EF5777" : "transparent",
+        borderRadius: "50px",
+        color: selected === title ? "white" : "white",
         cursor: "pointer",
         transition: "background 0.3s",
       }}
@@ -82,7 +82,7 @@ const Option = ({ Icon, title, selected, setSelected, open, notifs }) => {
           style={{
             position: "absolute",
             right: "15px",
-            backgroundColor: "#ff3860",
+            backgroundColor: "#1a202c",
             color: "white",
             borderRadius: "50%",
             width: "20px",
@@ -106,7 +106,7 @@ const TitleSection = ({ open }) => {
       {open && (
         <motion.div>
           <span style={{ display: "block", fontSize: "16px", fontWeight: "bold" }}>TomIsLoading</span>
-          <span style={{ fontSize: "12px", color: "#b9bbbe" }}>Pro Plan</span>
+          
         </motion.div>
       )}
     </div>
@@ -124,7 +124,7 @@ const ToggleClose = ({ open, setOpen }) => {
         background: "transparent",
         border: "none",
         cursor: "pointer",
-        color: "#b9bbbe",
+        color: "white",
       }}
     >
       <FiChevronsRight style={{ fontSize: "24px", transform: open ? "rotate(180deg)" : "rotate(0deg)", transition: "transform 0.3s" }} />
