@@ -137,7 +137,7 @@ const styles = {
   },
   grid: {
     display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
+    gridTemplateColumns: 'repeat(5, 1fr)', // ✅ Fixe à 5 cartes par ligne
     gap: '20px',
     justifyContent: 'center',
   },

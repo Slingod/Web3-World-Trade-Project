@@ -7,14 +7,20 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './components/Home';
 import CurrentVersion from './components/CurrentVersion';
 import RaritySidebar from "./components/RaritySidebar"; // ✅ Import de la Sidebar
+import Footer from "./components/Footer"; // ✅ Import du Footer
+import DiscordFooter from "./components/DiscordFooter"; // ✅ Import du Discord Footer
 
 const App = () => {
+  // ✅ States for authentication
+  // 🇬🇧 States to handle authentication and user data.
+  // 🇫🇷 États pour gérer l'authentification et les données utilisateur.
   const [token, setToken] = useState('');
   const [protectedData, setProtectedData] = useState('');
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
+  // ✅ Register Function
   const register = async () => {
     console.log('Register button clicked');
     try {
@@ -29,6 +35,7 @@ const App = () => {
     }
   };
 
+  // ✅ Login Function
   const login = async () => {
     try {
       const response = await axios.post('http://localhost:5000/api/auth/login', {
@@ -42,6 +49,7 @@ const App = () => {
     }
   };
 
+  // ✅ Get Protected Data Function
   const getProtectedData = async () => {
     console.log('Fetching protected data with token:', token);
     try {
@@ -60,21 +68,37 @@ const App = () => {
   return (
     <Router>
       <div className="app-container">
-        {/* ✅ Sidebar affichée sur toutes les pages sauf Home */}
+        {/* ✅ Page Routing */}
         <Routes>
-          <Route path="/" element={<Home />} /> {/* ❌ No Sidebar Here :D */}
+          {/* 🏠 Home Page (Without Sidebar and Footers) */}
+          <Route path="/" element={<Home />} />
+
+          {/* 📌 Other Pages (With Sidebar & Footers) */}
           <Route 
             path="/*" 
             element={
               <div className="content-container">
-                <RaritySidebar /> {/* ✅ Sidebar présente ici */}
-                <Routes>
-                  <Route path="/current-version" element={<CurrentVersion />} />
-                  <Route path="/game-objects" element={<GameObjectsList />} />
-                </Routes>
+                <RaritySidebar /> {/* ✅ Sidebar always visible */}
+                <div className="main-content">
+                  <Routes>
+                    <Route path="/current-version" element={<CurrentVersion />} />
+                    <Route path="/game-objects" element={<GameObjectsList />} />
+                  </Routes>
+                </div>
               </div>
             } 
           />
+        </Routes>
+
+        {/* ✅ Double Footer (Only on non-home pages) */}
+        <Routes>
+          <Route path="/" element={null} /> {/* ❌ No Footer on Home */}
+          <Route path="/*" element={
+            <div className="footer-container">
+              <DiscordFooter />  {/* 🔹 Footer du haut avec "Join Discord Partners" */}
+              <Footer /> {/* 🔹 Footer du bas avec icônes Discord */}
+            </div>
+          } />
         </Routes>
       </div>
     </Router>

@@ -76,3 +76,89 @@
   .content-container > * {
     flex: 0,1;}
   
+
+/* ✅ Structure principale pour garder le footer en bas */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* 🏆 Assure que toute la page est prise en compte */
+}
+
+/* ✅ Cette section prend tout l'espace disponible */
+.content-container {
+  display: flex;
+  flex: 1; /* 🏆 Permet à la sidebar + contenu de prendre tout l'espace disponible */
+}
+
+/* ✅ Permet au contenu de s'étendre en hauteur */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* ⬆️ Contenu commence en haut */
+}
+
+/* ✅ Le footer sera toujours en bas de la page */
+.footer-container {
+  margin-top: auto; /* 🏆 Pousse le footer tout en bas */
+  width: 100%;
+}
+
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content-container {
+  flex: 1;
+  overflow-y: auto; /* Permet le défilement du contenu principal */
+}
+
+.footer-container {
+  flex-shrink: 0; /* Empêche le footer de rétrécir */
+  width: 100%;
+}
+
+.discord-footer, .footer {
+  width: 100%;
+  text-align: center;
+}
+
+.discord-footer {
+  background-color: #4b2aad;
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.footer {
+  background-color: #222;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer .discord-icons img {
+  width: 80px;
+  height: auto;
+  margin: 0 10px;
+}
+
+
+.footer .discord-icons img {
+  width: 80px; /* Ajustez la taille selon vos besoins */
+  height: auto; /* Conserve les proportions de l'image */
+  margin: 0 10px; /* Espacement entre les icônes */
+  image-rendering: -webkit-optimize-contrast; /* Améliore le rendu sur certains navigateurs */
+  image-rendering: crisp-edges; /* Pour un rendu plus net */
+}

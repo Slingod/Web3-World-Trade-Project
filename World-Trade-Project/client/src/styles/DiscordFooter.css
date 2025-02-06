@@ -1,0 +1,11 @@
+/* ✅ Style du premier footer (Join Discord Partners) */
+.discord-footer {
+    background-color: #4b2aad; /* ✅ Violet */
+    color: white;
+    text-align: center;
+    padding: 10px; /* 🔹 Moins large */
+    width: 100%;
+    font-size: 16px; /* 🔹 Texte légèrement plus petit */
+    font-weight: bold;
+  }
+  

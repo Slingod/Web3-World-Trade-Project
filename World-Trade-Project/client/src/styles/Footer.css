@@ -1,0 +1,16 @@
+/* ✅ Style du footer contenant les icônes Discord */
+.footer {
+    background-color: #222;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  /* ✅ Icônes Discord en ligne */
+  .footer .discord-icons {
+    display: flex;
+    gap: 15px; /* 🔹 Espacement entre les icônes */
+  }
+  

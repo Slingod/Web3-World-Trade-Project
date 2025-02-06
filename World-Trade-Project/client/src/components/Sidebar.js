@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import {
     FiBarChart,
+    FiBookOpen,
     FiChevronsRight,
     FiDollarSign,
     FiHome,
@@ -33,12 +34,15 @@ export const Sidebar = () => {
       <TitleSection open={open} />
 
       <div style={{ width: "100%" }}>
-        <Option Icon={FiHome} title="Home" selected={selected} setSelected={setSelected} open={open} />
+      <a href="http://localhost:3000/" style={{ textDecoration: "none", color: "inherit" }}>
+    <Option Icon={FiHome} title="Home" selected={selected} setSelected={setSelected} open={open} />
+  </a>
         <Option Icon={FiDollarSign} title="Sales" selected={selected} setSelected={setSelected} open={open} />
         <Option Icon={FiMonitor} title="Games" selected={selected} setSelected={setSelected} open={open} />
         <Option Icon={FiShoppingCart} title="Market" selected={selected} setSelected={setSelected} open={open} />
-        <Option Icon={FiTag} title="Tags" selected={selected} setSelected={setSelected} open={open} />
-        <Option Icon={FiBarChart} title="Analytics" selected={selected} setSelected={setSelected} open={open} />
+        <a href="https://paradox-8.gitbook.io/paradox" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", color: "inherit" }}>
+    <Option Icon={FiBookOpen} title="Wiki" selected={selected} setSelected={setSelected} open={open} />
+  </a>        <Option Icon={FiBarChart} title="Analytics" selected={selected} setSelected={setSelected} open={open} />
         <Option Icon={FiUsers} title="Members" selected={selected} setSelected={setSelected} open={open} />
       </div>
 
