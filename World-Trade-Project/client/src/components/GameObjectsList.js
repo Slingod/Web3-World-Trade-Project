@@ -37,7 +37,7 @@ const ThemeToggle = ({ theme, setTheme }) => {
 
 const GameObjectsList = () => {
   const [gameObjects, setGameObjects] = useState([]);
-  const [visibleObjects, setVisibleObjects] = useState(20);
+  const [visibleObjects, setVisibleObjects] = useState(25);
 
   // 🔄 Fetch des objets de l'API au chargement
   useEffect(() => {

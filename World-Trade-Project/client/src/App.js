@@ -5,7 +5,8 @@ import './styles/tailwind.css';
 import GameObjectsList from './components/GameObjectsList';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './components/Home';
-import CurrentVersion from './components/CurrentVersion'; // Assurez-vous d'avoir ce composant
+import CurrentVersion from './components/CurrentVersion';
+import RaritySidebar from "./components/RaritySidebar"; // ✅ Import de la Sidebar
 
 const App = () => {
   const [token, setToken] = useState('');
@@ -46,7 +47,7 @@ const App = () => {
     try {
       const response = await axios.get('http://localhost:5000/api/protected', {
         headers: {
-          Authorization: `Bearer ${token}` // Correction de l'orthographe
+          Authorization: `Bearer ${token}`
         }
       });
       setProtectedData(response.data.message);
@@ -58,12 +59,24 @@ const App = () => {
 
   return (
     <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/current-version" element={<CurrentVersion />} />
-        <Route path="/game-objects" element={<GameObjectsList />} /> {/* Ajouter la route pour GameObjectsList */}
-        {/* Ajoutez d'autres routes ici */}
-      </Routes>
+      <div className="app-container">
+        {/* ✅ Sidebar affichée sur toutes les pages sauf Home */}
+        <Routes>
+          <Route path="/" element={<Home />} /> {/* ❌ No Sidebar Here :D */}
+          <Route 
+            path="/*" 
+            element={
+              <div className="content-container">
+                <RaritySidebar /> {/* ✅ Sidebar présente ici */}
+                <Routes>
+                  <Route path="/current-version" element={<CurrentVersion />} />
+                  <Route path="/game-objects" element={<GameObjectsList />} />
+                </Routes>
+              </div>
+            } 
+          />
+        </Routes>
+      </div>
     </Router>
   );
 };

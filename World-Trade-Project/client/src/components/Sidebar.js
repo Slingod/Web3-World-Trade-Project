@@ -1,15 +1,14 @@
 import React, { useState } from "react";
-import { 
-    FiBarChart, 
-    FiChevronsRight, 
-    FiDollarSign, 
-    FiHome, 
-    FiMonitor, 
-    FiShoppingCart, 
-    FiTag, 
-    FiUsers 
+import {
+    FiBarChart,
+    FiChevronsRight,
+    FiDollarSign,
+    FiHome,
+    FiMonitor,
+    FiShoppingCart,
+    FiTag,
+    FiUsers
   } from "react-icons/fi";
-  
 import { motion } from "framer-motion";
 
 export const Sidebar = () => {
@@ -20,7 +19,7 @@ export const Sidebar = () => {
     <motion.nav
       layout
       style={{
-        width: open ? "225px" : "60px",
+        width: open ? "225px" : "60px", // Largeur ajustée ici
         backgroundColor: "#1a202c",
         color: "#1a202c",
         height: "100vh", //  Max height
@@ -106,7 +105,6 @@ const TitleSection = ({ open }) => {
       {open && (
         <motion.div>
           <span style={{ display: "block", fontSize: "16px", fontWeight: "bold" }}>TomIsLoading</span>
-          
         </motion.div>
       )}
     </div>

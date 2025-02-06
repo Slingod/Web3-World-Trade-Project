@@ -54,3 +54,25 @@
     transform: translateX(0);
   }
   
+  .app-container {
+    display: flex;
+  }
+  
+  .sidebar-container {
+    display: flex;
+    flex-direction: column; /* ✅ Met les Sidebars en colonne */
+    gap: 20px; /* ✅ Espacement entre les deux Sidebars */
+  }
+  
+  .app-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .content-container {
+    display: flex;
+  }
+  
+  .content-container > * {
+    flex: 0,1;}
+  
