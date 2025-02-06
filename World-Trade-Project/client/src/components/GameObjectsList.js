@@ -3,27 +3,23 @@ import axios from 'axios';
 import { motion } from "framer-motion";
 import { FiMoon, FiSun } from "react-icons/fi";
 
-// Création d'une instance Axios
+// ✅ Axios instance to fetch game objects
+// ✅ Instance Axios pour récupérer les objets du jeu
 const axiosInstance = axios.create({
   headers: {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
   }
 });
 
-// 🔘 Composant Toggle Jour/Nuit
+// 🔘 Toggle Button for Light/Dark Mode
+// 🔘 Bouton pour basculer entre Mode Jour/Nuit
 const ThemeToggle = ({ theme, setTheme }) => {
   return (
     <div className="theme-toggle">
-      <button
-        className={`toggle-btn ${theme === "light" ? "active" : ""}`}
-        onClick={() => setTheme("light")}
-      >
+      <button className={`toggle-btn ${theme === "light" ? "active" : ""}`} onClick={() => setTheme("light")}>
         <FiSun />
       </button>
-      <button
-        className={`toggle-btn ${theme === "dark" ? "active" : ""}`}
-        onClick={() => setTheme("dark")}
-      >
+      <button className={`toggle-btn ${theme === "dark" ? "active" : ""}`} onClick={() => setTheme("dark")}>
         <FiMoon />
       </button>
       <motion.div
@@ -35,26 +31,28 @@ const ThemeToggle = ({ theme, setTheme }) => {
   );
 };
 
-const GameObjectsList = () => {
+// 🔹 Main component | Composant principal
+const GameObjectsList = ({ selectedCategory, selectedRarity, resetFilters }) => {
   const [gameObjects, setGameObjects] = useState([]);
   const [visibleObjects, setVisibleObjects] = useState(25);
 
-  // 🔄 Fetch des objets de l'API au chargement
+  // ✅ Fetch objects when the component loads
+  // ✅ Récupère les objets lors du chargement du composant
   useEffect(() => {
     const fetchGameObjects = async () => {
       try {
         const response = await axiosInstance.get('http://localhost:5000/api/gameObjects');
-        console.log('Nombre d\'objets récupérés :', response.data.length);
+        console.log('Number of objects fetched:', response.data.length);
         setGameObjects(response.data);
       } catch (error) {
-        console.error('Erreur lors du fetch des objets :', error);
+        console.error('Error fetching objects:', error);
       }
     };
-
     fetchGameObjects();
   }, []);
 
-  // 🎨 Définition des couleurs des bordures selon la rareté
+  // ✅ Define border colors based on item rarity
+  // ✅ Définition des couleurs des bordures selon la rareté
   const rarityBorders = {
     'Common': '#a4b0be',       
     'Uncommon': '#1cbf6a',    
@@ -68,30 +66,42 @@ const GameObjectsList = () => {
     'Unique': '#f368e0'       
   };
 
-  // 🔽 Bouton "Show More"
+  // ✅ Filter objects based on selected Category & Rarity
+  // ✅ Filtrer les objets en fonction de la Catégorie & Rareté sélectionnées
+  const filteredObjects = gameObjects.filter((item) => {
+    const categoryMatch = !selectedCategory || item.type === selectedCategory;
+    const rarityMatch = !selectedRarity || item.rarity === selectedRarity;
+    return categoryMatch && rarityMatch;
+  });
+
+  // 🔽 "Show More" button function
+  // 🔽 Fonction du bouton "Voir Plus"
   const handleShowMore = () => {
     setVisibleObjects(prevVisibleObjects => prevVisibleObjects + 20);
   };
 
-  // 🌙☀️ Gestion du mode Jour/Nuit (APPLIQUÉ À TOUTE LA PAGE)
+  // 🌙☀️ Manage Light/Dark Theme
+  // 🌙☀️ Gestion du Mode Jour/Nuit
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
 
   useEffect(() => {
-    document.body.className = theme; // ✅ Switch color from <body> 
-    localStorage.setItem("theme", theme); // ✅ Save on localStorage
+    document.body.className = theme; // ✅ Apply theme to <body>
+    localStorage.setItem("theme", theme); // ✅ Save in localStorage
   }, [theme]);
 
   return (
     <div>
-      {/* 🔘 Bouton Day/Night on Top Left */}
+      {/* 🔘 Theme Toggle Button */}
       <div style={styles.themeToggleContainer}>
         <ThemeToggle theme={theme} setTheme={setTheme} />
       </div>
 
-      <h1 style={styles.title}>167 Items</h1>
-      
+      {/* 🏷 Display filtered object count | Afficher le nombre d'objets filtrés */}
+      <h1 style={styles.title}>{filteredObjects.length} Items</h1>
+
+      {/* 🖼 Object Grid | Grille des objets */}
       <div style={styles.grid}>
-        {gameObjects.slice(0, visibleObjects).map((gameObject) => (
+        {filteredObjects.slice(0, visibleObjects).map((gameObject) => (
           <div key={gameObject.id} style={{
             ...styles.card,
             border: `3px solid ${rarityBorders[gameObject.rarity] || '#FFFFFF'}` 
@@ -112,8 +122,8 @@ const GameObjectsList = () => {
         ))}
       </div>
 
-      {/* 📌 Bouton "Show More" */}
-      {visibleObjects < gameObjects.length && (
+      {/* 📌 "Show More" Button | Bouton "Voir Plus" */}
+      {visibleObjects < filteredObjects.length && (
         <div style={styles.showMoreContainer}>
           <button onClick={handleShowMore} style={styles.showMoreButton}>
             Show More
@@ -124,7 +134,7 @@ const GameObjectsList = () => {
   );
 };
 
-// 🎨 Styles Online
+// 🎨 Styles
 const styles = {
   themeToggleContainer: {
     position: "absolute",
@@ -134,15 +144,14 @@ const styles = {
   title: {
     fontSize: '24px',
     marginBottom: '20px',
+    textAlign: 'center',
   },
   grid: {
     display: 'grid',
-    gridTemplateColumns: 'repeat(5, 1fr)', // ✅ Fixe à 5 cartes par ligne
+    gridTemplateColumns: 'repeat(5, 1fr)',
     gap: '20px',
     justifyContent: 'center',
   },
-
-  // 🎨 Card Styles (Objects)
   card: {
     backgroundColor: 'var(--card-bg)',
     color: 'var(--card-text)',
@@ -150,35 +159,21 @@ const styles = {
     borderRadius: '8px',
     textAlign: 'center',
     boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
-    transition: 'transform 0.2s ease',
-  },
-  image: {
-    width: '100%',
-    height: 'auto',
-    borderRadius: '5px',
-  },
-  name: {
-    fontSize: '18px',
-    fontWeight: 'bold',
-    margin: '10px 0',
   },
   showMoreContainer: {
-    display: 'flex',
-    justifyContent: 'center',
-    marginTop: '20px',
+    display: "flex",
+    justifyContent: "center",
+    marginTop: "20px",
   },
-
-  // 🎨 Show More Button Styles
   showMoreButton: {
-    backgroundColor: '#FFFFFF',
-    border: 'none',
-    padding: '10px 20px',
-    fontSize: '16px',
-    fontWeight: 'bold',
-    color: '#1a202c',
-    cursor: 'pointer',
-    borderRadius: '5px',
-    transition: 'background 0.3s ease',
+    backgroundColor: "#ffd32a",
+    color: "white",
+    border: "none",
+    padding: "10px 20px",
+    fontSize: "16px",
+    fontWeight: "bold",
+    cursor: "pointer",
+    borderRadius: "5px",
   },
 };
 

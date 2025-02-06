@@ -9,10 +9,10 @@ import {
     FiShoppingCart,
     FiTag,
     FiUsers
-  } from "react-icons/fi";
+} from "react-icons/fi";
 import { motion } from "framer-motion";
 
-export const Sidebar = () => {
+const Sidebar = () => {
   const [open, setOpen] = useState(true);
   const [selected, setSelected] = useState("Dashboard");
 
@@ -20,11 +20,11 @@ export const Sidebar = () => {
     <motion.nav
       layout
       style={{
-        width: open ? "225px" : "60px", // Largeur ajustée ici
+        width: open ? "225px" : "60px", 
         backgroundColor: "#1a202c",
-        color: "#1a202c",
-        height: "100vh", //  Max height
-        borderRight: "2px #1a202c",
+        color: "#fff",
+        height: "100vh", 
+        borderRight: "2px solid #1a202c",
         padding: "10px",
         display: "flex",
         flexDirection: "column",
@@ -34,15 +34,16 @@ export const Sidebar = () => {
       <TitleSection open={open} />
 
       <div style={{ width: "100%" }}>
-      <a href="http://localhost:3000/" style={{ textDecoration: "none", color: "inherit" }}>
-    <Option Icon={FiHome} title="Home" selected={selected} setSelected={setSelected} open={open} />
-  </a>
+        <a href="/" style={{ textDecoration: "none", color: "inherit" }}>
+          <Option Icon={FiHome} title="Home" selected={selected} setSelected={setSelected} open={open} />
+        </a>
         <Option Icon={FiDollarSign} title="Sales" selected={selected} setSelected={setSelected} open={open} />
         <Option Icon={FiMonitor} title="Games" selected={selected} setSelected={setSelected} open={open} />
         <Option Icon={FiShoppingCart} title="Market" selected={selected} setSelected={setSelected} open={open} />
         <a href="https://paradox-8.gitbook.io/paradox" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", color: "inherit" }}>
-    <Option Icon={FiBookOpen} title="Wiki" selected={selected} setSelected={setSelected} open={open} />
-  </a>        <Option Icon={FiBarChart} title="Analytics" selected={selected} setSelected={setSelected} open={open} />
+          <Option Icon={FiBookOpen} title="Wiki" selected={selected} setSelected={setSelected} open={open} />
+        </a>
+        <Option Icon={FiBarChart} title="Analytics" selected={selected} setSelected={setSelected} open={open} />
         <Option Icon={FiUsers} title="Members" selected={selected} setSelected={setSelected} open={open} />
       </div>
 
@@ -51,7 +52,7 @@ export const Sidebar = () => {
   );
 };
 
-const Option = ({ Icon, title, selected, setSelected, open, notifs }) => {
+const Option = ({ Icon, title, selected, setSelected, open }) => {
   return (
     <motion.button
       layout
@@ -64,7 +65,7 @@ const Option = ({ Icon, title, selected, setSelected, open, notifs }) => {
         padding: "10px",
         backgroundColor: selected === title ? "#EF5777" : "transparent",
         borderRadius: "50px",
-        color: selected === title ? "white" : "white",
+        color: "white",
         cursor: "pointer",
         transition: "background 0.3s",
       }}
@@ -75,28 +76,6 @@ const Option = ({ Icon, title, selected, setSelected, open, notifs }) => {
       {open && (
         <motion.span style={{ marginLeft: "10px", fontSize: "14px" }}>
           {title}
-        </motion.span>
-      )}
-
-      {notifs && open && (
-        <motion.span
-          initial={{ scale: 0, opacity: 0 }}
-          animate={{ opacity: 1, scale: 1 }}
-          style={{
-            position: "absolute",
-            right: "15px",
-            backgroundColor: "#1a202c",
-            color: "white",
-            borderRadius: "50%",
-            width: "20px",
-            height: "20px",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            fontSize: "12px",
-          }}
-        >
-          {notifs}
         </motion.span>
       )}
     </motion.button>
@@ -119,7 +98,7 @@ const ToggleClose = ({ open, setOpen }) => {
   return (
     <motion.button
       layout
-      onClick={() => setOpen((pv) => !pv)}
+      onClick={() => setOpen((prev) => !prev)}
       style={{
         position: "absolute",
         bottom: "20px",
@@ -129,7 +108,16 @@ const ToggleClose = ({ open, setOpen }) => {
         color: "white",
       }}
     >
-      <FiChevronsRight style={{ fontSize: "24px", transform: open ? "rotate(180deg)" : "rotate(0deg)", transition: "transform 0.3s" }} />
+      <FiChevronsRight
+        style={{
+          fontSize: "24px",
+          transform: open ? "rotate(180deg)" : "rotate(0deg)",
+          transition: "transform 0.3s"
+        }}
+      />
     </motion.button>
   );
 };
+
+// ✅ Export default pour éviter l'erreur
+export default Sidebar;
