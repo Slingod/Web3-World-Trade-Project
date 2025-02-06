@@ -15,15 +15,15 @@ const Footer = () => {
         </a>
 
         <a href="https://discord.gg/fRRAGastcS" target="_blank" rel="noopener noreferrer">
-        <img src="/images/discord3.png" alt="Discord Partner 3" />
+        <img src="CHRDAO.jpg" alt="Discord Partner 3" />
         </a>
 
-        <a href="https://discord.com/invite/votre-lien-ici" target="_blank" rel="noopener noreferrer">
-        <img src="/images/discord4.png" alt="Discord Partner 4" />
+        <a href="https://discord.gg/XZhXtfaTrs" target="_blank" rel="noopener noreferrer">
+        <img src="Logo THP.png" alt="Discord Partner 4" />
         </a>
 
-        <a href="https://discord.com/invite/votre-lien-ici" target="_blank" rel="noopener noreferrer">
-        <img src="/images/discord5.png" alt="Discord Partner 5" />
+        <a href="https://discord.gg/QBN2d5cx2E" target="_blank" rel="noopener noreferrer">
+        <img src="OP.webp" alt="Discord Partner 5" />
         </a>
 
         <a href="https://discord.com/invite/votre-lien-ici" target="_blank" rel="noopener noreferrer">

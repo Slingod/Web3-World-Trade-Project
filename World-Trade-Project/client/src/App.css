@@ -133,7 +133,7 @@ html, body {
 }
 
 .discord-footer {
-  background-color: #4b2aad;
+  background-color: #a369ff;
   color: white;
   padding: 10px;
   font-size: 16px;
@@ -161,4 +161,33 @@ html, body {
   margin: 0 10px; /* Espacement entre les icônes */
   image-rendering: -webkit-optimize-contrast; /* Améliore le rendu sur certains navigateurs */
   image-rendering: crisp-edges; /* Pour un rendu plus net */
+}
+
+
+
+
+.rarity-sidebar {
+  background-color: var(--card-bg);
+  color: var(--card-text);
+  padding: 20px;
+  border-right: 1px solid #ccc;
+  width: 250px;
+}
+
+.rarity-sidebar .section {
+  margin-bottom: 20px;
+}
+
+.rarity-sidebar h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.rarity-sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.rarity-sidebar li {
+  margin-bottom: 5px;
 }
