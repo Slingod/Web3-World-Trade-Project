@@ -8,11 +8,8 @@ const CurrentVersion = () => {
     <div style={styles.container}>
       <Login /> {/* Affichage du système de login */}
       <div style={{ display: "flex", height: "100vh",  }}>
-    <Sidebar /> {/* Sidebar à gauche */}
-    <GameObjectsList /> {/* Liste des objets à droite */}
-  </div>
-      
-     
+    <Sidebar /> {/* Sidebar à gauche */}</div>
+    
     </div>
   );
 };

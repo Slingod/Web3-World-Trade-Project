@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/Sidebar.css"; // Assurez-vous d'avoir un fichier CSS associé
+import "../styles/Sidebar.css";
 
 const rarityColors = {
   Common: "#a4b0be",
@@ -16,31 +16,40 @@ const rarityColors = {
 
 const categories = [
   "Armor",
-  "Artifacts",
-  "Decorations",
-  "Land",
-  "Access Keys",
-  "Lootbox",
-  "Tools",
-  "Weapons",
+  "Artifact",
+  "Island",
+  "Tool",
+  "Weapon",
 ];
 
 const tags = {
-  Artifacts: ["Armor", "Tool", "Weapon"],
-  Decorations: ["Asian", "Carpet", "Furniture", "Light", "Miscellaneous", "Plant", "Wall Decor"],
-  Land: ["Additional", "Founder"],
-  Tools: ["Axe", "Pickaxe"],
+  Artifact: ["Armor", "Tool", "Weapon"],
+  Island: ["Additional", "Founder"],
+  Tool: ["Axe", "Pickaxe"],
   Weapon: ["Claws", "Club", "Dual Axes", "Greathammer", "Greatsword", "Sword And Shield"],
 };
 
-const RaritySidebar = () => {
+const RaritySidebar = ({
+  selectedRarity,
+  setSelectedRarity,
+  selectedCategory,
+  setSelectedCategory,
+  selectedTag,
+  setSelectedTag,
+  resetFilters,
+}) => {
   return (
     <div className="sidebar">
       {/* Section Rarity */}
       <h2 className="sidebar-title">Rarity</h2>
       <ul className="sidebar-list">
         {Object.entries(rarityColors).map(([rarity, color]) => (
-          <li key={rarity} className="sidebar-item" style={{ color }}>
+          <li
+            key={rarity}
+            className="sidebar-item"
+            style={{ color, cursor: 'pointer' }}
+            onClick={() => setSelectedRarity(rarity)}
+          >
             {rarity}
           </li>
         ))}
@@ -50,7 +59,14 @@ const RaritySidebar = () => {
       <h2 className="sidebar-title">Categories</h2>
       <ul className="sidebar-list">
         {categories.map((category) => (
-          <li key={category} className="sidebar-item">{category}</li>
+          <li
+            key={category}
+            className="sidebar-item"
+            style={{ cursor: 'pointer' }}
+            onClick={() => setSelectedCategory(category)}
+          >
+            {category}
+          </li>
         ))}
       </ul>
 
@@ -61,11 +77,23 @@ const RaritySidebar = () => {
           <h3 className="sidebar-subtitle">{category}</h3>
           <ul className="sidebar-list">
             {items.map((item) => (
-              <li key={item} className="sidebar-item"> {item}</li>
+              <li
+                key={item}
+                className="sidebar-item"
+                style={{ cursor: 'pointer' }}
+                onClick={() => setSelectedTag(item)}
+              >
+                {item}
+              </li>
             ))}
           </ul>
         </div>
       ))}
+
+      {/* Reset Button */}
+      <button onClick={resetFilters} style={{ marginTop: '20px', padding: '10px', backgroundColor: '#ffd32a', border: 'none', cursor: 'pointer' }}>
+        Reset Filters
+      </button>
     </div>
   );
 };

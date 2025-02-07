@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import '../styles/Login.css'; // ✅ Garde le CSS du login
-import { FiLock } from "react-icons/fi"; // ✅ Import de l'icône du cadenas
+import '../styles/Login.css';
+import { FiLock } from "react-icons/fi";
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -9,7 +9,6 @@ const Login = () => {
   const [token, setToken] = useState('');
   const [text, setText] = useState("Encrypt data");
 
-  // ✅ Fonction pour envoyer les données de connexion
   const login = async () => {
     try {
       const response = await axios.post('http://localhost:5000/api/auth/login', {
@@ -23,7 +22,6 @@ const Login = () => {
     }
   };
 
-  // ✅ Fonction d'animation du texte avec des caractères aléatoires
   const scrambleText = () => {
     const CHARS = "!@#$%^&*():{};|,.<>/?";
     let pos = 0;
@@ -53,9 +51,7 @@ const Login = () => {
 
   return (
     <div className="login-container">
-      {/* ✅ Formulaire centré */}
       <form onSubmit={(e) => { e.preventDefault(); login(); }} className="login-form">
-        {/* ✅ Champ Email */}
         <div className="login-field">
           <label htmlFor="email">Email:</label>
           <input
@@ -66,8 +62,6 @@ const Login = () => {
             placeholder="Enter your email"
           />
         </div>
-
-        {/* ✅ Champ Password */}
         <div className="login-field">
           <label htmlFor="password">Password:</label>
           <input
@@ -78,14 +72,12 @@ const Login = () => {
             placeholder="Enter your password"
           />
         </div>
-
-        {/* ✅ Nouveau bouton "Encrypt Login" */}
         <button
           type="submit"
           className="encrypt-login-button"
-          onMouseEnter={scrambleText} // ✅ Animation du texte au survol
+          onMouseEnter={scrambleText}
         >
-          <FiLock /> <span>{text}</span> {/* ✅ Icône + Texte animé */}
+          <FiLock /> <span>{text}</span>
         </button>
       </form>
     </div>

@@ -191,3 +191,23 @@ html, body {
 .rarity-sidebar li {
   margin-bottom: 5px;
 }
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content-container {
+  display: flex;
+  flex: 1;
+}
+
+.content-container > * {
+  flex: 0 1 auto;
+}
+
+.footer-container {
+  margin-top: auto;
+  width: 100%;
+}

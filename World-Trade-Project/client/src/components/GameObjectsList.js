@@ -4,15 +4,15 @@ import { motion } from "framer-motion";
 import { FiMoon, FiSun } from "react-icons/fi";
 
 // ✅ Axios instance to fetch game objects
-// ✅ Instance Axios pour récupérer les objets du jeu
+// 🇬🇧 This instance ensures that we correctly retrieve game objects from the API.
+// 🇫🇷 Cette instance garantit que nous récupérons correctement les objets du jeu depuis l'API.
 const axiosInstance = axios.create({
   headers: {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
   }
 });
 
-// 🔘 Toggle Button for Light/Dark Mode
-// 🔘 Bouton pour basculer entre Mode Jour/Nuit
+// 🔘 Theme Toggle Component
 const ThemeToggle = ({ theme, setTheme }) => {
   return (
     <div className="theme-toggle">
@@ -31,63 +31,77 @@ const ThemeToggle = ({ theme, setTheme }) => {
   );
 };
 
-// 🔹 Main component | Composant principal
-const GameObjectsList = ({ selectedCategory, selectedRarity, resetFilters }) => {
-  const [gameObjects, setGameObjects] = useState([]);
-  const [visibleObjects, setVisibleObjects] = useState(25);
+// 🔹 Main Component | Displays game objects
+const GameObjectsList = ({ selectedCategory, selectedRarity }) => {
+  const [gameObjects, setGameObjects] = useState([]); // Full list of objects
+  const [visibleObjects, setVisibleObjects] = useState(25); // Number of objects visible
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light"); // Theme management
+  const [loading, setLoading] = useState(true); // Loading state
+  const [error, setError] = useState(null); // Error handling
 
-  // ✅ Fetch objects when the component loads
-  // ✅ Récupère les objets lors du chargement du composant
+  // ✅ Fetch game objects from API
   useEffect(() => {
     const fetchGameObjects = async () => {
       try {
+        setLoading(true);
         const response = await axiosInstance.get('http://localhost:5000/api/gameObjects');
-        console.log('Number of objects fetched:', response.data.length);
         setGameObjects(response.data);
       } catch (error) {
-        console.error('Error fetching objects:', error);
+        setError('Failed to fetch game objects.');
+        console.error('Error fetching game objects:', error);
+      } finally {
+        setLoading(false);
       }
     };
     fetchGameObjects();
   }, []);
 
-  // ✅ Define border colors based on item rarity
-  // ✅ Définition des couleurs des bordures selon la rareté
-  const rarityBorders = {
-    'Common': '#a4b0be',       
-    'Uncommon': '#1cbf6a',    
-    'Rare': '#159cfd',        
-    'Epic': '#a369ff',        
-    'Legendary': '#e67e22',   
-    'Mythic': '#ffd32a',      
-    'Exalted': '#ef5777',     
-    'Exotic': '#be2edd',      
-    'Transcendent': '#ff3838',
-    'Unique': '#f368e0'       
-  };
+  // ✅ Reset visible objects when filters change
+  useEffect(() => {
+    setVisibleObjects(25);
+  }, [selectedCategory, selectedRarity]);
 
-  // ✅ Filter objects based on selected Category & Rarity
-  // ✅ Filtrer les objets en fonction de la Catégorie & Rareté sélectionnées
+  // ✅ Apply filters
   const filteredObjects = gameObjects.filter((item) => {
     const categoryMatch = !selectedCategory || item.type === selectedCategory;
     const rarityMatch = !selectedRarity || item.rarity === selectedRarity;
     return categoryMatch && rarityMatch;
   });
 
-  // 🔽 "Show More" button function
-  // 🔽 Fonction du bouton "Voir Plus"
-  const handleShowMore = () => {
-    setVisibleObjects(prevVisibleObjects => prevVisibleObjects + 20);
+  // ✅ Apply dark/light mode
+  useEffect(() => {
+    document.body.className = theme;
+    localStorage.setItem("theme", theme);
+  }, [theme]);
+
+  // ✅ Define border colors by rarity
+  const rarityBorders = {
+    'Common': '#a4b0be',
+    'Uncommon': '#1cbf6a',
+    'Rare': '#159cfd',
+    'Epic': '#a369ff',
+    'Legendary': '#e67e22',
+    'Mythic': '#ffd32a',
+    'Exalted': '#ef5777',
+    'Exotic': '#be2edd',
+    'Transcendent': '#ff3838',
+    'Unique': '#f368e0'
   };
 
-  // 🌙☀️ Manage Light/Dark Theme
-  // 🌙☀️ Gestion du Mode Jour/Nuit
-  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
+  // 🔽 "Show More" button function
+  const handleShowMore = () => {
+    setVisibleObjects(prev => prev + 20);
+  };
 
-  useEffect(() => {
-    document.body.className = theme; // ✅ Apply theme to <body>
-    localStorage.setItem("theme", theme); // ✅ Save in localStorage
-  }, [theme]);
+  // ✅ Show loading state
+  if (loading) {
+    return <p style={styles.loading}>Loading game objects...</p>;
+  }
+
+  // ✅ Show error state
+  if (error) {
+    return <p style={styles.error}>{error}</p>;
+  }
 
   return (
     <div>
@@ -96,15 +110,15 @@ const GameObjectsList = ({ selectedCategory, selectedRarity, resetFilters }) => 
         <ThemeToggle theme={theme} setTheme={setTheme} />
       </div>
 
-      {/* 🏷 Display filtered object count | Afficher le nombre d'objets filtrés */}
+      {/* 🏷 Number of filtered objects */}
       <h1 style={styles.title}>{filteredObjects.length} Items</h1>
 
-      {/* 🖼 Object Grid | Grille des objets */}
+      {/* 🖼 Grid of filtered game objects */}
       <div style={styles.grid}>
         {filteredObjects.slice(0, visibleObjects).map((gameObject) => (
           <div key={gameObject.id} style={{
             ...styles.card,
-            border: `3px solid ${rarityBorders[gameObject.rarity] || '#FFFFFF'}` 
+            border: `3px solid ${rarityBorders[gameObject.rarity] || '#FFFFFF'}`
           }}>
             {gameObject.img && (
               gameObject.img.endsWith('.webm') ? (
@@ -122,7 +136,7 @@ const GameObjectsList = ({ selectedCategory, selectedRarity, resetFilters }) => 
         ))}
       </div>
 
-      {/* 📌 "Show More" Button | Bouton "Voir Plus" */}
+      {/* 📌 "Show More" button */}
       {visibleObjects < filteredObjects.length && (
         <div style={styles.showMoreContainer}>
           <button onClick={handleShowMore} style={styles.showMoreButton}>
@@ -134,7 +148,7 @@ const GameObjectsList = ({ selectedCategory, selectedRarity, resetFilters }) => 
   );
 };
 
-// 🎨 Styles
+// 🎨 CSS Styles
 const styles = {
   themeToggleContainer: {
     position: "absolute",
@@ -175,6 +189,18 @@ const styles = {
     cursor: "pointer",
     borderRadius: "5px",
   },
+  loading: {
+    textAlign: 'center',
+    fontSize: '18px',
+    fontWeight: 'bold',
+    color: '#ffa502',
+  },
+  error: {
+    textAlign: 'center',
+    fontSize: '18px',
+    fontWeight: 'bold',
+    color: '#ff4757',
+  }
 };
 
 export default GameObjectsList;
