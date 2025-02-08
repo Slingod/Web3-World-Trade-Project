@@ -1,27 +1,32 @@
 import React from 'react';
-import Login from './Login';
-import GameObjectsList from './GameObjectsList';
 import Sidebar from "../components/Sidebar"; 
+import GameObjectsList from './GameObjectsList'; // ✅ Contient maintenant Login
 
 const CurrentVersion = () => {
   return (
     <div style={styles.container}>
-      <Login /> {/* Affichage du système de login */}
-      <div style={{ display: "flex", height: "100vh",  }}>
-    <Sidebar /> {/* Sidebar à gauche */}</div>
-    
+      {/* ✅ Suppression de <Login />, maintenant géré dans GameObjectsList */}
+      <div style={styles.content}>
+        <Sidebar /> {/* ✅ Sidebar à gauche */}
+      </div>
     </div>
   );
 };
 
-// Styles en ligne
+// ✅ Styles pour l'affichage correct
 const styles = {
   container: {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
     padding: '20px',
-    minHeight: '100vh', // Pleine hauteur
+    minHeight: '100vh',
+  },
+  content: {
+    display: 'flex',
+    width: '100%',
+    justifyContent: 'center',
   },
 };
+
 export default CurrentVersion;

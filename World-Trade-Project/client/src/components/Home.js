@@ -35,6 +35,8 @@ const Home = () => {
       <div className="center-link">
         <a href="/current-version" className="link">Current Version</a>
       </div>
+
+      
     </div>
   );
 };

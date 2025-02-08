@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { motion } from "framer-motion";
 import { FiMoon, FiSun } from "react-icons/fi";
+import Login from './Login'; // ✅ Login Form imported
+import '../styles/GameObjectsList.css';
 
 // ✅ Axios instance to fetch game objects
 // 🇬🇧 This instance ensures that we correctly retrieve game objects from the API.
@@ -32,7 +34,7 @@ const ThemeToggle = ({ theme, setTheme }) => {
 };
 
 // 🔹 Main Component | Displays game objects
-const GameObjectsList = ({ selectedCategory, selectedRarity }) => {
+const GameObjectsList = ({ selectedCategory, selectedRarity, selectedTag }) => {
   const [gameObjects, setGameObjects] = useState([]); // Full list of objects
   const [visibleObjects, setVisibleObjects] = useState(25); // Number of objects visible
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "light"); // Theme management
@@ -58,7 +60,7 @@ const GameObjectsList = ({ selectedCategory, selectedRarity }) => {
 
   // ✅ Reset visible objects when filters change
   useEffect(() => {
-    setVisibleObjects(25);
+    setVisibleObjects(30);
   }, [selectedCategory, selectedRarity]);
 
   // ✅ Apply filters
@@ -105,15 +107,22 @@ const GameObjectsList = ({ selectedCategory, selectedRarity }) => {
 
   return (
     <div>
-      {/* 🔘 Theme Toggle Button */}
+      {/* 🔘 Theme Toggle Button | 🇬🇧 Allows user to switch between light and dark mode */}
+      {/* 🇫🇷 Permet à l'utilisateur de passer du mode clair au mode sombre */}
       <div style={styles.themeToggleContainer}>
         <ThemeToggle theme={theme} setTheme={setTheme} />
       </div>
 
-      {/* 🏷 Number of filtered objects */}
+      {/* 🔐 Login Form | 🇬🇧 Placed above the title */}
+      {/* 🇫🇷 Formulaire de connexion placé au-dessus du titre */}
+      <Login />
+
+      {/* 🏷 Number of filtered objects | 🇬🇧 Displays the number of items found */}
+      {/* 🇫🇷 Affiche le nombre d'objets trouvés */}
       <h1 style={styles.title}>{filteredObjects.length} Items</h1>
 
-      {/* 🖼 Grid of filtered game objects */}
+      {/* 🖼 Grid of filtered game objects | 🇬🇧 Displays the items in a grid */}
+      {/* 🇫🇷 Affiche les objets sous forme de grille */}
       <div style={styles.grid}>
         {filteredObjects.slice(0, visibleObjects).map((gameObject) => (
           <div key={gameObject.id} style={{
@@ -136,7 +145,8 @@ const GameObjectsList = ({ selectedCategory, selectedRarity }) => {
         ))}
       </div>
 
-      {/* 📌 "Show More" button */}
+      {/* 📌 "Show More" button | 🇬🇧 Allows user to load more items */}
+      {/* 🇫🇷 Permet à l'utilisateur de charger plus d'objets */}
       {visibleObjects < filteredObjects.length && (
         <div style={styles.showMoreContainer}>
           <button onClick={handleShowMore} style={styles.showMoreButton}>

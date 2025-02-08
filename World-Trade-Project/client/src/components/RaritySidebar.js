@@ -14,13 +14,7 @@ const rarityColors = {
   Unique: "#f368e0",
 };
 
-const categories = [
-  "Armor",
-  "Artifact",
-  "Island",
-  "Tool",
-  "Weapon",
-];
+const categories = ["Armor", "Artifact", "Island", "Tool", "Weapon"];
 
 const tags = {
   Artifact: ["Armor", "Tool", "Weapon"],
@@ -40,14 +34,31 @@ const RaritySidebar = ({
 }) => {
   return (
     <div className="sidebar">
-      {/* Section Rarity */}
+      {/* ✅ Reset Button Centered */}
+      <div style={{ display: "flex", justifyContent: "center", marginBottom: "10px" }}>
+        <button
+          onClick={resetFilters}
+          style={{
+            padding: "10px 15px",
+            backgroundColor: "#ffd32a",
+            border: "none",
+            cursor: "pointer",
+            fontWeight: "bold",
+            borderRadius: "5px",
+          }}
+        >
+          Reset Filters
+        </button>
+      </div>
+
+      {/* ✅ Section Rarity */}
       <h2 className="sidebar-title">Rarity</h2>
       <ul className="sidebar-list">
         {Object.entries(rarityColors).map(([rarity, color]) => (
           <li
             key={rarity}
             className="sidebar-item"
-            style={{ color, cursor: 'pointer' }}
+            style={{ color, cursor: "pointer" }}
             onClick={() => setSelectedRarity(rarity)}
           >
             {rarity}
@@ -55,14 +66,14 @@ const RaritySidebar = ({
         ))}
       </ul>
 
-      {/* Section Categories */}
+      {/* ✅ Section Categories */}
       <h2 className="sidebar-title">Categories</h2>
       <ul className="sidebar-list">
         {categories.map((category) => (
           <li
             key={category}
             className="sidebar-item"
-            style={{ cursor: 'pointer' }}
+            style={{ cursor: "pointer" }}
             onClick={() => setSelectedCategory(category)}
           >
             {category}
@@ -70,7 +81,7 @@ const RaritySidebar = ({
         ))}
       </ul>
 
-      {/* Section Tags */}
+      {/* ✅ Section Tags */}
       <h2 className="sidebar-title">Tags</h2>
       {Object.entries(tags).map(([category, items]) => (
         <div key={category}>
@@ -80,7 +91,7 @@ const RaritySidebar = ({
               <li
                 key={item}
                 className="sidebar-item"
-                style={{ cursor: 'pointer' }}
+                style={{ cursor: "pointer" }}
                 onClick={() => setSelectedTag(item)}
               >
                 {item}
@@ -89,11 +100,6 @@ const RaritySidebar = ({
           </ul>
         </div>
       ))}
-
-      {/* Reset Button */}
-      <button onClick={resetFilters} style={{ marginTop: '20px', padding: '10px', backgroundColor: '#ffd32a', border: 'none', cursor: 'pointer' }}>
-        Reset Filters
-      </button>
     </div>
   );
 };

@@ -87,7 +87,7 @@ const TitleSection = ({ open }) => {
     <div style={{ width: "100%", marginBottom: "20px", textAlign: "center" }}>
       {open && (
         <motion.div>
-          <span style={{ display: "block", fontSize: "16px", fontWeight: "bold" }}>TomIsLoading</span>
+          <span style={{ display: "block", fontSize: "16px", fontWeight: "bold" }}></span>
         </motion.div>
       )}
     </div>
