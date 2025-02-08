@@ -6,8 +6,9 @@ import GameObjectsList from './components/GameObjectsList';
 import Home from './components/Home';
 import CurrentVersion from './components/CurrentVersion';
 import RaritySidebar from "./components/RaritySidebar"; 
-import Footer from "./components/Footer"; 
+import Footer from './components/common/Footer/Footer';
 import DiscordFooter from "./components/DiscordFooter"; 
+import ThemeToggle from "./components/common/ThemeToggle"; // 🔥 Import  ThemeToggle
 
 const App = () => {
   // ✅ States for authentication
@@ -32,6 +33,9 @@ const App = () => {
   return (
     <Router>
       <div className="app-container">
+        {/* 🔥 Ajout du ThemeToggle en haut de l'application */}
+        
+
         <Routes>
           {/* 🏠 Home Page (Without Sidebar and Footers) */}
           <Route path="/" element={<Home />} />

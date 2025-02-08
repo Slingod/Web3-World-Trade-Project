@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/Footer.css'; // ✅ Correction : Utilisation du bon chemin
+import './Footer.css'; // ✅ Utilisation du chemin relatif correct
 
 const Footer = () => {
   return (

@@ -6,7 +6,7 @@
 :root {
     --bg-color: white;       /* Fond global */
     --text-color: black;      /* Texte global */
-    --card-bg: #f8f9fa;      /* Fond des cartes */
+    --card-bg: rgb(164, 176, 190);      /* Fond des cartes */
     --card-text: black;       /* Texte des cartes */
   }
   
@@ -211,3 +211,4 @@ html, body {
   margin-top: auto;
   width: 100%;
 }
+

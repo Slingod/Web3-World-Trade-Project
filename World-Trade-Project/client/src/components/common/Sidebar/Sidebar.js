@@ -11,6 +11,7 @@ import {
     FiUsers
 } from "react-icons/fi";
 import { motion } from "framer-motion";
+import "./Sidebar.css";
 
 const Sidebar = () => {
   const [open, setOpen] = useState(true);

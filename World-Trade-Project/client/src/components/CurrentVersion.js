@@ -1,10 +1,13 @@
 import React from 'react';
-import Sidebar from "../components/Sidebar"; 
+import Sidebar from "./common/Sidebar/Sidebar"; 
 import GameObjectsList from './GameObjectsList'; // ✅ Contient maintenant Login
+import ThemeToggle from './common/ThemeToggle'; // ✅ Importation de ThemeToggle
 
 const CurrentVersion = () => {
   return (
     <div style={styles.container}>
+      
+      <ThemeToggle /> {/* ✅ Ajout du ThemeToggle en haut de l'application */}
       {/* ✅ Suppression de <Login />, maintenant géré dans GameObjectsList */}
       <div style={styles.content}>
         <Sidebar /> {/* ✅ Sidebar à gauche */}
