@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react'; // Importation de React et du hook useEffect
                                            // Importing React and the useEffect hook
 
-import ShiftingCountdown from "../components/ShiftingCountdown"; // Importation du composant ShiftingCountdown
-                                                                 // Importing the ShiftingCountdown component
+import ShiftingCountdown from "./ShiftingCountdown";   // Importation du composant ShiftingCountdown
+                                                      // Importing the ShiftingCountdown component
 
 const Home = () => { // Définition du composant Home
                      // Defining the Home component

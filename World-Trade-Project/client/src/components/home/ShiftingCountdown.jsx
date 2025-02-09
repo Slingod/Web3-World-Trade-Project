@@ -5,8 +5,9 @@ import React, { useEffect, useRef, useState } from 'react'; // Importation de Re
 import { useAnimate } from 'framer-motion'; // Importation de useAnimate pour les animations
                                              // Importing useAnimate for animations
 
-import './Countdownhome.css'; // Importation du fichier CSS pour le composant
-                               // Importing the CSS file for the component
+import './Countdownhome.css';
+    // Importation du fichier CSS pour le composant
+    // Importing the CSS file for the component
 
 const COUNTDOWN_FROM = '2025-03-01'; // Date cible pour le compte à rebours
                                      // Target date for the countdown

@@ -1,13 +1,13 @@
 import { useRef, useState } from "react"; // Importation des hooks useRef et useState de React
-                                          // Importing useRef and useState hooks from React
+                                           // Importing useRef and useState hooks from React
 
 import { FiLock } from "react-icons/fi"; // Importation de l'icône de verrouillage depuis react-icons
-                                         // Importing lock icon from react-icons
+                                          // Importing lock icon from react-icons
 
 import { motion } from "framer-motion"; // Importation de motion pour les animations
                                         // Importing motion for animations
 
-import "../styles/EncryptButton.css"; // Importation du fichier CSS pour le bouton "Encrypt"
+import './EncryptButton.css';         // Importation du fichier CSS pour le bouton "Encrypt"
                                       // Importing the CSS file for the "Encrypt" button
 
 // ✅ Définition du texte cible
@@ -30,7 +30,7 @@ const EncryptButton = () => {
                                     // Reference for the animation interval
 
   const [text, setText] = useState(TARGET_TEXT); // État pour le texte du bouton
-                                                 // State for the button text
+                                                // State for the button text
 
   // ✅ Fonction pour animer le texte avec des caractères aléatoires
   // ✅ Function to animate the text with random characters
@@ -91,9 +91,9 @@ const EncryptButton = () => {
     >
       <div className="encrypt-content">
         <FiLock /> {/* Affichage de l'icône de verrouillage */}
-                    {/* Displaying the lock icon */}
+                   {/* Displaying the lock icon */}
 
-        <span>{text}</span> {/* Affichage du texte animé */}
+        <span>{text}</span>  {/* Affichage du texte animé */}
                              {/* Displaying the animated text */}
       </div>
       <motion.span
@@ -111,7 +111,7 @@ const EncryptButton = () => {
 
           duration: 1, // Durée de l'animation
                        // Duration of the animation
-                       
+
           ease: "linear", // Courbe d'animation
                           // Animation curve
         }}

@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react"; // Importation de React et d
 import axios from "axios"; // Importation de la bibliothèque axios pour les requêtes HTTP
                            // Importing the axios library for HTTP requests
 
-import Login from "../Login"; // Importation du composant Login
+import Login from "../auth/Login"; // Importation du composant Login
                               // Importing the Login component
 
 import "./GameObjectsList.css"; // Importation du fichier CSS pour le composant

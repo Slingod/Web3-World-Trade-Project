@@ -4,7 +4,7 @@ import React, { useState } from 'react'; // Importation de React et du hook useS
 import axios from 'axios'; // Importation de la bibliothèque axios pour les requêtes HTTP
                            // Importing the axios library for HTTP requests
 
-import '../styles/Login.css'; // Importation du fichier CSS pour le composant Login
+import './Login.css'; // Importation du fichier CSS pour le composant Login
                                // Importing the CSS file for the Login component
 
 import { FiLock } from "react-icons/fi"; // Importation de l'icône de verrouillage depuis react-icons

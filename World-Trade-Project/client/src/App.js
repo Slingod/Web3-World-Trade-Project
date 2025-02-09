@@ -3,11 +3,11 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 import './styles/tailwind.css';
 import GameObjectsList from './components/game/GameObjectsList';
-import Home from './components/Home';
+import Home from './components/home/Home';
 import CurrentVersion from './components/game/CurrentVersion';
 import RaritySidebar from "./components/game/RaritySidebar"; 
 import Footer from './components/common/Footer/Footer';
-import DiscordFooter from "./components/DiscordFooter"; 
+import DiscordFooter from "./components/common/Footer/DiscordFooter"; 
 import ThemeToggle from "./components/common/ThemeToggle"; // 🔥 Import  ThemeToggle
 
 const App = () => {

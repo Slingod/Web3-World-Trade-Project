@@ -1,7 +1,7 @@
 import React from 'react'; // Importation de React
                            // Importing React
 
-import '../styles/DiscordFooter.css'; // Importation du fichier CSS pour le footer Discord
+import './DiscordFooter.css'; // Importation du fichier CSS pour le footer Discord
                                       // Importing the CSS file for the Discord footer
 
 const DiscordFooter = () => { // Définition du composant DiscordFooter
