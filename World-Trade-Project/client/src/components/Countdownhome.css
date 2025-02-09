@@ -1,78 +1,199 @@
 /* src/components/Countdown/Countdownhome.css */
+
 .countdown-container {
-    background: linear-gradient(to bottom right, #7b61ff, #61dafb);
-    padding: 1rem;
-  }
+  background: linear-gradient(to bottom right, #7b61ff, #61dafb);
+  /* Dégradé de couleur pour le fond */
+  /* Background gradient color */
+
+  padding: 1rem;
+  /* Espace intérieur */
+  /* Inner spacing */
+}
+
+.countdown-items {
+  display: flex;
+  /* Utilisation de Flexbox pour aligner les éléments */
+  /* Using Flexbox to align items */
+
+  justify-content: center;
+  /* Centrage horizontal des éléments */
+  /* Horizontal centering of items */
+
+  gap: 1rem;
+  /* Espacement entre les éléments */
+  /* Spacing between items */
+}
+
+.countdown-item {
+  display: flex;
+  /* Utilisation de Flexbox pour la disposition */
+  /* Using Flexbox for layout */
+
+  flex-direction: column;
+  /* Disposition en colonne */
+  /* Column layout */
+
+  align-items: center;
+  /* Centrage horizontal des éléments */
+  /* Horizontal centering of items */
+
+  justify-content: center;
+  /* Centrage vertical des éléments */
+  /* Vertical centering of items */
+
+  gap: 0.5rem;
+  /* Espacement entre les éléments */
+  /* Spacing between items */
+
+  border-right: 1px solid #e2e8f0ab;
+  /* Bordure droite */
+  /* Right border */
+
+  padding: 1rem;
+  /* Espace intérieur */
+  /* Inner spacing */
+}
+
+.countdown-value {
+  position: relative;
+  /* Positionnement relatif */
+  /* Relative positioning */
+
+  overflow: hidden;
+  /* Masquage du débordement */
+  /* Hidden overflow */
+
+  text-align: center;
+  /* Alignement centré du texte */
+  /* Centered text alignment */
+}
+
+.countdown-time {
+  font-size: 2rem;
+  /* Taille de la police */
+  /* Font size */
+
+  font-weight: bold;
+  /* Texte en gras */
+  /* Bold text */
+
+  color: #1a202c;
+  /* Couleur du texte */
+  /* Text color */
+
+  transition: opacity 0.35s ease, transform 0.35s ease;
+  /* Transition pour l'opacité et la transformation */
+  /* Transition for opacity and transform */
+}
+
+.countdown-text {
+  font-size: 0.875rem;
+  /* Taille de la police */
+  /* Font size */
+
+  font-weight: light;
+  /* Texte léger */
+  /* Light text */
+
+  color: #718096;
+  /* Couleur du texte */
+  /* Text color */
+}
+
+/* 🔽 Styles alternatifs pour le conteneur de compte à rebours */
+/* 🔽 Alternative styles for the countdown container */
+.countdown-container {
+  background: transparent;
+  /* Fond transparent */
+  /* Transparent background */
+
+  padding: 10px;
+  /* Espace intérieur */
+  /* Inner spacing */
+
+  display: flex;
+  /* Utilisation de Flexbox pour la disposition */
+  /* Using Flexbox for layout */
+
+  justify-content: center;
+  /* Centrage horizontal des éléments */
+  /* Horizontal centering of items */
+}
+
+.countdown-items {
+  display: flex;
+  /* Utilisation de Flexbox pour aligner les éléments */
+  /* Using Flexbox to align items */
+
+  background-color: rgba(255, 255, 255, 0.1);
+  /* Couleur de fond avec transparence */
+  /* Background color with transparency */
+
+  padding: 10px;
+  /* Espace intérieur */
+  /* Inner spacing */
+
+  border-radius: 10px;
+  /* Coins arrondis */
+  /* Rounded corners */
+
+  backdrop-filter: blur(10px);
+  /* Flou de l'arrière-plan */
+  /* Background blur */
+}
+
+.countdown-item {
+  display: flex;
+  /* Utilisation de Flexbox pour la disposition */
+  /* Using Flexbox for layout */
+
+  flex-direction: column;
+  /* Disposition en colonne */
+  /* Column layout */
+
+  align-items: center;
+  /* Centrage horizontal des éléments */
+  /* Horizontal centering of items */
+
+  margin: 0 10px;
+  /* Marge horizontale */
+  /* Horizontal margin */
+
+  padding: 10px;
+  /* Espace intérieur */
+  /* Inner spacing */
+
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  /* Bordure droite avec transparence */
+  /* Right border with transparency */
+}
+
+.countdown-item:last-child {
+  border-right: none;
+  /* Suppression de la bordure droite pour le dernier élément */
+  /* Remove right border for the last item */
+}
+
+.countdown-time {
+  font-size: 3rem;
+  /* Taille de la police */
+  /* Font size */
+
+  font-weight: bold;
+  /* Texte en gras */
+  /* Bold text */
+
+  color: #fff;
+  /* Couleur du texte */
+  /* Text color */
+}
+
+.countdown-text {
+  font-size: 1rem;
+  /* Taille de la police */
+  /* Font size */
   
-  .countdown-items {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-  }
-  
-  .countdown-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    border-right: 1px solid #e2e8f0ab;
-    padding: 1rem;
-  }
-  
-  .countdown-value {
-    position: relative;
-    overflow: hidden;
-    text-align: center;
-  }
-  
-  .countdown-time {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #1a202c;
-    transition: opacity 0.35s ease, transform 0.35s ease;
-  }
-  
-  .countdown-text {
-    font-size: 0.875rem;
-    font-weight: light;
-    color: #718096;
-  }
-  .countdown-container {
-    background: transparent; 
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .countdown-items {
-    display: flex;
-    background-color: rgba(255, 255, 255, 0.1); 
-    padding: 10px;
-    border-radius: 10px;
-    backdrop-filter: blur(10px); 
-  }
-  
-  .countdown-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 10px;
-    padding: 10px;
-    border-right: 1px solid rgba(255, 255, 255, 0.2);
-  }
-  
-  .countdown-item:last-child {
-    border-right: none;
-  }
-  
-  .countdown-time {
-    font-size: 3rem;
-    font-weight: bold;
-    color: #fff; 
-  }
-  
-  .countdown-text {
-    font-size: 1rem;
-    color: rgba(255, 255, 255, 0.7); 
-  }
+  color: rgba(255, 255, 255, 0.7);
+  /* Couleur du texte avec transparence */
+  /* Text color with transparency */
+}

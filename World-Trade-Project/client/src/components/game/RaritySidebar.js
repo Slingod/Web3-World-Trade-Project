@@ -1,6 +1,11 @@
-import React from "react";
-import "../common/Sidebar/Sidebar.css";
+import React from "react"; // Importation de React
+                           // Importing React
 
+import "../common/Sidebar/Sidebar.css"; // Importation du fichier CSS pour la sidebar
+                                        // Importing the CSS file for the sidebar
+
+// ✅ Couleurs associées à chaque rareté
+// ✅ Colors associated with each rarity
 const rarityColors = {
   Common: "#a4b0be",
   Uncommon: "#1cbf6a",
@@ -14,8 +19,12 @@ const rarityColors = {
   Unique: "#f368e0",
 };
 
+// ✅ Catégories disponibles
+// ✅ Available categories
 const categories = ["Armor", "Artifact", "Island", "Tool", "Weapon"];
 
+// ✅ Tags associés à chaque catégorie
+// ✅ Tags associated with each category
 const tags = {
   Artifact: ["Armor", "Tool", "Weapon"],
   Island: ["Additional", "Founder"],
@@ -23,6 +32,8 @@ const tags = {
   Weapon: ["Claws", "Club", "Dual Axes", "Greathammer", "Greatsword", "Sword And Shield"],
 };
 
+// ✅ Composant RaritySidebar
+// ✅ RaritySidebar Component
 const RaritySidebar = ({
   selectedRarity,
   setSelectedRarity,
@@ -34,7 +45,8 @@ const RaritySidebar = ({
 }) => {
   return (
     <div className="sidebar">
-      {/* ✅ Reset Button Centered */}
+      {/* ✅ Bouton de réinitialisation centré */}
+      {/* ✅ Centered Reset Button */}
       <div style={{ display: "flex", justifyContent: "center", marginBottom: "10px" }}>
         <button
           onClick={resetFilters}
@@ -51,7 +63,8 @@ const RaritySidebar = ({
         </button>
       </div>
 
-      {/* ✅ Section Rarity */}
+      {/* ✅ Section Rareté */}
+      {/* ✅ Rarity Section */}
       <h2 className="sidebar-title">Rarity</h2>
       <ul className="sidebar-list">
         {Object.entries(rarityColors).map(([rarity, color]) => (
@@ -66,7 +79,8 @@ const RaritySidebar = ({
         ))}
       </ul>
 
-      {/* ✅ Section Categories */}
+      {/* ✅ Section Catégories */}
+      {/* ✅ Categories Section */}
       <h2 className="sidebar-title">Categories</h2>
       <ul className="sidebar-list">
         {categories.map((category) => (
@@ -82,6 +96,7 @@ const RaritySidebar = ({
       </ul>
 
       {/* ✅ Section Tags */}
+      {/* ✅ Tags Section */}
       <h2 className="sidebar-title">Tags</h2>
       {Object.entries(tags).map(([category, items]) => (
         <div key={category}>
@@ -104,4 +119,5 @@ const RaritySidebar = ({
   );
 };
 
-export default RaritySidebar;
+export default RaritySidebar; // Exportation du composant RaritySidebar
+                               // Exporting the RaritySidebar component

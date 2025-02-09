@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, { useState } from "react"; // Importation de React et du hook useState
+                                        // Importing React and the useState hook
+
 import {
     FiBarChart,
     FiBookOpen,
@@ -9,32 +11,65 @@ import {
     FiShoppingCart,
     FiTag,
     FiUsers
-} from "react-icons/fi";
-import { motion } from "framer-motion";
-import "./Sidebar.css";
+} from "react-icons/fi";  // Importation des icônes depuis react-icons
+                         // Importing icons from react-icons
 
-const Sidebar = () => {
-  const [open, setOpen] = useState(true);
-  const [selected, setSelected] = useState("Dashboard");
+import { motion } from "framer-motion"; // Importation de motion pour les animations
+                                       // Importing motion for animations
+
+import "./Sidebar.css";    // Importation du fichier CSS pour la sidebar
+                          // Importing the CSS file for the sidebar
+
+const Sidebar = () => {   // Définition du composant Sidebar
+                         // Defining the Sidebar component
+
+  const [open, setOpen] = useState(true);  // État pour gérer l'ouverture/fermeture de la sidebar
+                                          // State to manage sidebar open/close
+
+
+  const [selected, setSelected] = useState("Dashboard"); // État pour gérer l'élément sélectionné
+                                                        // State to manage the selected item
 
   return (
     <motion.nav
       layout
       style={{
-        width: open ? "225px" : "60px", 
-        backgroundColor: "#1a202c",
-        color: "#fff",
-        height: "100vh", 
-        borderRight: "2px solid #1a202c",
-        padding: "10px",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
+        width: open ? "225px" : "60px",   // Largeur en fonction de l'état d'ouverture
+                                         // Width based on open state 
+
+
+        backgroundColor: "#1a202c",  // Couleur de fond
+                                    // Background color
+
+        color: "#fff", // Couleur du texte
+                      // Text color
+
+        height: "100vh", // Hauteur de la sidebar
+                        // Sidebar height
+
+        borderRight: "2px solid #1a202c", // Bordure droite
+                                            // Right border
+
+        padding: "10px",   // Espace intérieur
+                          // Inner spacing
+
+
+        display: "flex",  // Utilisation de Flexbox
+                         // Using Flexbox
+
+        flexDirection: "column", // Disposition en colonne
+                                // Column layout
+
+        alignItems: "center",    // Alignement centré
+                                // Centered alignment
       }}
     >
-      <TitleSection open={open} />
+      <TitleSection open={open} />  {/* Section de titre */}
+                                    {/* Title section */}
 
-      <div style={{ width: "100%" }}>
+      <div style={{ width: "100%" }}>   {/* Conteneur pour les options */}
+                                        {/* Container for options */}
+
         <a href="/" style={{ textDecoration: "none", color: "inherit" }}>
           <Option Icon={FiHome} title="Home" selected={selected} setSelected={setSelected} open={open} />
         </a>
@@ -48,33 +83,56 @@ const Sidebar = () => {
         <Option Icon={FiUsers} title="Members" selected={selected} setSelected={setSelected} open={open} />
       </div>
 
-      <ToggleClose open={open} setOpen={setOpen} />
+      <ToggleClose open={open} setOpen={setOpen} />   {/* Bouton pour ouvrir/fermer la sidebar */}
+                                                      {/* Button to open/close the sidebar */}
     </motion.nav>
   );
 };
 
-const Option = ({ Icon, title, selected, setSelected, open }) => {
+const Option = ({ Icon, title, selected, setSelected, open }) => {   // Composant pour chaque option
+                                                                    // Component for each option
   return (
     <motion.button
       layout
       onClick={() => setSelected(title)}
       style={{
-        display: "flex",
-        alignItems: "center",
-        width: "100%",
-        height: "40px",
-        padding: "10px",
-        backgroundColor: selected === title ? "#EF5777" : "transparent",
-        borderRadius: "50px",
-        color: "white",
-        cursor: "pointer",
-        transition: "background 0.3s",
+        display: "flex", // Utilisation de Flexbox
+                        // Using Flexbox
+
+        alignItems: "center",  // Alignement centré
+                              // Centered alignment
+
+        width: "100%", // Largeur complète
+                      // Full width
+
+        height: "40px", // Hauteur fixe
+                        // Fixed height
+
+        padding: "10px", // Espace intérieur
+                        // Inner spacing
+
+        backgroundColor: selected === title ? "#EF5777" : "transparent", // Couleur de fond si sélectionné
+                                                                        // Background color if selected
+        borderRadius: "50px",  // Coins arrondis
+                              // Rounded corners
+
+        color: "white", // Couleur du texte
+                        // Text color
+
+        cursor: "pointer", // Curseur en forme de pointeur
+                          // Pointer cursor
+
+        transition: "background 0.3s", // Transition de la couleur de fond
+                                      // Background color transition
       }}
     >
       <motion.div style={{ width: "30px", textAlign: "center", fontSize: "18px" }}>
-        <Icon />
+        <Icon />  {/* Affichage de l'icône */}
+                  {/* Displaying the icon */}
       </motion.div>
-      {open && (
+      {open && (   // Affichage du titre si la sidebar est ouverte
+                  // Displaying the title if the sidebar is open */
+
         <motion.span style={{ marginLeft: "10px", fontSize: "14px" }}>
           {title}
         </motion.span>
@@ -83,42 +141,62 @@ const Option = ({ Icon, title, selected, setSelected, open }) => {
   );
 };
 
-const TitleSection = ({ open }) => {
-  return (
+const TitleSection = ({ open }) => {        // Section de titre
+  return (                                 // Title section
     <div style={{ width: "100%", marginBottom: "20px", textAlign: "center" }}>
-      {open && (
+      {open && (        // Affichage du titre si la sidebar est ouverte
+                        // Displaying the title if the sidebar is open
         <motion.div>
           <span style={{ display: "block", fontSize: "16px", fontWeight: "bold" }}></span>
         </motion.div>
+
       )}
     </div>
   );
 };
 
-const ToggleClose = ({ open, setOpen }) => {
+const ToggleClose = ({ open, setOpen }) => {    // Bouton pour ouvrir/fermer la sidebar
+                                               // Button to open/close the sidebar
   return (
     <motion.button
       layout
-      onClick={() => setOpen((prev) => !prev)}
+      onClick={() => setOpen((prev) => !prev)}  // Inverse l'état d'ouverture
+                                                // Inverting the open state
       style={{
-        position: "absolute",
-        bottom: "20px",
-        background: "transparent",
-        border: "none",
-        cursor: "pointer",
-        color: "white",
+        position: "absolute", // Positionnement absolue
+                              // Absolute positioning
+
+        bottom: "20px",       // Position en bas
+                              // Bottom position
+
+        background: "transparent", // Fond transparent
+                                    // Transparent background
+
+        border: "none",          // Pas de bordure
+                                  // No border
+
+        cursor: "pointer",    // Curseur en forme de pointeur
+                              // Pointer cursor
+
+        color: "white",     // Couleur du texte
+                            // Text color
       }}
     >
       <FiChevronsRight
         style={{
-          fontSize: "24px",
-          transform: open ? "rotate(180deg)" : "rotate(0deg)",
-          transition: "transform 0.3s"
-        }}
+          fontSize: "24px", // Taille de l'icône
+                            // Icon size
+
+          transform: open ? "rotate(180deg)" : "rotate(0deg)", // Rotation de l'icône
+                                                              // Icon rotation
+
+          transition: "transform 0.3s"                 // Transition de la rotation
+        }}                                            // Rotation transition
       />
     </motion.button>
   );
 };
 
 // ✅ Export default pour éviter l'erreur
+// ✅ Default export to avoid errors
 export default Sidebar;

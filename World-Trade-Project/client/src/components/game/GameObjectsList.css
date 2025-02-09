@@ -1,0 +1,76 @@
+.filters {
+  display: flex; /* Utilisation de Flexbox pour aligner les éléments */
+                 /* Using Flexbox to align items */
+
+  justify-content: center; /* Centrage horizontal des éléments */
+                           /* Horizontal centering of items */
+
+  gap: 15px; /* Espacement entre les éléments */
+             /* Spacing between items */
+
+  margin-bottom: 20px; /* Marge inférieure */
+                        /* Bottom margin */
+}
+
+.filters select {
+  padding: 8px; /* Espace intérieur */
+                /* Inner spacing */
+
+  font-size: 16px; /* Taille de la police */
+                   /* Font size */
+
+  border-radius: 5px; /* Coins arrondis */
+                      /* Rounded corners */
+
+  border: 1px solid #ddd; /* Bordure */
+                           /* Border */
+
+  background-color: white; /* Couleur de fond */
+                           /* Background color */
+
+  cursor: pointer; /* Curseur en forme de pointeur */
+                   /* Pointer cursor */
+}
+
+.grid {
+  display: grid; /* Utilisation de la grille CSS pour la disposition */
+                 /* Using CSS grid for layout */
+
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  /* Colonnes de la grille avec une largeur minimale de 200px */
+  /* Grid columns with a minimum width of 200px */
+
+  gap: 20px; /* Espacement entre les éléments de la grille */
+             /* Spacing between grid items */
+
+  justify-content: center; /* Centrage horizontal des éléments */
+                           /* Horizontal centering of items */
+}
+
+.card {
+  background-color: var(--card-bg); /* Couleur de fond définie par une variable CSS */
+                                   /* Background color defined by a CSS variable */
+
+  color: var(--card-text); /* Couleur du texte définie par une variable CSS */
+                           /* Text color defined by a CSS variable */
+
+  padding: 15px; /* Espace intérieur */
+                 /* Inner spacing */
+
+  border-radius: 8px; /* Coins arrondis */
+                      /* Rounded corners */
+
+  text-align: center; /* Alignement centré du texte */
+                      /* Centered text alignment */
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre portée */
+                                           /* Box shadow */
+                                           
+  transition: transform 0.2s ease; /* Transition pour l'effet de survol */
+                                 /* Transition for hover effect */
+}
+
+.card:hover {
+  transform: scale(1.05); /* Agrandissement au survol */
+                          /* Enlargement on hover */
+}

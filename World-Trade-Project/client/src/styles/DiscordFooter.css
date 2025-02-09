@@ -1,11 +1,23 @@
-/* ✅ Frist Style footer (Join Discord Partners) */
+/* ✅ First Style footer (Join Discord Partners) */
 .discord-footer {
-    background-color: #5865f2; /* ✅ Epic Color */
-    color: white;
-    text-align: center;
-    padding: 10px; /* 🔹 Less Large */
-    width: 100%;
-    font-size: 16px; /* 🔹 Lower Text size */
-    font-weight: bold;
-  }
-  
+  background-color: #5865f2; /* ✅ Couleur épique */
+                              /* ✅ Epic Color */
+
+  color: white; /* Couleur du texte */
+                 /* Text color */
+
+  text-align: center; /* Alignement centré du texte */
+                      /* Centered text alignment */
+
+  padding: 10px; /* 🔹 Espace intérieur moins large */
+                  /* 🔹 Less Large */
+
+  width: 100%; /* Largeur complète */
+               /* Full width */
+
+  font-size: 16px; /* 🔹 Taille de police plus petite */
+                   /* 🔹 Lower Text size */
+
+  font-weight: bold; /* Texte en gras */
+                     /* Bold text */
+}

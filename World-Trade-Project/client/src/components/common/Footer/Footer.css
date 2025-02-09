@@ -1,16 +1,31 @@
 /* ✅ Style du footer contenant les icônes Discord */
+/* ✅ Footer style containing Discord icons */
 .footer {
-    background-color: #222;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
-  
-  /* ✅ Icônes Discord en ligne */
-  .footer .discord-icons {
-    display: flex;
-    gap: 15px; /* 🔹 Espacement entre les icônes */
-  }
-  
+  background-color: #222; /* Couleur de fond du footer */
+                          /* Background color of the footer */
+
+  padding: 10px;          /* Espace intérieur du footer */
+                          /* Inner spacing of the footer */
+
+  display: flex;          /* Utilisation de Flexbox pour la disposition */
+                          /* Using Flexbox for layout */
+
+  justify-content: center; /* Centrage horizontal des éléments */
+                           /* Horizontal centering of elements */
+
+  align-items: center;    /* Centrage vertical des éléments */
+                          /* Vertical centering of elements */
+
+  width: 100%;            /* Largeur du footer à 100% */
+                          /* Footer width set to 100% */
+}
+
+/* ✅ Icônes Discord en ligne */
+/* ✅ Discord icons in a row */
+.footer .discord-icons {
+  display: flex;          /* Utilisation de Flexbox pour aligner les icônes */
+                          /* Using Flexbox to align icons */
+                          
+  gap: 15px;              /* Espacement entre les icônes */
+                          /* Spacing between icons */
+}

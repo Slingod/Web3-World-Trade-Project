@@ -1,41 +1,92 @@
 /* ✅ Style de la Sidebar */
+/* ✅ Sidebar style */
 .sidebar {
-    width: 250px; /* Largeur fixe */
-    background-color: #2c3e50;
-    padding: 15px;
-    border-radius: 8px;
-    color: white;
+    width: 250px; /* Largeur fixe de la sidebar */
+                  /* Fixed width of the sidebar */
+
+
+    background-color: #2c3e50;  /* Couleur de fond */
+                                  /* Background color */
+
+
+    padding: 15px;        /* Espace intérieur */
+                         /* Inner spacing */
+
+
+    border-radius: 8px;  /* Coins arrondis */
+                        /* Rounded corners */
+
+
+    color: white;   /* Couleur du texte */
+                      /* Text color */
   }
   
-  /* ✅ Titre "Rarity" */
+   /* ✅ Titre "Rarity" */
+  /* ✅ "Rarity" title */
   .sidebar-title {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    text-align: center;
-    font-weight: bold;
+    font-size: 1.5rem; /* Taille de la police */
+                       /* Font size */
+
+
+    margin-bottom: 10px;  /* Marge inférieure */
+                          /* Bottom margin */
+
+
+    text-align: center;   /* Alignement centré */
+                          /* Centered alignment */
+
+
+    font-weight: bold;    /* Texte en gras */
+                         /* Bold text */
   }
   
-  /* ✅ Liste des éléments */
+    /* ✅ Liste des éléments */
+    /* ✅ List of items */
   .sidebar-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    list-style: none; /* Suppression des puces de liste */
+                      /* Removing list bullets */
+
+
+    padding: 0;     /* Suppression du padding */
+                    /* Removing padding */
+
+
+    margin: 0;       /* Suppression de la marge */
+                    /* Removing margin */
   }
   
-  /* ✅ Style des tags de rareté */
+      /* ✅ Style des tags de rareté */
+      /* ✅ Rarity tags style */
   .sidebar-item {
-    padding: 10px;
-    margin: 5px 0;
-    font-size: 1rem;
-    font-weight: bold;
-    text-align: center;
-    border-radius: 4px;
-    color: white; /* Texte blanc pour contraste */
-    transition: transform 0.2s ease-in-out;
+    padding: 10px;  /* Espace intérieur */
+                   /* Inner spacing */
+
+    margin: 5px 0;  /* Marge verticale */
+                    /* Vertical margin */
+
+    font-size: 1rem;  /* Taille de la police */
+                      /* Font size */
+
+    font-weight: bold;  /* Texte en gras */
+                        /* Bold text */
+
+    text-align: center;  /* Alignement centré */
+                        /* Centered alignment */
+
+    border-radius: 4px;   /* Coins arrondis */
+                          /* Rounded corners */
+
+    color: white;  /* Couleur du texte */
+                     /* Text color */
+
+    transition: transform 0.2s ease-in-out;  /* Effet de transition */
+                                            /* Transition effect */
   }
   
-  /* ✅ Effet de survol */
+          /* ✅ Effet de survol */
+          /* ✅ Hover effect */
   .sidebar-item:hover {
-    transform: scale(1.05);
+    transform: scale(1.05);  /* Agrandissement au survol */
+                             /* Enlargement on hover */
   }
   
