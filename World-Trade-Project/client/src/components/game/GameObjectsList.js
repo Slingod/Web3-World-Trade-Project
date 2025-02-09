@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import Login from "./Login";
-import "../styles/GameObjectsList.css";
+import Login from "../Login";
+import "../../styles/GameObjectsList.css";
 
 // ✅ Axios instance to fetch game objects
 const axiosInstance = axios.create({

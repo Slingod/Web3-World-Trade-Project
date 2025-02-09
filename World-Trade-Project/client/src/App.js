@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 import './styles/tailwind.css';
-import GameObjectsList from './components/GameObjectsList';
+import GameObjectsList from './components/game/GameObjectsList';
 import Home from './components/Home';
-import CurrentVersion from './components/CurrentVersion';
-import RaritySidebar from "./components/RaritySidebar"; 
+import CurrentVersion from './components/game/CurrentVersion';
+import RaritySidebar from "./components/game/RaritySidebar"; 
 import Footer from './components/common/Footer/Footer';
 import DiscordFooter from "./components/DiscordFooter"; 
 import ThemeToggle from "./components/common/ThemeToggle"; // 🔥 Import  ThemeToggle

@@ -1,5 +1,5 @@
 import React from "react";
-import "./common/Sidebar/Sidebar.css";
+import "../common/Sidebar/Sidebar.css";
 
 const rarityColors = {
   Common: "#a4b0be",

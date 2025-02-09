@@ -1,7 +1,7 @@
 import React from 'react';
-import Sidebar from "./common/Sidebar/Sidebar"; 
-import GameObjectsList from './GameObjectsList'; // ✅ Contient maintenant Login
-import ThemeToggle from './common/ThemeToggle'; // ✅ Importation de ThemeToggle
+import Sidebar from "../common/Sidebar/Sidebar"; 
+import GameObjectsList from './GameObjectsList';
+import ThemeToggle from '../common/ThemeToggle'; // ✅ Importation de ThemeToggle
 
 const CurrentVersion = () => {
   return (
