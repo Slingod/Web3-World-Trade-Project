@@ -15,7 +15,7 @@ const Footer = () => {         // Définition d'un composant fonctionnel React
                                             {/*Container for Discord icons */}
             
       <a href="https://discord.gg/RqVZZcEsgJ" target="_blank" rel="noopener noreferrer">
-        <img src="para.png" alt="Discord Partner 1" />      {/* Lien vers le serveur Discord avec une image */}
+        <img src="betdox.png" alt="Discord Partner 1" />      {/* Lien vers le serveur Discord avec une image */}
         </a>                                                {/* Link to Discord server with an image */}
 
         <a href="https://discord.gg/bigtimewarriors" target="_blank" rel="noopener noreferrer">

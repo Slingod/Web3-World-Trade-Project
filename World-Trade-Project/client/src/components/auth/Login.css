@@ -1,78 +1,164 @@
 .login-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
+  display: flex; /* Utilisation de Flexbox pour la disposition */
+                  /* Using Flexbox for layout */
+
+  justify-content: center; /* Centrage horizontal des éléments */
+                             /* Horizontal centering of items */
+
+  align-items: center; /* Centrage vertical des éléments */
+                        /* Vertical centering of items */
+
+  padding: 20px; /* Espace intérieur */
+                  /* Inner spacing */
 }
 
 .login-form {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  background-color: #535151e5;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex; /* Utilisation de Flexbox pour la disposition */
+                  /* Using Flexbox for layout */
+
+  align-items: center; /* Centrage vertical des éléments */
+                        /* Vertical centering of items */
+
+  gap: 10px; /* Espacement entre les éléments */
+              /* Spacing between items */
+              
+  background-color: #535151e5; /* Couleur de fond */
+                                /* Background color */
+
+  padding: 20px; /* Espace intérieur */
+                  /* Inner spacing */
+
+  border-radius: 8px; /* Coins arrondis */
+                       /* Rounded corners */
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre portée */
+                                             /* Box shadow */
 }
 
 .login-field {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 5px;
+  display: flex; /* Utilisation de Flexbox pour la disposition */
+                  /* Using Flexbox for layout */
+
+  flex-direction: row; /* Disposition en ligne */
+                        /* Row layout */
+
+  align-items: center; /* Centrage vertical des éléments */
+                        /* Vertical centering of items */
+
+  gap: 5px; /* Espacement entre les éléments */
+             /* Spacing between items */
 }
 
 .login-field label {
-  margin-bottom: 5px;
-  font-size: 0.9rem;
-  color: white;
+  margin-bottom: 5px; /* Marge inférieure */
+                      /* Bottom margin */
+
+  font-size: 0.9rem; /* Taille de la police */
+                      /* Font size */
+
+  color: white; /* Couleur du texte */
+                 /* Text color */
 }
 
 .login-field input {
-  padding: 5px;
-  font-size: 1rem;
-  border: 1px solid #e5e7eb;
-  border-radius: 4px;
-  color: #384e32;
+  padding: 5px; /* Espace intérieur */
+                 /* Inner spacing */
+
+  font-size: 1rem; /* Taille de la police */
+                    /* Font size */
+
+  border: 1px solid #e5e7eb; /* Bordure */
+                              /* Border */
+
+  border-radius: 4px; /* Coins arrondis */
+                       /* Rounded corners */
+
+  color: #384e32; /* Couleur du texte */
+                   /* Text color */
 }
 
 .login-button {
-  padding: 10px 20px;
-  font-size: 1rem;
-  color: white;
-  background-color: #e5e7eb;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+  padding: 10px 20px; /* Espace intérieur */
+                       /* Inner spacing */
+
+  font-size: 1rem; /* Taille de la police */
+                    /* Font size */
+
+  color: white; /* Couleur du texte */
+                 /* Text color */
+
+  background-color: #e5e7eb; /* Couleur de fond */
+                              /* Background color */
+
+  border: none; /* Pas de bordure */
+                /* No border */
+
+  border-radius: 4px; /* Coins arrondis */
+                       /* Rounded corners */
+                       
+  cursor: pointer; /* Curseur en forme de pointeur */
+                     /* Pointer cursor */
 }
 
 .login-button:hover {
-  background-color: #0b5f51fd;
+  background-color: #0b5f51fd; /* Couleur de fond au survol */
+                                /* Background color on hover */
 }
-/* ✅ Button Style "Encrypt Login" */
+
+/* ✅ Style du bouton "Encrypt Login" */
 .encrypt-login-button {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 20px;
-  font-size: 1rem;
-  font-family: monospace;
-  color: white;
-  background-color: #8d8d8db6; /* Background Login Button */
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  text-transform: uppercase;
-  transition: background 0.3s ease, color 0.3s ease;
+  display: flex; /* Utilisation de Flexbox pour la disposition */
+                  /* Using Flexbox for layout */
+
+  align-items: center; /* Centrage vertical des éléments */
+                        /* Vertical centering of items */
+
+  gap: 8px; /* Espacement entre les éléments */
+             /* Spacing between items */
+
+  padding: 10px 20px; /* Espace intérieur */
+                       /* Inner spacing */
+
+  font-size: 1rem; /* Taille de la police */
+                    /* Font size */
+
+  font-family: monospace; /* Police de caractères */
+                           /* Font family */
+
+  color: white; /* Couleur du texte */
+                 /* Text color */
+
+  background-color: #8d8d8db6; /* Couleur de fond */
+                                /* Background color */
+
+  border: none; /* Pas de bordure */
+                /* No border */
+
+  border-radius: 4px; /* Coins arrondis */
+                       /* Rounded corners */
+
+  cursor: pointer; /* Curseur en forme de pointeur */
+                     /* Pointer cursor */
+
+  text-transform: uppercase; /* Texte en majuscules */
+                               /* Uppercase text */
+
+  transition: background 0.3s ease, color 0.3s ease; /* Transition pour le fond et la couleur */
+                                                      /* Transition for background and color */
 }
 
 /* ✅ Effet de survol */
 .encrypt-login-button:hover {
-  background-color: #f368e0; /* Vert foncé */
-  color: #f7f7f7; /* Indigo */
+  background-color: #f368e0; /* Couleur de fond au survol */
+                              /* Background color on hover */
+
+  color: #f7f7f7; /* Couleur du texte au survol */
+                   /* Text color on hover */
 }
 
 /* ✅ Icône du cadenas */
 .encrypt-login-button svg {
-  font-size: 1.2rem;
+
+  font-size: 1.2rem; /* Taille de l'icône */
+                       /* Icon size */
 }

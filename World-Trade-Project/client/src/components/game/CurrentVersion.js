@@ -14,10 +14,6 @@ const CurrentVersion = () => { // Définition du composant CurrentVersion
                                // Defining the CurrentVersion component
   return (
     <div style={styles.container}>
-
-      <ThemeToggle />  {/* Ajout du composant ThemeToggle en haut de l'application */}
-                       {/* Adding the ThemeToggle component at the top of the application */}
-
       {/* Suppression du composant <Login />, maintenant géré dans GameObjectsList */}
       {/* Removal of the <Login /> component, now managed within GameObjectsList */}
 
@@ -54,7 +50,7 @@ const styles = {
 
     width: '100%', // Largeur complète
                    // Full width
-                   
+
     justifyContent: 'center', // Alignement centré horizontalement
                                // Centered horizontal alignment
   },

@@ -1,8 +1,17 @@
 @tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Importation des styles de base de Tailwind CSS
+   Importing base styles from Tailwind CSS */
 
-/* 🌞 Day Mod (par défaut) */
+@tailwind components;
+
+/* Importation des composants de Tailwind CSS
+   Importing components from Tailwind CSS */
+
+@tailwind utilities;
+/* Importation des utilitaires de Tailwind CSS
+   Importing utilities from Tailwind CSS */
+
+/* 🌞 Day Mod  */
 :root {
     --bg-color: white;       /* Fond global */
     --text-color: black;      /* Texte global */
@@ -19,107 +28,142 @@
   }  
   
   /* 🔘 Button Toggle */
-  .theme-toggle {
-    display: flex;
-    align-items: center;
-    background: rgba(255, 255, 255, 0.473);
-    padding: 5px;
-    border-radius: 20px;
-    position: relative;
-  }
+  /* 🔘 Bouton de basculement de thème */
+.theme-toggle {
+  display: flex; /* Utilisation de Flexbox pour la disposition */
+                 /* Using Flexbox for layout */
+
+  align-items: center; /* Centrage vertical des éléments */
+                        /* Vertical centering of items */
+
+  background: rgba(255, 255, 255, 0.473); /* Fond semi-transparent */
+                                             /* Semi-transparent background */
+
+  padding: 5px; /* Espace intérieur */
+                 /* Inner spacing */
+
+  border-radius: 20px; /* Coins arrondis */
+                       /* Rounded corners */
+
+  position: relative; /* Positionnement relatif */
+                        /* Relative positioning */
+}
   
-  .toggle-btn {
-    background: transparent;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-    font-size: 18px;
-  }
-  /* 🌗 Animation Day/Night */
-  .toggle-slider {
-    position: absolute;
-    top: 3px;
-    width: 50%;
-    height: 24px;
-    border-radius: 12px;
-    background: #ffcc0000;
-    transition: transform 0.3s;
-  }
+ .toggle-btn {
+    background: transparent; /* Fond transparent */
+                              /* Transparent background */
+
+    border: none; /* Pas de bordure */
+                  /* No border */
+
+    padding: 5px 10px; /* Espace intérieur */
+                       /* Inner spacing */
+
+    cursor: pointer; /* Curseur en forme de pointeur */
+                      /* Pointer cursor */
+
+    font-size: 18px; /* Taille de la police */
+                      /* Font size */
+}
+/* 🌗 Animation Jour/Nuit */
+.toggle-slider {
+    position: absolute; /* Positionnement absolu */
+                        /* Absolute positioning */
+
+    top: 3px; /* Position en haut */
+               /* Top position */
+
+    width: 50%; /* Largeur du curseur */
+                 /* Slider width */
+
+    height: 24px; /* Hauteur du curseur */
+                   /* Slider height */
+
+    border-radius: 12px; /* Coins arrondis */
+                          /* Rounded corners */
+
+    background: #ffcc0000; /* Couleur de fond */
+                            /* Background color */
+
+    transition: transform 0.3s; /* Transition pour le déplacement */
+                                 /* Transition for movement */
+}
   
-  .right {
-    transform: translateX(100%);
+.right {
+    transform: translateX(100%); /* Déplacement vers la droite */
+                                  /* Move to the right */
+}
+
+.left {
+    transform: translateX(0); /* Déplacement vers la gauche */
+                              /* Move to the left */
+}
+
+.sidebar-container {
+    display: flex; /* Utilisation de Flexbox pour la disposition */
+                    /* Using Flexbox for layout */
+
+    flex-direction: column; /* Disposition en colonne */
+                             /* Column layout */
+
+    gap: 20px; /* Espacement entre les éléments */
+                 /* Spacing between items */
   }
-  
-  .left {
-    transform: translateX(0);
-  }
-  
-  .app-container {
-    display: flex;
-  }
-  
-  .sidebar-container {
-    display: flex;
-    flex-direction: column; /* ✅ Met les Sidebars en colonne */
-    gap: 20px; /* ✅ Espacement entre les deux Sidebars */
-  }
-  
-  .app-container {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .content-container {
-    display: flex;
-  }
-  
-  .content-container > * {
-    flex: 0,1;}
+   
+ .content-container {
+    display: flex; /* Utilisation de Flexbox pour la disposition */
+                    /* Using Flexbox for layout */
+
+    flex: 1; /* Prend tout l'espace disponible */
+              /* Takes up all available space */
+}
+
+.content-container > * {
+    flex: 0 1 auto; /* Permet aux éléments de s'étendre */
+                     /* Allows items to expand */
+}
   
 
 /* ✅ Structure principale pour garder le footer en bas */
 .app-container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh; /* 🏆 Assure que toute la page est prise en compte */
+    display: flex; /* Utilisation de Flexbox pour la disposition */
+                    /* Using Flexbox for layout */
+
+    flex-direction: column; /* Disposition en colonne */
+                             /* Column layout */
+
+    min-height: 100vh; /* Assure que toute la page est prise en compte */
+                        /* Ensures the entire page is considered */
 }
 
-/* ✅ Cette section prend tout l'espace disponible */
-.content-container {
-  display: flex;
-  flex: 1; /* 🏆 Permet à la sidebar + contenu de prendre tout l'espace disponible */
-}
-
-/* ✅ Permet au contenu de s'étendre en hauteur */
 .main-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; /* ⬆️ Contenu commence en haut */
+    flex: 1; /* Permet au contenu de s'étendre en hauteur */
+              /* Allows content to expand in height */
+
+    display: flex; /* Utilisation de Flexbox pour la disposition */
+                    /* Using Flexbox for layout */
+
+    flex-direction: column; /* Disposition en colonne */
+                             /* Column layout */
+
+    justify-content: flex-start; /* Contenu commence en haut */
+                                  /* Content starts at the top */
 }
 
-/* ✅ Le footer sera toujours en bas de la page */
 .footer-container {
-  margin-top: auto; /* 🏆 Pousse le footer tout en bas */
-  width: 100%;
+    margin-top: auto; /* Pousse le footer tout en bas */
+                       /* Pushes the footer to the bottom */
+
+    width: 100%; /* Largeur complète */
+                  /* Full width */
 }
-
-
 
 html, body {
-  height: 100%;
-  margin: 0;
-}
+    height: 100%; /* Hauteur complète */
+                   /* Full height */
 
-.app-container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-.content-container {
-  flex: 1;
-  overflow-y: auto; /* Permet le défilement du contenu principal */
+    margin: 0; /* Suppression des marges */
+                 /* Remove margins */
 }
 
 .footer-container {
@@ -128,87 +172,102 @@ html, body {
 }
 
 .discord-footer, .footer {
-  width: 100%;
-  text-align: center;
+    width: 100%; /* Largeur complète */
+                  /* Full width */
+
+    text-align: center; /* Alignement centré du texte */
+                         /* Centered text alignment */
 }
 
 .discord-footer {
-  background-color: #5865f2;
-  color: white;
-  padding: 10px;
-  font-size: 16px;
-  font-weight: bold;
+    background-color: #5865f2; /* Couleur de fond */
+                                /* Background color */
+
+    color: white; /* Couleur du texte */
+                   /* Text color */
+
+    padding: 10px; /* Espace intérieur */
+                    /* Inner spacing */
+
+    font-size: 16px; /* Taille de la police */
+                      /* Font size */
+
+    font-weight: bold; /* Texte en gras */
+                        /* Bold text */
 }
 
 .footer {
-  background-color: #222;
-  padding: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    background-color: #222; /* Couleur de fond */
+                             /* Background color */
+
+    padding: 10px; /* Espace intérieur */
+                    /* Inner spacing */
+
+    display: flex; /* Utilisation de Flexbox pour la disposition */
+                    /* Using Flexbox for layout */
+
+    justify-content: center; /* Centrage horizontal des éléments */
+                              /* Horizontal centering of items */
+
+    align-items: center; /* Centrage vertical des éléments */
+                          /* Vertical centering of items */
 }
 
 .footer .discord-icons img {
-  width: 80px;
-  height: auto;
-  margin: 0 10px;
+    width: 80px; /* Largeur des icônes */
+                  /* Icon width */
+
+    height: auto; /* Hauteur automatique */
+                   /* Automatic height */
+
+    margin: 0 10px; /* Espacement entre les icônes */
+                     /* Spacing between icons */
+
+    image-rendering: -webkit-optimize-contrast; /* Améliore le rendu sur certains navigateurs */
+                                                 /* Improves rendering on some browsers */
+
+    image-rendering: crisp-edges; /* Pour un rendu plus net */
+                                  /* For sharper rendering */
 }
-
-
-.footer .discord-icons img {
-  width: 80px; /* Ajustez la taille selon vos besoins */
-  height: auto; /* Conserve les proportions de l'image */
-  margin: 0 10px; /* Espacement entre les icônes */
-  image-rendering: -webkit-optimize-contrast; /* Améliore le rendu sur certains navigateurs */
-  image-rendering: crisp-edges; /* Pour un rendu plus net */
-}
-
-
-
-
 .rarity-sidebar {
-  background-color: var(--card-bg);
-  color: var(--card-text);
-  padding: 20px;
-  border-right: 1px solid #ccc;
-  width: 250px;
+    background-color: var(--card-bg); /* Couleur de fond des cartes */
+                                       /* Card background color */
+
+    color: var(--card-text); /* Couleur du texte des cartes */
+                              /* Card text color */
+
+    padding: 20px; /* Espace intérieur */
+                    /* Inner spacing */
+
+    border-right: 1px solid #ccc; /* Bordure droite */
+                                  /* Right border */
+
+    width: 250px; /* Largeur de la sidebar */
+                   /* Sidebar width */
 }
 
 .rarity-sidebar .section {
-  margin-bottom: 20px;
+    margin-bottom: 20px; /* Marge inférieure */
+                         /* Bottom margin */
 }
 
 .rarity-sidebar h3 {
-  font-size: 18px;
-  margin-bottom: 10px;
+    font-size: 18px; /* Taille de la police */
+                      /* Font size */
+
+    margin-bottom: 10px; /* Marge inférieure */
+                          /* Bottom margin */
 }
 
 .rarity-sidebar ul {
-  list-style-type: none;
-  padding: 0;
+    list-style-type: none; /* Suppression des puces de liste */
+                           /* Remove list bullets */
+
+    padding: 0; /* Suppression du padding */
+                 /* Remove padding */
 }
 
 .rarity-sidebar li {
-  margin-bottom: 5px;
+    margin-bottom: 5px; /* Marge inférieure */
+                        /* Bottom margin */
 }
-
-.app-container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-.content-container {
-  display: flex;
-  flex: 1;
-}
-
-.content-container > * {
-  flex: 0 1 auto;
-}
-
-.footer-container {
-  margin-top: auto;
-  width: 100%;
-}
-
