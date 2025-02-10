@@ -74,3 +74,103 @@
   transform: scale(1.05); /* Agrandissement au survol */
                           /* Enlargement on hover */
 }
+
+
+
+
+
+/* CardDetailPage*/
+.game-objects-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+.game-object-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease;
+}
+
+.game-object-card:hover {
+  transform: scale(1.05);
+}
+
+.game-object-image {
+  width: 100px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+
+.game-objects-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  background-color: var(--bg-color-dark);
+  color: var(--text-color-dark);
+}
+
+.game-object-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--bg-color-light);
+  color: var(--text-color-light);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.game-object-card:hover {
+  transform: scale(1.05);
+}
+
+.game-object-image {
+  width: 100px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.light .game-objects-list {
+  background-color: var(--bg-color-light);
+  color: var(--text-color-light);
+}
+
+.light .game-object-card {
+  background-color: var(--bg-color-dark);
+  color: var(--text-color-dark);
+}
+
+@media (max-width: 768px) {
+  .game-object-card {
+    flex: 1 1 45%;
+  }
+
+  .card-detail-container {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .game-object-card {
+    flex: 1 1 100%;
+  }
+
+  .card-detail-container {
+    padding: 5px;
+  }
+}

@@ -22,6 +22,35 @@ app.use(bodyParser.json());
 app.use('/api/auth', authRoutes);
 app.use('/api/gameObjects', gameObjectsRoutes);
 
+// Route pour récupérer les détails d'une carte
+app.get('/api/gameObjects/:id', async (req, res) => {
+  const id = req.params.id;
+  try {
+    // Logique pour récupérer les détails de la carte depuis la base de données
+    // Exemple de données fictives
+    const card = {
+      id,
+      name: `Item ${id}`,
+      img: `https://example.com/image${id}.png`,
+      purchasePrice: `$${id * 10}`,
+      rarity: 'Common',
+      type: 'Category',
+    };
+    res.json(card);
+  } catch (error) {
+    console.error('Error fetching card details:', error);
+    res.status(500).json({ error: 'Failed to fetch card details' });
+  }
+});
+
+// Route pour soumettre les ressources de fabrication
+app.post('/api/submitResources', (req, res) => {
+  const { cardId, resources } = req.body;
+  // Logique pour enregistrer les ressources dans la base de données
+  console.log(`Resources for card ${cardId} submitted:`, resources);
+  res.status(200).send('Resources submitted successfully');
+});
+
 // Route racine
 app.get('/', (req, res) => {
   res.send('Hello World!');
