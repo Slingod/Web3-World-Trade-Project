@@ -71,64 +71,61 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 Voici une arborescence optimisée organiser des fichiers :
 
-.vscode
-client
-├── node_modules # 📦 Dependencies installed via npm/yarn
-│ # 🇫🇷 Dépendances installées via npm/yarn
-├── public # 🌍 Static assets accessible in the public folder
-│ # 🇫🇷 Fichiers statiques accessibles publiquement
-└── src # 📜 Source code for the application
-├── assets # 🖼️ Images, icons, and other static files
-│ ├── logo.svg # 🎨 Application logo
-│ └── icons/ # 🎭 Folder for SVG or PNG icons
-├── components # 🏗️ UI components
-│ ├── common # 🔁 Reusable components
-│ │ ├── EncryptButton.js # 🔐 Button for encryption
-│ │ ├── Footer.js # 🔽 Footer component
-│ │ ├── Sidebar.js # 📜 Sidebar navigation
-│ │ └── ThemeToggle.js # 🌗 Theme switcher
-│ ├── game # 🎮 Components related to game objects
-│ │ ├── GameObjectsList.js # 📋 List of game items
-│ │ ├── RaritySidebar.js # 🌟 Sidebar for item rarity
-│ │ └── CurrentVersion.js # 🔄 Shows current game version
-│ ├── home # 🏠 Homepage-related components
-│ │ ├── Home.js # 🏡 Main home page
-│ │ ├── ShiftingCountdown.js # ⏳ Animated countdown
-│ │ └── CountdownHome.js # ⏱️ Static countdown timer
-│ ├── auth # 🔑 Authentication components
-│ │ ├── Login.js # 👤 Login form
-│ │ ├── Register.js # 📝 Register form (if needed)
-│ │ └── AuthForm.js # 🔄 Combined login/register form
-├── contexts # 🎛️ Global context management
-│ ├── ThemeContext.js # 🌙 Context for dark/light mode
-│ └── AuthContext.js # 🔑 Context for user authentication
-├── hooks # ⚓ Custom React hooks
-│ ├── useFetch.js # 🔄 Hook for fetching API data
-│ ├── useTheme.js # 🎨 Hook for theme management
-│ └── useAuth.js # 🔐 Hook for authentication logic
-├── services # 📡 API communication services
-│ ├── api.js # 🔗 Base API setup (Axios instance)
-│ ├── authService.js # 🔑 Authentication-related API calls
-│ ├── gameService.js # 🎮 Game-related API calls
-│ └── userService.js # 👤 User-related API calls
-├── styles # 🎨 CSS and Tailwind styles
-│ ├── components # 📌 Component-specific styles
-│ │ ├── EncryptButton.css
-│ │ ├── Footer.css
-│ │ ├── GameObjectsList.css
-│ │ ├── Login.css
-│ │ ├── Sidebar.css
-│ │ └── DiscordFooter.css
-│ ├── tailwind.css # 🎨 Tailwind global styles
-│ └── globals.css # 🎭 General styles (CSS variables, resets...)
-├── App.js # 🏡 Root React component
-├── App.css # 🎨 Global app styles
-├── index.js # 🚀 React entry point
-├── config.js # ⚙️ Configuration file (API keys, env variables)
-├── .gitignore # 🚫 Files ignored by Git
-├── Dockerfile # 🐳 Docker setup for deployment
-├── package-lock.json # 📦 Locked dependency tree
-├── package.json # 📦 Project dependencies and scripts
-├── postcss.config.js # 🎨 PostCSS configuration
-├── README.md # 📖 Project documentation
-└── tailwind.config.js # 🎨 TailwindCSS configuration
+client/
+├── node_modules/ ------------------------ # Directory for Node.js dependencies
+├── public/ -------------------------------# Public assets directory
+│ ├── betdox.png --------------------------# Image file
+│ ├── Big_Time_Warrior_Discordlogo.png ----# Image file
+│ ├── CHRDAO.jpg --------------------------# Image file
+│ ├── doxlo.png ---------------------------# Image file
+│ ├── favicon.ico -------------------------# Favicon file
+│ ├── faviconParadox.png ------------------# Image file
+│ ├── IconeParadox.png --------------------# Image file
+│ ├── index.html --------------------------# Main HTML file
+│ ├── Logo THP.png ------------------------# Image file
+│ ├── logo.svg ----------------------------# SVG logo file
+│ ├── logo512.png -------------------------# Image file
+│ ├── manifest.json -----------------------# Web app manifest file
+│ ├── OP.webp -----------------------------# WebP image file
+│ ├── para.png ----------------------------# Image file
+│ └── robots.txt --------------------------# Robots exclusion standard file
+├── src/ ----------------------------------# Source code directory
+│ ├── components/ -------------------------# Directory for React components
+│ │ ├── auth/ -----------------------------# Authentication-related components
+│ │ │ ├── EncryptButton.css ---------------# Styles for EncryptButton component
+│ │ │ └── EncryptButton.js---------------- # EncryptButton component
+│ │ │ ├── Login.css -----------------------# Styles for Login component
+│ │ │ └── Login.js ------------------------# Login component
+│ │ ├── common/ ---------------------------# Common components
+│ │ │ ├── Footer/------------------------- # Footer-related components
+│ │ │ │ ├── DiscordFooter.css -------------# Styles for DiscordFooter component
+│ │ │ │ └── DiscordFooter.js --------------# DiscordFooter component
+│ │ │ ├── Footer.css ----------------------# Styles for Footer component
+│ │ │ └── Footer.js -----------------------# Footer component
+│ │ ├── Sidebar/ --------------------------# Sidebar-related components
+│ │ │ ├── index.js ------------------------# Index file for Sidebar
+│ │ │ ├── Sidebar.css ---------------------# Styles for Sidebar component
+│ │ │ └── Sidebar.js ----------------------# Sidebar component
+│ │ └── ThemeToggle.js --------------------# ThemeToggle component
+│ ├── game/ -------------------------------# Game-related components and files
+│ │ ├── CurrentVersion.js -----------------# Current version information
+│ │ ├── GameObjectsList.css ---------------# Styles for GameObjectsList component
+│ │ └── GameObjectsList.js ----------------# GameObjectsList component
+│ │ ├── RaritySidebar.js ------------------# RaritySidebar component
+│ │ ├── home/ -----------------------------# Home-related components
+│ │ │ ├── Countdownhome.css ---------------# Styles for Countdownhome component
+│ │ │ └── Home.js -------------------------# Home component
+│ │ │ └── ShiftingCountdown.jsx -----------# ShiftingCountdown component
+│ │ ├── styles/ ---------------------------# Styles directory
+│ │ │ ├── tailwind.css --------------------# Tailwind CSS file
+│ │ │ ├── App.css -------------------------# Global styles for the app
+│ │ │ └── index.js ------------------------# Index file for styles
+│ │ └── reportWebVitals.js ----------------# Report web vitals
+│ ├── .gitignore --------------------------# Git ignore file
+│ ├── Dockerfile --------------------------# Docker configuration file
+│ ├── package-lock.json -------------------# Lock file for npm dependencies
+│ ├── package.json ------------------------# npm configuration file
+│ ├── postcss.config.js -------------------# PostCSS configuration file
+│ ├── README.md ---------------------------# Project README file
+│ ├── tailwind.config.js ------------------# Tailwind CSS configuration file
+│ └── yarn.lock ---------------------------# Lock file for Yarn dependencies
