@@ -12,6 +12,19 @@ router.get('/', async (req, res) => {
   }
 });
 
+// Fetch a single object by ID ✅ (Ajouté)
+router.get('/:id', async (req, res) => {
+  try {
+    const object = await ObjectModel.findOne({ where: { id: req.params.id } });
+    if (!object) {
+      return res.status(404).json({ error: 'Object not found' });
+    }
+    res.json(object);
+  } catch (error) {
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+});
+
 // Create a new object
 router.post('/', async (req, res) => {
   try {

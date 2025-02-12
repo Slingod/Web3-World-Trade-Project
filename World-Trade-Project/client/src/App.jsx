@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 import './styles/tailwind.css';
-import GameObjectsList from './components/game/GameObjectsList';
+import GameObjectsList from './components/CardDetail/GameObjectsList';
 import Home from './components/home/Home';
 import CurrentVersion from './components/game/CurrentVersion';
 import RaritySidebar from "./components/game/RaritySidebar";

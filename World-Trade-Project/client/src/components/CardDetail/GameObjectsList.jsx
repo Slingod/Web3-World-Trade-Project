@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './GameObjectsList.css';
 
 const GameObjectsList = ({ selectedCategory, selectedRarity, selectedTag }) => {
   const [gameObjects, setGameObjects] = useState([]);
+  const navigate = useNavigate(); // 🔥 Utiliser useNavigate au lieu de <Link>
 
   useEffect(() => {
     const fetchGameObjects = async () => {
@@ -28,13 +29,18 @@ const GameObjectsList = ({ selectedCategory, selectedRarity, selectedTag }) => {
   return (
     <div className="game-objects-list">
       {filteredObjects.map((gameObject) => (
-        <Link key={gameObject.id} to={`/card/${gameObject.id}`} className="game-object-card">
+        <div
+          key={gameObject.id}
+          className="game-object-card"
+          onClick={() => navigate(`/card/${gameObject.id}`)} // 🔥 Redirige sans <Link>
+          style={{ cursor: "pointer" }} // 🔥 Pour montrer que c'est cliquable
+        >
           <img src={gameObject.img} alt={gameObject.name} className="game-object-image" />
           <h2>{gameObject.name}</h2>
           <p>Price: ${gameObject.purchasePrice}</p>
           <p>Rarity: {gameObject.rarity}</p>
           <p>Category: {gameObject.type}</p>
-        </Link>
+        </div>
       ))}
     </div>
   );
