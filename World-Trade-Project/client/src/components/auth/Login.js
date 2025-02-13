@@ -1,40 +1,60 @@
 import React, { useState } from 'react'; // Importation de React et du hook useState
                                           // Importing React and the useState hook
 
+import { useNavigate } from 'react-router-dom'; // Importation du hook de navigation
+                                               // Importing the navigation hook
+
 import axios from 'axios'; // Importation de la bibliothèque axios pour les requêtes HTTP
                            // Importing the axios library for HTTP requests
 
 import './Login.css'; // Importation du fichier CSS pour le composant Login
-                               // Importing the CSS file for the Login component
+                      // Importing the CSS file for the Login component
 
 import { FiLock } from "react-icons/fi"; // Importation de l'icône de verrouillage depuis react-icons
                                           // Importing lock icon from react-icons
 
-const Login = () => { // Définition du composant Login
-                      // Defining the Login component
+const Login = ({ setUser }) => { // Définition du composant Login avec setUser pour gérer l'état global
+                                 // Defining the Login component with setUser to manage global state
+  const navigate = useNavigate(); // Hook pour la navigation après connexion
+                                  // Hook for navigation after login
+
   const [email, setEmail] = useState(''); // État pour stocker l'email
                                           // State to store the email
 
   const [password, setPassword] = useState(''); // État pour stocker le mot de passe
                                                 // State to store the password
 
-  const [token, setToken] = useState(''); // État pour stocker le token d'authentification
-                                          // State to store the authentication token
-
   const [text, setText] = useState("Encrypt data"); // État pour le texte du bouton
                                                     // State for the button text
 
+  const [error, setError] = useState(''); // État pour afficher un message d'erreur
+                                          // State to display an error message
+
   const login = async () => { // Fonction pour gérer la connexion
                               // Function to handle login
+    setError(''); // Réinitialise les erreurs avant une nouvelle tentative
+                  // Reset errors before a new attempt
+
     try {
       const response = await axios.post('http://localhost:5000/api/auth/login', {
         email,
         password
       });
-      setToken(response.data.token); // Stockage du token reçu
-                                      // Storing the received token
-      console.log('Login response:', response.data);
+
+      const { token, username } = response.data; // Récupération du token et du username
+                                                 // Retrieving the token and username
+
+      localStorage.setItem('token', token); // Stockage du token dans le localStorage
+                                            // Storing the token in localStorage
+
+      setUser({ username, token }); // Mise à jour de l'état utilisateur global
+                                    // Updating global user state
+
+      navigate('/'); // Redirection vers la page d'accueil après connexion
+                     // Redirect to home page after login
     } catch (error) {
+      setError('Email ou mot de passe invalide'); // Affichage d'un message d'erreur en cas d'échec
+                                                  // Display an error message in case of failure
       console.error('Error logging in:', error); // Gestion des erreurs de connexion
                                                  // Handling login errors
     }
@@ -47,10 +67,10 @@ const Login = () => { // Définition du composant Login
                                             // Characters used for the animation
 
     let pos = 0; // Position actuelle dans le texte
-                  // Current position in the text
+                 // Current position in the text
 
     const CYCLES_PER_LETTER = 2; // Nombre de cycles par lettre pour l'animation
-                                  // Number of cycles per letter for the animation
+                                 // Number of cycles per letter for the animation
 
     const SHUFFLE_TIME = 50; // Durée de chaque cycle en millisecondes
                              // Duration of each cycle in milliseconds
@@ -76,10 +96,10 @@ const Login = () => { // Définition du composant Login
 
       if (pos >= TARGET_TEXT.length * CYCLES_PER_LETTER) {
         clearInterval(interval); // Arrête l'animation lorsque tous les cycles sont terminés
-                                  // Stops the animation when all cycles are complete
+                                 // Stops the animation when all cycles are complete
 
         setText(TARGET_TEXT); // Remet le texte d'origine
-                               // Resets the text to the original
+                              // Resets the text to the original
       }
     }, SHUFFLE_TIME);
   };
@@ -107,6 +127,10 @@ const Login = () => { // Définition du composant Login
             placeholder="Enter your password"
           />
         </div>
+
+        {error && <p className="error-message">{error}</p>} {/* Affichage du message d'erreur si présent */}
+                                                            {/* Display error message if present */}
+
         <button
           type="submit"
           className="encrypt-login-button"
@@ -122,4 +146,4 @@ const Login = () => { // Définition du composant Login
 };
 
 export default Login; // Exportation du composant Login
-                       // Exporting the Login component
+                      // Exporting the Login component

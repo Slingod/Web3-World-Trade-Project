@@ -1,8 +1,8 @@
-import React, { useState } from 'react'; // Importation de React et du hook useState
-                                           // Importing React and the useState hook
+import React, { useState, useEffect } from 'react'; // Importation de React, du hook useState et useEffect
+                                                   // Importing React, useState and useEffect hook
 
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Importation des composants de routage
-                                                                           // Importing routing components
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom'; // Importation des composants de routage
+                                                                                 // Importing routing components
 
 import './App.css'; // Importation du fichier CSS principal
                      // Importing the main CSS file
@@ -31,24 +31,18 @@ import DiscordFooter from "./components/common/Footer/DiscordFooter"; // Importa
 import ThemeToggle from "./components/common/ThemeToggle"; // Importation du composant ThemeToggle
                                                              // Importing the ThemeToggle component
 
+import Register from "./components/auth/Register"; // Importation du composant Register
+import Login from "./components/auth/Login"; // Importation du composant Login
+
 const App = () => { // Définition du composant App
                      // Defining the App component
   // ✅ États pour l'authentification
   // ✅ States for authentication
-  const [token, setToken] = useState(''); // État pour stocker le token d'authentification
-                                          // State to store the authentication token
-
-  const [protectedData, setProtectedData] = useState(''); // État pour stocker les données protégées
-                                                          // State to store protected data
+  const [token, setToken] = useState(localStorage.getItem("token") || ''); // État pour stocker le token d'authentification
+                                                                          // State to store the authentication token
 
   const [username, setUsername] = useState(''); // État pour stocker le nom d'utilisateur
                                                 // State to store the username
-
-  const [email, setEmail] = useState(''); // État pour stocker l'email
-                                          // State to store the email
-
-  const [password, setPassword] = useState(''); // État pour stocker le mot de passe
-                                                // State to store the password
 
   // ✅ États pour le filtrage
   // ✅ States for filtering
@@ -72,17 +66,39 @@ const App = () => { // Définition du composant App
                           // Reset tag
   };
 
+  // ✅ Récupération du nom d'utilisateur si un token est présent
+  // ✅ Fetch username if a token is available
+  useEffect(() => {
+    if (token) {
+      fetch("http://localhost:5000/api/auth/me", {
+        method: "GET",
+        headers: { Authorization: `Bearer ${token}` },
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.username) {
+            setUsername(data.username);
+          }
+        })
+        .catch((err) => console.error("Erreur récupération utilisateur :", err));
+    }
+  }, [token]);
+
   return (
     <Router>
       <div className="app-container">
-        {/* 🔥 Ajout du ThemeToggle en haut de l'application */}
-        {/* 🔥 Adding ThemeToggle at the top of the application */}
+        
         
 
         <Routes>
-          {/* 🏠 Page d'accueil (Sans Sidebar et Footers) */}
-          {/* 🏠 Home Page (Without Sidebar and Footers) */}
+          {/* 🏠 Page d'accueil */}
+          {/* 🏠 Home Page */}
           <Route path="/" element={<Home />} />
+
+          {/* ✅ Pages Register & Login */}
+          {/* ✅ Register & Login Pages */}
+          <Route path="/register" element={<Register />} />
+          <Route path="/login" element={<Login />} />
 
           {/* 📌 Autres pages (Avec Sidebar & Footers) */}
           {/* 📌 Other Pages (With Sidebar & Footers) */}
@@ -110,8 +126,8 @@ const App = () => { // Définition du composant App
                   selectedTag={selectedTag}
                 />
 
-                {/* ✅ Contenu principal (Emballé dans <Routes> pour éviter les erreurs) */}
-                {/* ✅ Main Content (Wrapped in <Routes> to prevent errors) */}
+                {/* ✅ Contenu principal (Routes incluses) */}
+                {/* ✅ Main Content (Routes included) */}
                 <Routes>
                   <Route path="/current-version" element={<CurrentVersion />} />
                 </Routes>
