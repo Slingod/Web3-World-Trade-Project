@@ -1,76 +1,177 @@
+/* Style pour le conteneur de détails de carte */
+/* Styling for the card detail container */
 .card-detail-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    background-color: var(--bg-color-dark);
-    color: var(--text-color-dark);
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  .card-image {
-    width: 200px;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 20px;
-  }
-  
-  .buy-link {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #28a745;
-    color: white;
-    text-decoration: none;
-    border-radius: 4px;
-  }
-  
-  .resource-form {
-    margin-top: 20px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .resource-input {
-    width: 100%;
-    max-width: 400px;
-    height: 100px;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: var(--bg-color-light);
-    color: var(--text-color-light);
-  }
-  
-  .submit-button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .light .card-detail-container {
-    background-color: var(--bg-color-light);
-    color: var(--text-color-light);
-  }
-  
-  .light .resource-input {
-    background-color: var(--bg-color-dark);
-    color: var(--text-color-dark);
-  }
-  
-  .game-object-card {
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-  }
-  
-  .game-object-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  }
-  
+  display: flex;                  /* Utiliser la disposition flexbox */
+                                  /* Use flexbox layout */
+                                  
+  flex-direction: column;          /* Disposer les enfants en colonne */
+                                  /* Arrange children in a column */
+
+  align-items: center;            /* Aligner les éléments au centre */
+                                  /* Center align items */
+
+  padding: 20px;                   /* Rembourrage intérieur */
+                                  /* Inner padding */
+
+  background-color: var(--bg-color-dark); /* Couleur de fond sombre */
+                                          /* Dark background color */
+
+  color: var(--text-color-dark);          /* Couleur de texte sombre */
+                                          /* Dark text color */
+
+  border-radius: 8px;              /* Coins arrondis */
+                                  /* Rounded corners */
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre subtile */
+                                            /* Subtle shadow */
+
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transition douce pour les changements de couleur */
+                                                           /* Smooth transition for color changes */
+}
+
+/* Style pour l'image de la carte */
+/* Styling for the card image */
+.card-image {
+  width: 200px;                    /* Définir la largeur */
+                                  /* Set width */
+
+  height: auto;                    /* Maintenir le ratio d'aspect */
+                                  /* Maintain aspect ratio */
+
+  border-radius: 8px;              /* Coins arrondis */
+                                  /* Rounded corners */
+
+  margin-bottom: 20px;             /* Espace en dessous de l'image */
+                                  /* Space below the image */
+}
+
+/* Style pour le lien d'achat */
+/* Styling for the buy link */
+.buy-link {
+  margin-top: 20px;                /* Espace au-dessus du lien */
+                                  /* Space above the link */
+
+  padding: 10px 20px;              /* Rembourrage intérieur */
+                                  /* Inner padding */
+
+  background-color: #28a745;       /* Couleur de fond verte */
+                                  /* Green background color */
+
+  color: white;                    /* Couleur du texte blanc */
+                                  /* White text color */
+
+  text-decoration: none;           /* Pas de décoration de texte */
+                                  /* No text decoration */
+
+  border-radius: 4px;              /* Coins arrondis */
+                                  /* Rounded corners */
+}
+
+/* Style pour le formulaire de ressources */
+/* Styling for the resource form */
+.resource-form {
+  margin-top: 20px;                /* Espace au-dessus du formulaire */
+                                  /* Space above the form */
+
+  width: 100%;                     /* Largeur complète */
+                                  /* Full width */
+
+  display: flex;                   /* Utiliser la disposition flexbox */
+                                  /* Use flexbox layout */
+
+  flex-direction: column;          /* Disposer les enfants en colonne */
+                                  /* Arrange children in a column */
+
+  align-items: center;            /* Aligner les éléments au centre */
+                                  /* Center align items */
+}
+
+/* Style pour l'entrée de ressources */
+/* Styling for the resource input */
+.resource-input {
+  width: 100%;                     /* Largeur complète */
+                                  /* Full width */
+
+  max-width: 400px;                /* Largeur maximale */
+                                  /* Maximum width */
+
+  height: 100px;                   /* Hauteur fixe */
+                                  /* Fixed height */
+
+  padding: 10px;                   /* Rembourrage intérieur */
+                                  /* Inner padding */
+
+  margin-bottom: 10px;             /* Espace en dessous de l'entrée */
+                                  /* Space below the input */
+
+  border: 1px solid #ccc;          /* Bordure grise */
+                                  /* Gray border */
+
+  border-radius: 4px;              /* Coins arrondis */
+                                  /* Rounded corners */
+
+  background-color: var(--bg-color-light); /* Couleur de fond claire */
+                                           /* Light background color */
+
+  color: var(--text-color-light);          /* Couleur de texte claire */
+                                           /* Light text color */
+}
+
+/* Style pour le bouton de soumission */
+/* Styling for the submit button */
+.submit-button {
+  padding: 10px 20px;              /* Rembourrage intérieur */
+                                  /* Inner padding */
+
+  background-color: #007bff;       /* Couleur de fond bleue */
+                                  /* Blue background color */
+
+  color: white;                    /* Couleur du texte blanc */
+                                  /* White text color */
+
+  border: none;                    /* Pas de bordure */
+                                  /* No border */
+
+  border-radius: 4px;              /* Coins arrondis */
+                                  /* Rounded corners */
+
+  cursor: pointer;                 /* Curseur de type pointeur */
+                                  /* Pointer cursor */
+}
+
+/* Style pour le conteneur de détails de carte en mode clair */
+/* Styling for the card detail container in light mode */
+.light .card-detail-container {
+  background-color: var(--bg-color-light); /* Couleur de fond claire */
+                                          /* Light background color */
+
+  color: var(--text-color-light);         /* Couleur de texte claire */
+                                          /* Light text color */
+}
+
+/* Style pour l'entrée de ressources en mode clair */
+/* Styling for the resource input in light mode */
+.light .resource-input {
+  background-color: var(--bg-color-dark); /* Couleur de fond sombre */
+                                        /* Dark background color */
+
+  color: var(--text-color-dark);        /* Couleur de texte sombre */
+                                        /* Dark text color */
+}
+
+/* Style pour la carte d'objet de jeu */
+/* Styling for the game object card */
+.game-object-card {
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Transition douce pour les transformations et l'ombre */
+                                                                       /* Smooth transition for transformations and shadow */
+}
+
+/* Style pour la carte d'objet de jeu au survol */
+/* Styling for the game object card on hover */
+.game-object-card:hover {
+  transform: scale(1.05);          /* Légèrement agrandir au survol */
+                                  /* Slightly enlarge on hover */
+
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée */
+                                                /* More pronounced shadow */
+}

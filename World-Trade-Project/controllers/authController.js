@@ -3,17 +3,17 @@ const hashPassword = require('../utils/hashPassword');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 
-const SECRET_KEY = process.env.JWT_SECRET || 'fallback_secret'; // Utilisation de la clé secrète depuis .env
+const SECRET_KEY = process.env.JWT_SECRET || 'fallback_secret'; // ✅ Utilisation de la clé secrète depuis .env
 
 // ✅ Inscription (Register)
 const registerUser = async (req, res) => {
-  const { email, password, pseudo } = req.body;
+  const { email, password, username } = req.body; // ✅ "pseudo" devient "username"
 
   try {
     // Vérification Regex
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
-    const pseudoRegex = /^[a-zA-Z0-9_-]{3,32}$/;
+    const usernameRegex = /^[a-zA-Z0-9_-]{3,32}$/; // ✅ "pseudo" remplacé par "username"
 
     if (!emailRegex.test(email)) {
       return res.status(400).json({ error: 'Invalid email format' });
@@ -23,17 +23,18 @@ const registerUser = async (req, res) => {
       return res.status(400).json({ error: 'Password must be at least 8 characters long and include an uppercase letter, a number, and a special character' });
     }
 
-    if (!pseudoRegex.test(pseudo)) {
-      return res.status(400).json({ error: 'Pseudo must be 3-32 characters long and can only include letters, numbers, underscores, and hyphens' });
+    if (!usernameRegex.test(username)) {
+      return res.status(400).json({ error: 'Username must be 3-32 characters long and can only include letters, numbers, underscores, and hyphens' });
     }
 
     // Hachage du mot de passe
     const hashedPassword = await hashPassword(password);
-    const user = await User.create({ email, password: hashedPassword, pseudo });
+    const user = await User.create({ email, password: hashedPassword, username }); // ✅ "pseudo" → "username"
 
     res.status(201).json({ message: 'User registered successfully', user });
   } catch (error) {
-    res.status(400).json({ error: error.message });
+    console.error("🔴 Erreur lors de l'inscription :", error); // ✅ Log en cas d'erreur
+    res.status(500).json({ error: "An error occurred while registering the user", details: error.message });
   }
 };
 
@@ -57,6 +58,7 @@ const loginUser = async (req, res) => {
 
     res.json({ message: 'Login successful', token });
   } catch (error) {
+    console.error("🔴 Erreur lors de la connexion :", error);
     res.status(500).json({ error: 'Internal Server Error' });
   }
 };
@@ -98,6 +100,7 @@ const deleteAccount = async (req, res) => {
     await user.destroy();
     res.json({ message: "Compte supprimé avec succès" });
   } catch (error) {
+    console.error("🔴 Erreur lors de la suppression du compte :", error);
     res.status(500).json({ error: "Erreur serveur lors de la suppression du compte" });
   }
 };

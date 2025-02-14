@@ -1,0 +1,93 @@
+/* ✅ Style spécifique au bouton animé pour éviter le conflit avec Login.css */
+.animated-button {
+    position: relative; /* Positionnement relatif */
+                         /* Relative positioning */
+  
+    overflow: hidden; /* Masquage du débordement */
+                       /* Hidden overflow */
+  
+    border: 1px solid #888; /* Bordure */
+                            /* Border */
+  
+    background-color: #444; /* Couleur de fond */
+                             /* Background color */
+  
+    color: white; /* Couleur du texte */
+                   /* Text color */
+  
+    padding: 10px 20px; /* Espace intérieur */
+                          /* Inner spacing */
+  
+    font-size: 1rem; /* Taille de la police */
+                      /* Font size */
+  
+    font-family: monospace; /* Police de caractères */
+                              /* Font family */
+  
+    text-transform: uppercase; /* Texte en majuscules */
+                                 /* Uppercase text */
+  
+    border-radius: 8px; /* Coins arrondis */
+                         /* Rounded corners */
+  
+    cursor: pointer; /* Curseur en forme de pointeur */
+                       /* Pointer cursor */
+  
+    transition: color 0.3s ease, background 0.3s ease; /* Transition pour la couleur et le fond */
+                                                       /* Transition for color and background */
+  }
+  
+  /* ✅ Effet au survol */
+  .animated-button:hover {
+    color: white; /* Couleur du texte au survol */
+                   /* Text color on hover */
+  }
+  
+  /* ✅ Contenu du bouton */
+  .button-content {
+    display: flex; /* Utilisation de Flexbox pour la disposition */
+                    /* Using Flexbox for layout */
+  
+    align-items: center; /* Alignement centré des éléments */
+                           /* Centered alignment of items */
+  
+    gap: 10px; /* Espacement entre les éléments */
+                 /* Spacing between items */
+  
+    position: relative; /* Positionnement relatif */
+                          /* Relative positioning */
+  
+    z-index: 10; /* Priorité d'affichage */
+                  /* Display priority */
+  }
+  
+  /* ✅ Effet d'animation */
+  .button-effect {
+    position: absolute; /* Positionnement absolu */
+                         /* Absolute positioning */
+  
+    inset: 0; /* Couvre tout l'élément parent */
+               /* Covers the entire parent element */
+  
+    z-index: 0; /* Priorité d'affichage */
+                 /* Display priority */
+  
+    scale: 1.2; /* Mise à l'échelle */
+                 /* Scaling */
+  
+    background: linear-gradient(to top, rgba(255, 255, 255, 0) 40%, rgb(255, 255, 255) 50%, rgba(255, 255, 255, 0) 60%);
+    /* Dégradé de couleur */
+    /* Color gradient */
+  
+    opacity: 0; /* Opacité initiale */
+                 /* Initial opacity */
+  
+    transition: opacity 0.3s ease; /* Transition pour l'opacité */
+                                   /* Transition for opacity */
+  }
+  
+  .animated-button:hover .button-effect {
+    opacity: 1; /* Opacité au survol */
+                 /* Opacity on hover */
+  }
+  

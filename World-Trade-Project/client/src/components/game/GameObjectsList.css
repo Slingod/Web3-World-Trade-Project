@@ -75,102 +75,145 @@
                           /* Enlargement on hover */
 }
 
+/* CardDetailPage */
 
-
-
-
-/* CardDetailPage*/
+/* Container for the list of game objects */
+/* Conteneur pour la liste des objets de jeu */
 .game-objects-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding: 20px;
+  display: flex;                  /* Use flexbox layout */
+                                 /* Utiliser la disposition flexbox */
+
+  flex-wrap: wrap;                /* Allow wrapping to next line */
+                                 /* Permettre le passage à la ligne suivante */
+
+  gap: 20px;                      /* Space between items */
+                                 /* Espace entre les éléments */
+
+  padding: 20px;                  /* Inner padding */
+                                 /* Rembourrage intérieur */
 }
 
+/* Styling for individual game object card */
+/* Style pour la carte d'un objet de jeu individuel */
 .game-object-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-decoration: none;
-  color: inherit;
-  transition: transform 0.3s ease;
+  display: flex;                  /* Use flexbox layout */
+                                 /* Utiliser la disposition flexbox */
+
+  flex-direction: column;          /* Arrange children in a column */
+                                 /* Disposer les enfants en colonne */
+
+  align-items: center;            /* Center align items */
+                                 /* Aligner les éléments au centre */
+
+  padding: 20px;                   /* Inner padding */
+                                 /* Rembourrage intérieur */
+
+  background-color: #fff;         /* White background */
+                                 /* Fond blanc */
+
+  border-radius: 8px;              /* Rounded corners */
+                                 /* Coins arrondis */
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+                                 /* Ombre subtile */
+
+  text-decoration: none;          /* No text decoration */
+                                 /* Pas de décoration de texte */
+
+  color: inherit;                 /* Inherit text color */
+                                 /* Hériter de la couleur du texte */
+
+  transition: transform 0.3s ease; /* Smooth transition for transform */
+                                 /* Transition douce pour la transformation */
 }
 
+/* Hover effect for game object card */
+/* Effet de survol pour la carte d'objet de jeu */
 .game-object-card:hover {
-  transform: scale(1.05);
+  transform: scale(1.05);         /* Slightly enlarge on hover */
+                                 /* Légèrement agrandir au survol */
 }
 
+/* Styling for the game object image */
+/* Style pour l'image de l'objet de jeu */
 .game-object-image {
-  width: 100px;
-  height: auto;
-  border-radius: 8px;
-  margin-bottom: 10px;
+  width: 100px;                    /* Set width */
+                                 /* Définir la largeur */
+
+  height: auto;                   /* Maintain aspect ratio */
+                                 /* Maintenir le ratio d'aspect */
+
+  border-radius: 8px;             /* Rounded corners */
+                                 /* Coins arrondis */
+
+  margin-bottom: 10px;            /* Space below image */
+                                 /* Espace en dessous de l'image */
 }
 
-
+/* Alternative styling for game objects list in dark mode */
+/* Style alternatif pour la liste des objets de jeu en mode sombre */
 .game-objects-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding: 20px;
-  background-color: var(--bg-color-dark);
-  color: var(--text-color-dark);
+  background-color: var(--bg-color-dark); /* Dark background */
+                                          /* Fond sombre */
+
+  color: var(--text-color-dark);          /* Dark text color */
+                                          /* Couleur de texte sombre */
 }
 
+/* Alternative styling for game object card in dark mode */
+/* Style alternatif pour la carte d'objet de jeu en mode sombre */
 .game-object-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  background-color: var(--bg-color-light);
-  color: var(--text-color-light);
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-decoration: none;
-  transition: transform 0.3s ease;
+  background-color: var(--bg-color-light); /* Light background */
+                                          /* Fond clair */
+
+  color: var(--text-color-light);         /* Light text color */
+                                          /* Couleur de texte clair */
 }
 
-.game-object-card:hover {
-  transform: scale(1.05);
-}
-
-.game-object-image {
-  width: 100px;
-  height: auto;
-  border-radius: 8px;
-  margin-bottom: 10px;
-}
-
+/* Styling for game object card in light mode */
+/* Style pour la carte d'objet de jeu en mode clair */
 .light .game-objects-list {
-  background-color: var(--bg-color-light);
-  color: var(--text-color-light);
+  background-color: var(--bg-color-light); /* Light background */
+                                          /* Fond clair */
+
+  color: var(--text-color-light);         /* Light text color */
+                                          /* Couleur de texte clair */
 }
 
+/* Styling for game object card in light mode */
+/* Style pour la carte d'objet de jeu en mode clair */
 .light .game-object-card {
-  background-color: var(--bg-color-dark);
-  color: var(--text-color-dark);
+  background-color: var(--bg-color-dark); /* Dark background */
+                                        /* Fond sombre */
+                                        
+  color: var(--text-color-dark);        /* Dark text color */
+                                        /* Couleur de texte sombre */
 }
 
+/* Responsive design for smaller screens */
+/* Conception réactive pour les petits écrans */
 @media (max-width: 768px) {
   .game-object-card {
-    flex: 1 1 45%;
+    flex: 1 1 45%;                        /* Adjust flex properties */
+                                         /* Ajuster les propriétés flex */
   }
 
   .card-detail-container {
-    padding: 10px;
+    padding: 10px;                        /* Reduce padding */
+                                         /* Réduire le rembourrage */
   }
 }
 
+/* Responsive design for very small screens */
+/* Conception réactive pour les très petits écrans */
 @media (max-width: 480px) {
   .game-object-card {
-    flex: 1 1 100%;
+    flex: 1 1 100%;                      /* Make cards full width */
+                                         /* Rendre les cartes pleine largeur */
   }
 
   .card-detail-container {
-    padding: 5px;
+    padding: 5px;                        /* Further reduce padding */
+                                         /* Réduire encore le rembourrage */
   }
 }

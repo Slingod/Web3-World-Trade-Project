@@ -12,7 +12,7 @@ const User = sequelize.define('User', {
     type: DataTypes.STRING(60), // ✅ Stockage sécurisé pour le hash
     allowNull: false
   },
-  pseudo: {
+  username: {
     type: DataTypes.STRING(32), // ✅ Limite à 32 caractères
     allowNull: false
   },
