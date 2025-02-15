@@ -36,6 +36,7 @@ import Login from "./components/auth/Login"; // Importation du composant Login
 
 const App = () => { // Définition du composant App
                      // Defining the App component
+                     
   // ✅ États pour l'authentification
   // ✅ States for authentication
   const [token, setToken] = useState(localStorage.getItem("token") || ''); // État pour stocker le token d'authentification

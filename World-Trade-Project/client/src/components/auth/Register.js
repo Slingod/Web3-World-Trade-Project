@@ -1,64 +1,65 @@
-import React, { useState } from 'react'; // Importation de React et du hook useState
-                                          // Importing React and the useState hook
+import React, { useState } from 'react'; // Importing React and the useState hook
+                                        // Importation de React et du hook useState
 
-import axios from 'axios'; // Importation de la bibliothèque axios pour les requêtes HTTP
-                           // Importing the axios library for HTTP requests
+import axios from 'axios'; // Importing the axios library for HTTP requests
+                           // Importation de la bibliothèque axios pour les requêtes HTTP
 
-import './Register.css'; // Importation du fichier CSS pour le composant Register
-                         // Importing the CSS file for the Register component
+import './Register.css'; // Importing the CSS file for the Register component
+                         // Importation du fichier CSS pour le composant Register
 
-import AnimatedButton from './AnimatedButton'; // Importation du composant AnimatedButton
-                                              // Importing the AnimatedButton component
+import AnimatedButton from './AnimatedButton'; // Importing the AnimatedButton component
+                                              // Importation du composant AnimatedButton
 
 const Register = () => {
-  const [email, setEmail] = useState(''); // État pour stocker l'email
-                                          // State to store the email
+  const [email, setEmail] = useState(''); // State to store the email
+                                          // État pour stocker l'email
 
-  const [password, setPassword] = useState(''); // État pour stocker le mot de passe
-                                                // State to store the password
+  const [password, setPassword] = useState(''); // State to store the password
+                                                // État pour stocker le mot de passe
 
-  const [pseudo, setPseudo] = useState(''); // État pour stocker le pseudo
-                                            // State to store the username
+  const [username, setUsername] = useState(''); // State to store the username
+                                                // État pour stocker le nom d'utilisateur
 
-  const [error, setError] = useState(''); // État pour afficher un message d'erreur
-                                          // State to display an error message
+  const [error, setError] = useState(''); // State to display an error message
+                                          // État pour afficher un message d'erreur
 
-  const register = async () => { // Fonction pour gérer l'inscription
-                                  // Function to handle registration
-    setError(''); // Réinitialise les erreurs avant une nouvelle tentative
-                  // Reset errors before a new attempt
+  const register = async () => { // Function to handle registration
+                                 // Fonction pour gérer l'inscription
+    setError(''); // Reset errors before a new attempt
+                  // Réinitialise les erreurs avant une nouvelle tentative
 
     try {
       const response = await axios.post('http://localhost:5000/api/auth/register', {
         email,
         password,
-        pseudo
+        username
       });
 
       if (response.data) {
-        alert("Inscription réussie !"); // Alerte de succès
-                                        // Success alert
+        alert("Inscription réussie !"); // Success alert
+                                        // Alerte de succès
       }
     } catch (error) {
-      setError('Erreur lors de l\'inscription'); // Affichage d'un message d'erreur en cas d'échec
-                                                 // Display an error message in case of failure
-      console.error('Error registering:', error); // Gestion des erreurs d'inscription
-                                                   // Handling registration errors
+      setError('Erreur lors de l\'inscription'); // Display an error message in case of failure
+                                                // Affichage d'un message d'erreur en cas d'échec
+      console.error('Error registering:', error); // Handling registration errors
+                                                  // Gestion des erreurs d'inscription
     }
   };
 
   return (
     <div className="register-container">
-      <h2>Inscription</h2> {/* Titre de la page d'inscription */}
-                            {/* Title of the registration page */}
+      <h2>Inscription</h2> {/* Title of the registration page */}
+                           {/* Titre de la page d'inscription */}
       <form onSubmit={(e) => { e.preventDefault(); register(); }} className="register-form">
         <div className="register-field">
-          <label htmlFor="pseudo">Pseudo:</label>
+          <label htmlFor="username">Username:</label> {/* Changed Pseudo to Username */}
+                                                      {/* Changement de Pseudo à Username */}
           <input
             type="text"
-            id="pseudo"
-            value={pseudo}
-            onChange={(e) => setPseudo(e.target.value)}
+            id="username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
             placeholder="Enter your username"
           />
         </div>
@@ -83,15 +84,15 @@ const Register = () => {
           />
         </div>
 
-        {error && <p className="error-message">{error}</p>} {/* Affichage du message d'erreur si présent */}
-                                                            {/* Display error message if present */}
+        {error && <p className="error-message">{error}</p>} {/* Display error message if present */}
+                                                            {/* Affichage du message d'erreur si présent */}
 
-        <AnimatedButton text="Register" onClick={register} /> {/* Utilisation du bouton animé */}
-                                                                {/* Using the animated button */}
+        <AnimatedButton text="Register" onClick={register} /> {/* Using the animated button */}
+                                                              {/* Utilisation du bouton animé */}
       </form>
     </div>
   );
 };
 
-export default Register; // Exportation du composant Register
-                         // Exporting the Register component
+export default Register; // Exporting the Register component
+                         // Exportation du composant Register

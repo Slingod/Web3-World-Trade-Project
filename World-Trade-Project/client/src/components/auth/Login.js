@@ -30,8 +30,9 @@ const Login = ({ setUser }) => { // Définition du composant Login avec setUser 
   const [error, setError] = useState(''); // État pour afficher un message d'erreur
                                           // State to display an error message
 
-  const login = async () => { // Fonction pour gérer la connexion
+  const login = async (e) => { // Fonction pour gérer la connexion
                               // Function to handle login
+    e.preventDefault();
     setError(''); // Réinitialise les erreurs avant une nouvelle tentative
                   // Reset errors before a new attempt
 
@@ -40,6 +41,11 @@ const Login = ({ setUser }) => { // Définition du composant Login avec setUser 
         email,
         password
       });
+
+      if (response.data) {
+        alert('Connexion réussie !');
+        // Rediriger ou faire quelque chose après la connexion réussie
+      }
 
       const { token, username } = response.data; // Récupération du token et du username
                                                  // Retrieving the token and username
@@ -53,7 +59,7 @@ const Login = ({ setUser }) => { // Définition du composant Login avec setUser 
       navigate('/'); // Redirection vers la page d'accueil après connexion
                      // Redirect to home page after login
     } catch (error) {
-      setError('Email ou mot de passe invalide'); // Affichage d'un message d'erreur en cas d'échec
+      setError('Erreur lors de la connexion'); // Affichage d'un message d'erreur en cas d'échec
                                                   // Display an error message in case of failure
       console.error('Error logging in:', error); // Gestion des erreurs de connexion
                                                  // Handling login errors
@@ -113,7 +119,8 @@ const Login = ({ setUser }) => { // Définition du composant Login avec setUser 
 
   return (
     <div className="login-container">
-      <form onSubmit={(e) => { e.preventDefault(); login(); }} className="login-form">
+      <h2>Connexion</h2>
+      <form onSubmit={login} className="login-form">
         <div className="login-field">
           <label htmlFor="email">Email:</label>
           <input

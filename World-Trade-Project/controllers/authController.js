@@ -1,19 +1,21 @@
 const User = require('../models/User');
-const hashPassword = require('../utils/hashPassword');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 
-const SECRET_KEY = process.env.JWT_SECRET || 'fallback_secret'; // ✅ Utilisation de la clé secrète depuis .env
+const SECRET_KEY = process.env.JWT_SECRET || 'fallback_secret'; // Utilisation de la clé secrète depuis .env
+                                                                // Using the secret key from .env
 
-// ✅ Inscription (Register)
+// Inscription (Register)
 const registerUser = async (req, res) => {
-  const { email, password, username } = req.body; // ✅ "pseudo" devient "username"
+  const { email, password, pseudo } = req.body; // "pseudo" devient "username"
+                                                // "pseudo" becomes "username"
 
   try {
     // Vérification Regex
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
-    const usernameRegex = /^[a-zA-Z0-9_-]{3,32}$/; // ✅ "pseudo" remplacé par "username"
+    const usernameRegex = /^[a-zA-Z0-9_-]{3,32}$/; // "pseudo" remplacé par "username"
+                                                   // "pseudo" replaced by "username"
 
     if (!emailRegex.test(email)) {
       return res.status(400).json({ error: 'Invalid email format' });
@@ -23,22 +25,30 @@ const registerUser = async (req, res) => {
       return res.status(400).json({ error: 'Password must be at least 8 characters long and include an uppercase letter, a number, and a special character' });
     }
 
-    if (!usernameRegex.test(username)) {
+    if (!usernameRegex.test(pseudo)) {
       return res.status(400).json({ error: 'Username must be 3-32 characters long and can only include letters, numbers, underscores, and hyphens' });
     }
 
+    // Vérifier si l'utilisateur existe déjà
+    let user = await User.findOne({ where: { email } });
+    if (user) {
+      return res.status(400).json({ error: 'User already exists' });
+    }
+
     // Hachage du mot de passe
-    const hashedPassword = await hashPassword(password);
-    const user = await User.create({ email, password: hashedPassword, username }); // ✅ "pseudo" → "username"
+    const hashedPassword = await bcrypt.hash(password, 10);
+    user = await User.create({ email, password: hashedPassword, username: pseudo }); // "pseudo" → "username"
+                                                                                     // "pseudo" → "username"
 
     res.status(201).json({ message: 'User registered successfully', user });
   } catch (error) {
-    console.error("🔴 Erreur lors de l'inscription :", error); // ✅ Log en cas d'erreur
+    console.error("🔴 Erreur lors de l'inscription :", error); // Log en cas d'erreur
+                                                               // Log in case of error
     res.status(500).json({ error: "An error occurred while registering the user", details: error.message });
   }
 };
 
-// ✅ Connexion (Login)
+// Connexion (Login)
 const loginUser = async (req, res) => {
   const { email, password } = req.body;
 
@@ -63,9 +73,10 @@ const loginUser = async (req, res) => {
   }
 };
 
-// ✅ Middleware pour vérifier l’authentification
+// Middleware pour vérifier l’authentification
 const authenticateUser = (req, res, next) => {
   const token = req.header('Authorization')?.split(' ')[1]; // Récupérer le token
+                                                            // Retrieve the token
 
   if (!token) {
     return res.status(401).json({ error: 'Access denied' });
@@ -80,12 +91,13 @@ const authenticateUser = (req, res, next) => {
   }
 };
 
-// ✅ Déconnexion (Logout) côté client (juste suppression du token)
+// Déconnexion (Logout) côté client (juste suppression du token)
 const logoutUser = async (req, res) => {
   res.json({ message: 'Logout successful' }); // Le client doit supprimer son token côté frontend
+                                              // The client must delete its token on the frontend
 };
 
-// ✅ Suppression du compte
+// Suppression du compte
 const deleteAccount = async (req, res) => {
   try {
     const userId = req.user.userId;
@@ -105,4 +117,20 @@ const deleteAccount = async (req, res) => {
   }
 };
 
-module.exports = { registerUser, loginUser, authenticateUser, logoutUser, deleteAccount };
+// Récupérer les infos de l'utilisateur connecté
+const getUser = async (req, res) => {
+  try {
+    const user = await User.findByPk(req.user.userId, {
+      attributes: ['id', 'email', 'username']
+    });
+    if (!user) {
+      return res.status(404).json({ error: "Utilisateur non trouvé" });
+    }
+    res.json(user);
+  } catch (error) {
+    console.error("🔴 Erreur lors de la récupération des infos de l'utilisateur :", error);
+    res.status(500).json({ error: "Erreur serveur lors de la récupération des infos de l'utilisateur" });
+  }
+};
+
+module.exports = { registerUser, loginUser, authenticateUser, logoutUser, deleteAccount, getUser };
